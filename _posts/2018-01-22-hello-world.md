@@ -8,7 +8,7 @@ What? A new blog? What is it, 2003?  Don't check your calendar, we are in 2018 a
 
 ## Give back
 
-I decided to become an active member on [StackOverflow](www.stackoverflow.com) back in May, not even a year ago. After a month, and 34 answers, I was shocked finding myself on the top 10% in [ASP.NET](https://stackoverflow.com/questions/tagged/asp.net) and C# rank. I was also on the top 20% in SQL Server and jQuery, ok I shouldn't have mentioned jQuery, where I only answered 10 questions in each topic.
+I decided to become an active member on [Stack Overflow](www.stackoverflow.com) back in May, not even a year ago. After a month, and 34 answers, I was shocked finding myself on the top 10% in [ASP.NET](https://stackoverflow.com/questions/tagged/asp.net) and C# rank. I was also on the top 20% in SQL Server and jQuery, ok I shouldn't have mentioned jQuery, where I only answered 10 questions in each topic.
 Why was that? Was I a .NET guru and the community was waiting for my knowledge? I don't think so. I think we just **don't give back** (enough).
 
 ![meme1](https://i.imgflip.com/22wert.jpg)
