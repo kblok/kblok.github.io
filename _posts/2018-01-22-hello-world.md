@@ -1,5 +1,9 @@
-Hello World!
-===============
+---
+title: Hello World!
+tags: general
+permalink: /blog/hello-world
+---
+
 What? A new blog? What is it, 2003?  Don't check your calendar, we are in 2018 and I am creating a new blog. Let me tell you why.
 
 ## Give back
