@@ -47,7 +47,7 @@ I wouldn't be writing this blog if it wasn't for [Ezequiel Gioia](http://blog.gi
 
 If you don't notice that I write like a caveman (well cavemen didn't write, but you get the point) is because [Lucas](https://twitter.com/lucasmetal), [Mauro](https://twitter.com/mmackinze) and [Facundo](https://twitter.com/facundozurdo) helped me edit many posts that are on the way. They are always reviewing my ideas and thoughts.
 
-I don't want to forget [Gervacio](https://twitter.com/g3rv4). It's great to find people like him who is passionate about the community and always open to give you a hand. If I'm writing this blog is also because of him.
+I don't want to forget [Gervasio](https://twitter.com/g3rv4). It's great to find people like him who is passionate about the community and always open to give you a hand. If I'm writing this blog is also because of him.
 
 ## Welcome to this journey
 
