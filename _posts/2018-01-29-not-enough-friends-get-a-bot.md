@@ -7,7 +7,7 @@ permalink: /blogs/not-enough-friends-get-a-bot
  
 # Introduction 
  
-When you start reading about Machine Learning and [Recurrent Neural networks](https://en.wikipedia.org/wiki/Recurrent_neural_network) there is a high chance that the first thing you want to do is writing a bot. I was in that group.
+When you start reading about Machine Learning and [Recurrent Neural networks](https://en.wikipedia.org/wiki/Recurrent_neural_network) there is a high chance that the first thing you want to do is write a bot. I was in that group.
  
 So, I coded a Machine Learning model. But even after training it for a few days I wasn't able to get results as cool as the bots I used to see on Twitter. So after digging into how the community was implementing these bots, I found that most of the guys were using [Markovify](https://github.com/jsvine/markovify).
  
