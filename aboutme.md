@@ -11,7 +11,7 @@ So, my name is Darío Kondratiuk, and I’m a software developer.
 
 I won't be able to say that I hacked my Commodore 64 in the 80s, but I can say that I wrote my first lines of C# code back in 2001, when the .NET Framework 1.0 Beta 2 was released.
 
-I worked on enterprise projects for 10+ years. Those were fun days. I started playing with ORMs back in 2004 (Entity Framework wasn't even in alpha). I started using OJB.NET, then turned into [DomainObjects](https://sourceforge.net/projects/domainobjects/), which was a port of [OJB](https://db.apache.org/ojb/). After a few months using it in many projects, I ended up becoming part of the maintainers team. My most important contributions were implementing the Oracle provider and the composite primary key support. I was also an early adopter of [Telerik](https://www.telerik.com/) products. It was super fun playing with Ajax panels a few years before ASP.NET AJAX came to light.
+I worked on enterprise projects for 10+ years. Those were fun days. I started playing with ORMs back in 2004 (Entity Framework wasn't even in alpha). I started using OJB.NET, then turned into [DomainObjects.NET](https://sourceforge.net/projects/domainobjects/), which was a port of [OJB](https://db.apache.org/ojb/). After a few months using it in many projects, I ended up becoming part of the maintainers team. My most important contributions were implementing the Oracle provider and the composite primary key support. I was also an early adopter of [Telerik](https://www.telerik.com/) products. It was super fun playing with Ajax panels a few years before ASP.NET AJAX came to light.
 
 **The public web**
 
