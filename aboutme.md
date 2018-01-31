@@ -7,7 +7,7 @@ If you got to this page, and you are not a bot, thank you for taking the time to
 
 So, my name is Darío Kondratiuk, and I’m a software developer.
 
-[Meme](https://i.imgflip.com/23gepg.jpg)
+![Meme](https://i.imgflip.com/23gepg.jpg)
 
 I won't be able to say that I hacked my Commodore 64 in the 80s, but I can say that I wrote my first lines of C# code back in 2001, when the .NET Framework 1.0 Beta 2 was released.
 
