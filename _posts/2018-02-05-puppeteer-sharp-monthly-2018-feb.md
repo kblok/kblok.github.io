@@ -5,7 +5,6 @@ permalink: /blogs/puppeteer-sharp-monthly-february-2018
 ---
  
 # Introduction
-
 Welcome to the first Puppeteer Sharp monthly digest. I hope this is the first of many to come.
 As this is the first digest, I need to explain the current status and the roadmap I have planned.
 
