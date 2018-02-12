@@ -4,8 +4,6 @@ tags: sqlserver
 permalink: /blogs/how-to-work-with-stored-procedures-and-not-die-trying
 ---
 
-# How to work with stored procedures and not die trying
-
 ## What's wrong with databases?
 I won't try to sell you the idea that stored procedures are the best and that everybody needs to throw away all their ORM code and move to the database world. I believe that every team has to choose the best tool that not only helps them to solve their problem and but also makes them more productive.
 
