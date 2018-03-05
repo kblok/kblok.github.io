@@ -5,7 +5,6 @@ permalink: /blogs/puppeteer-sharp-monthly-march-2018
 ---
  
 # Puppeteer Sharp v0.1 released!
-
 I'm super excited to announce that the first **usable** version of Puppeteer Sharp is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). The first milestone on the [roadmap](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018) is completed.
 
 # What can you do so far?
