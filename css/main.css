@@ -669,7 +669,8 @@ pre.highlight, .highlight > pre, td.code pre {
   background-repeat: repeat;
   background-size: 3em 3em;
   background-position: 0px 10px;
-  border-left: 7px solid #444;
+  border-left: 7px solid #EEE;
+  padding: 0 0 0 3px;
 }
 code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
@@ -739,4 +740,9 @@ td.gutter {
 
 .navbar-default button.navbar-toggle[aria-expanded="true"] {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Custom*/
+.blog-post code {
+  font-family: Consolas,"Courier New",monospace;
 }

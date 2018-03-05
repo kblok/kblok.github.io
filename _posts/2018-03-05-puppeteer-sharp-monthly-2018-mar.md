@@ -13,22 +13,22 @@ I'm super excited to announce that the first **usable** version of Puppeteer Sha
 
 You can export any page to PDF file.
 
-```CS
+{% highlight CS %}
 var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
 var page = await browser.NewPageAsync();
 await page.GoToAsync("https://www.google.com");
 await page.PdfAsync(outputFile);
-```
+{% endhighlight %}
 
 You can also get a PDF file in a stream.
 
-```CS
+{% highlight CS %}
 var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
 var page = await browser.NewPageAsync();
 await page.GoToAsync("https://www.google.com");
 var stream = await page.PdfStreamAsync();
 await UploadToAzure(stream);
-```
+{% endhighlight %}
 
 `PdfAsync` supports the following options:
  * Scale `<decimal>` Scale of the webpage rendering. Defaults to 1.
@@ -54,7 +54,7 @@ await UploadToAzure(stream);
 
 You can take a screenshot of a page (the visible part based on the viewport), a full page, or a part of it.
 
-```CS
+{% highlight CS %}
 var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
 var page = await browser.NewPageAsync();
 
@@ -66,7 +66,7 @@ await page.SetViewport(new ViewPortOptions
 
 await page.GoToAsync("https://www.google.com");
 await page.ScreenshotAsync(outputFile);
-```
+{% endhighlight %}
 
 You can also use `ScreenshotStreamAsync` to get a stream instead of a file.
 
