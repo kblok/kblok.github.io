@@ -1,88 +1,113 @@
 ---
-title: Puppeteer Sharp Monthly Report - February 2018
+title: Puppeteer Sharp Monthly Report - March 2018
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-monthly-february-2018
+permalink: /blogs/puppeteer-sharp-monthly-march-2018
 ---
  
-# Introduction
-Welcome to the first Puppeteer Sharp monthly digest. I hope this is the first of many to come.
-As this is the first digest, I need to explain the current status and the roadmap I have planned.
+# Puppeteer Sharp v0.1 released!
 
-# Current status
+I'm super excited to announce that the first **usable** version of Puppeteer Sharp is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). The first milestone on the [roadmap](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018) is completed.
 
-Turning that first test green is harder than it sounds. The first test is about browsing a page while ignoring HTTPS errors. But before browsing a page we need to create a browser process; start a WebSocket; implement messaging between puppeteer-sharp; among other things.
+# What can you do so far?
 
-So, the current status is: ~~I'm almost there.~~ The first test is green!
+## PDF support
 
-Puppeteer Sharp is now able to:
- * Start a chromium process.
- * Start a WebSocket.
- * Send/Receive messages using that WebSocket.
- * Load a FrameManager.
- * Load an EmulationManager.
- * Build a response.
- * Close the browser gracefully.
+You can export any page to PDF file.
 
-# Roadmap
-Getting to all the 523 tests Puppeteer has, will be a long and fun journey. So, this will be the roadmap for Puppeteer Sharp 1.0:
+```CS
+var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
+var page = await browser.NewPageAsync();
+await page.GoToAsync("https://www.google.com");
+await page.PdfAsync(outputFile);
+```
 
-## 0.1 First Minimum Viable Product
-The first 0.1 will include:
-* Browser download
-* Basic browser operations: create a browser, a page and navigate a page.
-* Take screenshots.
-* Print to PDF.
+You can also get a PDF file in a stream.
 
-## 0.2 Repository cleanup
-This version won't include a new version. It will be about improving the repository:
+```CS
+var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
+var page = await browser.NewPageAsync();
+await page.GoToAsync("https://www.google.com");
+var stream = await page.PdfStreamAsync();
+await UploadToAzure(stream);
+```
 
-* Setup CI.
-* Create basic documentation (Readme, contributing, code of conduct).
+`PdfAsync` supports the following options:
+ * Scale `<decimal>` Scale of the webpage rendering. Defaults to 1.
+ * DisplayHeaderFooter `<bool>` Display header and footer. Defaults to false.
+ * HeaderTemplate `<string>` HTML template for the print header. 
+ * FooterTemplate `<string>` HTML template for the print footer. Should use the same format as the HeaderTemplate.
+ * PrintBackground `<bool>` Print background graphics. Defaults to false.
+ * Landscape `<boolean>` Paper orientation. Defaults to false.
+ * PageRanges `<string>` Paper ranges to print, e.g., '1-5, 8, 11-13'. 
+ Defaults to an empty string, which means print all pages.
+ * Format `<string>` Paper format. If set, takes priority over width or height options. Defaults to 'Letter'.
+ * Width `<string>` Paper width, accepts values labeled with units.
+ * Height `<string>` Paper height, accepts values labeled with units.
+ * Margin `<MarginOptions>` Paper margins, defaults to none.
+ * Top `<string>` Top margin, accepts values labeled with units.
+ * Right `<string>` Right margin, accepts values labeled with units.
+ * Bottom `<string>` Bottom margin accepts values labeled with units.
+ * Left `<string>` Left margin, accepts values labeled with units.
 
-## 0.3 Puppeteer
-It will implement all [Puppeteer related tests](https://github.com/GoogleChrome/puppeteer/blob/master/test/test.js#L108)
+*Documentation adapted from the [original Puppeteer repo](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions)*
 
-## 0.4 Page
-It will implement all Page tests except the ones testing the evaluate method.
-As this will be quite a big version, I think we will publish many 0.3.X versions before 0.4.
+## Screenshot support
 
-## 0.5 Frames
-It will implement all Frame tests.
+You can take a screenshot of a page (the visible part based on the viewport), a full page, or a part of it.
 
-## 0.6 Simple interactions
-It will implement all the test related to setting values to inputs and clicking on elements.
+```CS
+var browser = await PuppeteerSharp.Puppeteer.LaunchAsync(options, chromiumRevision);
+var page = await browser.NewPageAsync();
 
-## 0.X Intermediate versions
+await page.SetViewport(new ViewPortOptions
+    {
+        Width = 500,
+        Height = 500
+    });
 
-At this point, We will have implemented most features, except the ones which are javascript related.
-I believe there will be many versions between 0.6 and 1.0.
+await page.GoToAsync("https://www.google.com");
+await page.ScreenshotAsync(outputFile);
+```
 
-## 1.0 Puppeteer the world!
-The 1.0 version will have all (or most) Puppeteer features implemented. I don't know if we'll be able to cover 100% of Puppeteer features, due to differences between both technologies, but we'll do our best.
+You can also use `ScreenshotStreamAsync` to get a stream instead of a file.
+
+The `ScreenshotAsync` method supports the following options:
+
+ * Type `<string>` Specify screenshot type This can be either jpeg or png. Defaults to 'png'.
+ * Quality `<decimal?>` The quality of the image, between 0-100. Not applicable to png images.
+ * FullPage `<bool>` When true, takes a screenshot of the full scrollable page. Defaults to false.
+ * Clip `<Clip>` An object which specifies clipping region of the page. Should have the following fields:
+    * X `<int>` x-coordinate of top-left corner of clip area.
+    * Y `<int>` y-coordinate of top-left corner of clip area.
+    * Width `<int>` width of clipping area.
+    * Height `<number>` height of clipping area.
+ * OmitBackground `<bool>` Hides default white background and allows capturing screenshots with transparency. Defaults to false.
+
+*Documentation adapted from the [original Puppeteer repo](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions)*
 
 # Progress
 
-Let's talk about hard numbers. These numbers don't sound exciting now, but I hope we can see them grow month after month.
+* Tests on Google's Puppeteer: 548 (prev. 523)
+* Tests on Puppeteer Sharp: 19 (prev. 1)
+* Passing tests: 19 (prev. 1)
 
-* Tests on Google's Puppeteer: 523
-* Tests on Puppeteer Sharp: 1
-* Passing tests: 1
+# Activity 
 
-I know, this sounds pretty lame, but we will get there.
+* Repository Stars: 34 (prev. 13) +161%
+* Repository Forks: 5 (prev. 2) +150%
+* Nuget downloads: 223 (prev. 114) +95%
+* Contributors: 1
 
-# Activity
+# New Contributors
 
-If we talk about user activity, these are the hard numbers:
+I want to thank [Meir Blachman](https://twitter.com/MeirBlachman), the first contributor, for jumping in. He implemented the LaunchOptions class. I hope this is the first of many contributions and contributors!
 
-* Repository Stars: 11.
-* Repository Forks: 2.
-* Nuget downloads: 114.
+# What's Next
 
-# Wrapping up
+March will be about: First, Complete all tasks for (pseudo) version [0.2](https://github.com/kblok/puppeteer-sharp/projects/9). Basically, setting up AppVeyor and creating all the community docs we need. Then, start with version [0.3](https://github.com/kblok/puppeteer-sharp/projects/8) which is about implementing Puppeteer.launch tests.
 
-If you want to contribute to this project you are welcome!
-I won't accept code contributions to the library before version 0.3 because the code is still taking shape, and because I will create the contributing document in version 0.2. However, you are welcome to start writing tests. We have 523 tests to code!
-If you are interested, reach out to me on twitter, or by email.
+# Final words
 
+I hope you guys start testing the library. I’m looking forward to getting feedback from you. The issues tab in github is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-
+Don't stop coding!
