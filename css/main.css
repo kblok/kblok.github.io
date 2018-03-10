@@ -7,7 +7,7 @@ layout: null
 /* --- General --- */
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 18px;
   color: #404040;
   position: relative;
@@ -22,7 +22,7 @@ p {
   margin: 30px 0;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-weight: 300;
 }
 a {
@@ -57,7 +57,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   padding: 15px inherit;
 }
 
@@ -103,7 +103,7 @@ img {
 .navbar-custom {
   background-color: {{ site.navbar-col }};
   border-bottom: 1px solid #EAEAEA;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   {% if site.navbar-img %}
   background-image: url({{ site.navbar-img }});
   background-attachment: fixed;
@@ -268,6 +268,7 @@ footer {
 
 footer p.text-muted {
   color: {{ site.footer-text-col }};
+  text-align: center;
 }
 
 footer a {
@@ -279,7 +280,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   text-align: center;
   margin-bottom: 0;
 }
@@ -344,7 +345,7 @@ footer .theme-by {
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 }
 .post-entry-container {
   display: inline-block;
@@ -381,7 +382,7 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   color: #999;
   font-size: 15px;
   margin-bottom: 30px;
@@ -474,7 +475,7 @@ footer .theme-by {
   font-size: 20px;
   line-height: 1.1;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   font-weight: 300;
   margin: 10px 0 0;
 }
@@ -499,7 +500,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   right: 0;
   bottom: 0;
   display: none;
@@ -583,7 +584,7 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
@@ -664,12 +665,8 @@ pre code {
   white-space: pre;
 }
 pre.highlight, .highlight > pre, td.code pre {
-  background-color: #FAFAFA;
-  background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
-  background-repeat: repeat;
-  background-size: 3em 3em;
-  background-position: 0px 10px;
-  border-left: 7px solid #EEE;
+  background-color: #f6f8fa;
+  padding: 16px;
 }
 code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
@@ -678,7 +675,10 @@ td.gutter pre {
   background-color: #fff;
 }
 .highlight > pre {
-  padding: 0 0 0 3px;
+  padding: 15px;
+  border: 0;
+  font-size: 13.6px;
+  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
 td.code pre {
   border-width: 0 0 0 2px;
@@ -742,6 +742,15 @@ td.gutter {
 }
 
 /*Custom*/
-.blog-post code {
-  font-family: Consolas,"Courier New",monospace;
+.blog-post h1 {
+  font-size: 30px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.blog-post h2 {
+  font-size: 26px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  font-weight: 200;
 }
