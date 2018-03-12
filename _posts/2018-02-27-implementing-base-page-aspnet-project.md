@@ -20,7 +20,7 @@ I bet you have noticed that all your pages inherit from [Page](https://msdn.micr
 
 The implementation is simple. We just need a class that inherits from Page.
 
-```
+```cs
 public class BasePage : Page
 {
 
@@ -31,12 +31,12 @@ Then we need to go page by page (ok, you can use replace all), changing all your
 
 So we turn this:
 
-```
+```cs
 public class default: Page
 ```
 
 Into this
-```
+```cs
 public class default: BasePage
 ```
 
@@ -49,7 +49,7 @@ There are many things you can do on this BasePage. As I mentioned before, I will
 Do you need the user full name on every page?
 Move that boilerplate to your BasePage.
 
-```
+```cs
 public class default: BasePage
 {
     public string UserFullName
@@ -71,7 +71,7 @@ public class default: BasePage
 If you want to serve users around the globe, you need to take their culture into consideration. According to [this Wikipedia article](https://en.wikipedia.org/wiki/Date_format_by_country), if you render the date 1/2/2018, around 600 million people will read "January second, 2018", whereas 3565 million people will read "February first, 2018".
 If you know the user's culture you can set it in the current thread. Then, all `ToString` methods will use that culture to render dates and numbers properly.
 
-```
+```cs
 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo(userCulture);
 ```
 
@@ -79,14 +79,14 @@ Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = ne
 
 Let's say you have a cart application and need to change the style. This could be because the cart is filled, the user is logged in, or maybe the user is from another country. You can set classes in the form element and then use them in your CSS stylesheet.
 
-``` 
+```cs
 Form.Attributes["class"] = 
     mainElement.Attributes["class"] + " " +
     (HasItemsInCart() ? "items-in-cart" : string.Empty);
 ```
 
 And then in your CSS you can do this
-```
+```css
 .items-in-cart .some-cart-div
 {
     display: block;
@@ -95,7 +95,7 @@ And then in your CSS you can do this
 
 You can also declare javascript variables you need across the board. Let's say you know the user culture and you want to take advantage of it; not only on the server side, but also on the client site. You could declare a javascript variable on all your pages.
 
-```
+```cs
 ScriptManager.RegisterClientScriptBlock(
     this, 
     GetType(), 
