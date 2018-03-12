@@ -12,7 +12,7 @@ The most common solutions would be:
 
 Although the use of Sessions isn't recommended for public websites (because the number of concurrent users is unknown), it can be a good solution for intranet sites with a relatively low number of users.
 
-But, if you opt for Sessions, you'll have problems if the user opens the same page on different tabs. And there's when PageSessions come into play. 
+But, if you opt for Sessions, you'll have problems if the user opens the same page on different tabs. This is when PageSessions come into play.
 
 >Wouldn't it be great to have a Session collection by page instead of by... Session?
 
