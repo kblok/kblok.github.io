@@ -211,7 +211,7 @@ function pageSessionCleanUp() {
 
 # Final Words
 
-You can find the source code [here](https://github.com/kblok/PageSessionDemo), feel free to fork it and play with it.
+You can find the source code [here](https://github.com/kblok/AspNetExamples), feel free to fork it and play with it.
 
 Don't stop coding!
 
