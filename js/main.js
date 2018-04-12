@@ -66,6 +66,8 @@ var main = {
 
     // show the big header image
     main.initImgs();
+
+    $.post("https://maker.ifttt.com/trigger/webAccess/with/key/Fw7XHx2Iyz-Ahg0osrM9S")
   },
 
   initImgs : function() {
