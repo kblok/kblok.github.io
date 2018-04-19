@@ -1,58 +1,195 @@
 ---
-title: PDF Generators benchmark - It’s competition time!
+title: Implementing a Simple Server in .NET Core
 tags: puppeteer-sharp csharp
-permalink: /blogs/pdf-generators-benchmark
+permalink: /blogs/implementing-simple-server
 ---
- 
-Though there are many things left to be done on Puppeteer Sharp, I wanted to perform the first benchmark and see how Puppeteer Sharp is performing so far.
 
-Generating PDF files was the reason why I started working on Puppeteer Sharp. Most PDF generator libraries don’t support javascript and results are not good at all in real-world scenarios. I ended up using [wkhtmltopdf](https://wkhtmltopdf.org/), which is pretty cool but it has a few disadvantages. First, it's a black box. If something is being rendered differently (compared to other WebKit browsers) you don’t have an easy way to solve it. You have to tweak your CSS code and run the process until you get the result you want. And second, the API is very limited and there is not much you can do to manipulate the rendering process.
+One thing we needed to start testing [Puppeteer Sharp](https://github.com/kblok/puppeteer-sharp) was a simple web server to run a testing website. I knew the ideal scenario was something like this: Run `dotnet test`, the test would load a web server, run all tests and shut down the server. I also knew that ASP.NET Core was able to run in any process so, starting a web server inside the unit test process seemed to be easy to implement.
 
-But, in order to say that Puppeteer (the Node version or Puppeteer sharp) is better than wkhtmltopdf, we need to prove 3 things: It’s faster, it produces a pdf of the same or better quality and it’s easier to use.
+It wasn't.
 
-# The Scenario
+I tried executing the web host asynchronously, but it didn’t work. I couldn’t execute it synchronously because it would lock the test execution. I also had some issues running tests using the .NET Framework (instead of Core), so I moved on. I said: "whatever, let's create a process, call the test server and keep coding Puppeteer".
 
-In order to try to make this benchmark as fair as possible, I looked for a real-world HTML page, with CSS, images, and javascript. Then, I downloaded it to be run locally so the test didn’t depend on the network status. I found that the homepage of my website was a good example. :p
+```cs
+private async Task StartWebServerAsync()
+{
+    var taskWrapper = new TaskCompletionSource<bool>();
+    const int timeout = 2000;
 
-Each test generates 10 PDF fields and will be run 5 times.
+    var build = Directory.GetCurrentDirectory().Contains("Debug") ? "Debug" : "Release";
+    var webServerPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..",
+                                        "PuppeteerSharp.TestServer");
 
-# The profiler
+    _webServerProcess = new Process();
+    _webServerProcess.StartInfo.UseShellExecute = false;
+    _webServerProcess.StartInfo.FileName = "dotnet";
+    _webServerProcess.StartInfo.WorkingDirectory = webServerPath;
+    _webServerProcess.StartInfo.Arguments = $"./bin/{build}/netcoreapp2.0/PuppeteerSharp.TestServer.dll";
 
-I wanted to be able to run a process X times and then get the fastest, slowest, average and the standard deviation, something like [wrk](https://github.com/wg/wrk) but for Windows processes. As I didn’t find any tool to help me, I coded my own; a [Tiny process profiler](https://github.com/kblok/TinyProcessProfiler). The idea is simple: run any process a pre-determined number of times, save the elapsed time of each run in a list and then show some stats.
+    _webServerProcess.StartInfo.RedirectStandardOutput = true;
+    _webServerProcess.StartInfo.RedirectStandardError = true;
 
-# Environment
+    _webServerProcess.OutputDataReceived += (sender, e) =>
+    {
+        Console.WriteLine(e.Data);
+        if (e.Data != null &&
+            taskWrapper.Task.Status != TaskStatus.RanToCompletion &&
+            //Though this is not bulletproof for the purpose of local testing
+            //We assume that if the address is already in use is because we have another
+            //process hosting the site
+            (e.Data.Contains("Now listening on") || e.Data.Contains("ADDRINUSE")))
+        {
+            taskWrapper.SetResult(true);
+        }
+    };
 
-These tests were run on a DELL XPS 15
- * 7th Generation Intel® Core™ i7-7700HQ Quad Core Processor
- * Windows 10 Pro 64-bit 
- * 16GB, 2400MHz, DDR4
- * 512GB PCIe Solid State Drive
+    _webServerProcess.Exited += (sender, e) =>
+    {
+        taskWrapper.SetException(new Exception("Unable to start web server"));
+    };
 
-# Result
+    Timer timer = null;
+    //We have to declare the timer before initializing it because if we don't,  
+    //we can't dispose it in the action created in the constructor
+    timer = new Timer((state) =>
+    {
+        if (taskWrapper.Task.Status != TaskStatus.RanToCompletion)
+        {
+            taskWrapper.SetException(
+                new Exception($"Timed out after {timeout} ms while trying to connect to WebServer! "));
+        }
+        timer.Dispose();
+    }, null, timeout, 0);
 
-| Tool | Fastest Run | Slowest Run | Avg Run | Standard Deviation |
-| ---- | ---------: | | ---------: | | ---------: | | ---------: |
-| wkhtmltopdf | 18.725 | 19.880 | 19.170 | 0.5477 |
-| Puppeteer Node JS | 7.673 | 8.20 | 7.838 | 0.4472 |
-| Puppeteer Sharp | **7.285** | **7.457** | **7.602** | 0.4472 |
+    _webServerProcess.Start();
+    _webServerProcess.BeginOutputReadLine();
 
-_All values in seconds_
+    await taskWrapper.Task;
+}
+```
+
+# First internal process
+
+Luckily for me, [Meir Blachman](https://www.twitter.com/MeirBlachman) jumped into the project and, among many other things, he was able to [make the web host run inside the test project](https://github.com/kblok/puppeteer-sharp/pull/101). It was a great day.
+
+Now we were starting the server with only these 4 lines:
+
+```cs
+var builder = Startup.GetWebHostBuilder();
+builder.UseContentRoot(TestUtils.FindParentDirectory("PuppeteerSharp.TestServer"));
+_host = builder.Build();
+await _host.StartAsync();
+```
+
+Meir [wrote a simple and cool explanation](https://github.com/kblok/puppeteer-sharp/pull/101#issuecomment-378902668) in his PR.
+
+* DllNotFoundException: Unable to load DLL 'libuv' - especially this comment. Looking at aspnet/KestrelHttpServer#1292 (comment), I realized I only needed to add the RuntimeIdentifier element.
+* Adding the RuntimeIdentifier to PuppeteerSharp.Tests.csproj instead of PuppeteerSharp.TestServer.csproj
+* Using netstandard 2.0 instead of netcoreapp 2.0
+*Finding the PuppeteerSharp.TestServer directory from tests, since for net471 it's one directory deeper
+    * net471 - PuppeteerSharp.Tests\bin\Debug\net471\win7-x64
+    * netcoreapp2.0 - PuppeteerSharp.Tests\bin\Debug\netcoreapp2.0
+
+# We need a SimpleServer
+
+We were able to keep working on Puppeteer Sharp. We stopped getting process leaks and port locks. But Puppeteer had many tests that were intercepting requests on the server side, such as **server.setAuth**.
+
+```js
+server.setAuth('/empty.html', 'user', 'pass');
+````
+
+This was easy to implement. We created a controller and [implemented a basic HTTP authentication](https://github.com/kblok/puppeteer-sharp/blob/8c5a9e531efcc0a6eaa406489eb3092bc1fc49a3/lib/PuppeteerSharp.TestServer/Controllers/AuthenticationTestController.cs).
+
+But then, some things became quite tricky. For instance, we needed to wait for a request on the server-side:
+
+```js
+await server.waitForRequest('/one-style.css')
+```
+
+We had to integrate the Web host **into** the test suite. We needed to be able to change the Server behavior just before some test runs.
+
+# Let's implement a Simple Server
+
+Again, [Meir Blachman](https://www.twitter.com/MeirBlachman) said ["We need a Simple Server"](https://github.com/kblok/puppeteer-sharp/issues/116). He ended up implementing a [really cool solution](https://github.com/Meir017/puppeteer-sharp/blob/a522f3062e53a019ed6a4c06e00c7545b610135e/lib/PuppeteerSharp.TestServer/SimpleServer.cs)
+
+The API is simple
+
+```cs
+public class SimpleServer
+{
+    public static SimpleServer Create(int port, string contentRoot)
+    public static SimpleServer CreateHttps(int port, string contentRoot)
+
+    public void SetAuth(string path, string username, string password)
+    public Task StartAsync()
+    public async Task StopAsync()
+    public void Reset()
+    public void SetRoute(string path, RequestDelegate handler)
+    public void SetRedirect(string from, string to)
+    public async Task<T> WaitForRequest<T>(string path, Func<HttpRequest, T> selector)
+    private static bool Authenticate(string username, string password, HttpContext context)
+}
+```
+
+And the middleware is implemented in just a few lines:
+
+```
+.Configure(app => app.Use((context, next) =>
+{
+    if (_auths.TryGetValue(context.Request.Path, out var auth) && !Authenticate(auth.username, auth.password, context))
+    {
+        context.Response.Headers.Add("WWW-Authenticate", "Basic realm=\"Secure Area\"");
+        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+        return context.Response.WriteAsync("HTTP Error 401 Unauthorized: Access is denied");
+    }
+    if (_requestSubscribers.TryGetValue(context.Request.Path, out var subscriber))
+    {
+        subscriber(context.Request);
+    }
+    if (_routes.TryGetValue(context.Request.Path, out var handler))
+    {
+        return handler(context);
+    }
+    return next();
+})
+```
+
+So now, we can do things like this:
+
+```cs
+Server.SetAuth("/empty.html", "user", "pass");
+
+var response = await Page.GoToAsync(TestConstants.EmptyPage);
+Assert.Equal(HttpStatusCode.Unauthorized, response.Status);
+
+await Page.AuthenticateAsync(new Credentials
+{
+    Username = "user",
+    Password = "pass"
+});
+
+response = await Page.ReloadAsync();
+Assert.Equal(HttpStatusCode.OK, response.Status);
+```
+
+Or intercept a request:
+
+```cs
+await Page.SetExtraHttpHeadersAsync(new Dictionary<string, string>
+{
+    ["Foo"] = "Bar"
+});
+
+var headerTask = Server.WaitForRequest("/empty.html", request => request.Headers["Foo"]);
+await Task.WhenAll(Page.GoToAsync(TestConstants.EmptyPage), headerTask);
+
+Assert.Equal("Bar", headerTask.Result);
+````
 
 # Final Words
 
-### Quality
+Although Simple Server is a solution created for Puppeteer's needs, 
+it also demonstrates what you can do with .NET Core while implementing a simple server inside your app.
 
-Unlike Puppeteer (Node and Sharp), wkhtmltopdf doesn’t honor [media print](https://www.w3schools.com/css/css3_mediaqueries.asp). This could be good or bad depending on your needs. A PDF file created by Puppeteer would be more like the PDF generated when you print a page to PDF in Chrome, whereas it would look more like a screenshot in wkhtmltopdf.
-
-### Speed
-
-Puppeteer proved to be way faster; three times faster according to my tests. Puppeteer Sharp and Puppeteer have pretty much the same performance
-
-### API
-
-Puppeteer (Node and Sharp) has a richer API than wkhtmltopdf. Though I used  a process call to execute wkhtmltopdf there are many wrappers around wkhtmltopdf, such as [the one coded by codaxy](https://github.com/codaxy/wkhtmltopdf), but all of them are limited to the small API the process itself exposes
-
-This [benchmark](https://github.com/kblok/PdfGeneratorsBenchmark) is on Github, and also the [TinyProcessProfiler](https://github.com/kblok/TinyProcessProfiler). Issues and Pull Request are opened for comments and feedback.
-
-Don’t stop coding!
+Don't stop coding.
 
