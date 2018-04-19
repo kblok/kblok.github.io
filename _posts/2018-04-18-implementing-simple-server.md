@@ -191,5 +191,5 @@ Assert.Equal("Bar", headerTask.Result);
 Although Simple Server is a solution created for Puppeteer's needs, 
 it also demonstrates what you can do with .NET Core while implementing a simple server inside your app.
 
-Don't stop coding.
+Don't stop coding!
 
