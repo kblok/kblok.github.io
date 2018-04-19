@@ -184,7 +184,7 @@ var headerTask = Server.WaitForRequest("/empty.html", request => request.Headers
 await Task.WhenAll(Page.GoToAsync(TestConstants.EmptyPage), headerTask);
 
 Assert.Equal("Bar", headerTask.Result);
-````
+```
 
 # Final Words
 
