@@ -96,7 +96,7 @@ We were able to keep working on Puppeteer Sharp. We stopped getting process leak
 
 ```js
 server.setAuth('/empty.html', 'user', 'pass');
-````
+```
 
 This was easy to implement. We created a controller and [implemented a basic HTTP authentication](https://github.com/kblok/puppeteer-sharp/blob/8c5a9e531efcc0a6eaa406489eb3092bc1fc49a3/lib/PuppeteerSharp.TestServer/Controllers/AuthenticationTestController.cs).
 
