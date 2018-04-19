@@ -133,7 +133,7 @@ public class SimpleServer
 
 And the middleware is implemented in just a few lines:
 
-```
+```cs
 .Configure(app => app.Use((context, next) =>
 {
     if (_auths.TryGetValue(context.Request.Path, out var auth) && !Authenticate(auth.username, auth.password, context))
