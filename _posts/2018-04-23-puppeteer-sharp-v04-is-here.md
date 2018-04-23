@@ -49,7 +49,7 @@ We added support for remote browser connections. This will allow Puppeteer Sharp
 ```cs
 var options = new ConnectOptions()
 {
-    BrowserWSEndpoint = $"wss://browserproviderwhomightwanttosponsortheproject.io"
+    BrowserWSEndpoint = $"wss://chrome.browserless.io/..."
 };
 
 var url = "https://www.google.com/";
