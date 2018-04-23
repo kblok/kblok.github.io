@@ -1,5 +1,5 @@
 ---
-title: Puppeteer Sharp v0.4 is here, and it's huge!
+title: Puppeteer Sharp v0.4 is here and it's huge!
 tags: puppeteer-sharp csharp
 permalink: /blogs/puppeteer-sharp-v04-is-here
 ---
