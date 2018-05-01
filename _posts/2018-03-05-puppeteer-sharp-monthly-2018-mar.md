@@ -110,3 +110,7 @@ March will be about: First, Complete all tasks for (pseudo) version [0.2](https:
 I hope you guys start testing the library. I’m looking forward to getting feedback from you. The issues tab in github is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
 Don't stop coding!
+
+#### Previous Reports
+
+ * [February 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018)

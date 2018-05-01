@@ -78,3 +78,8 @@ I started receiving feedback from the community, and this is great, it’s what 
 I’m looking forward to getting more feedback. The issues tab in github is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://www.twitter.com/hardkoded).
 
 Don't stop coding!
+
+#### Previous Reports
+
+ * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [February 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018)
