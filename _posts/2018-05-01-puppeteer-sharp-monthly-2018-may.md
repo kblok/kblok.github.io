@@ -9,12 +9,15 @@ April was a great month for Puppeteer Sharp. We launched [v0.4](http://www.hardk
 # What can you do so far?
 
 Please, go and read the [v0.4](http://www.hardkoded.com/blogs/puppeteer-sharp-v04-is-here) release post, I'll be waiting here for you...
-
-
-
-
-
-Are you back?
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Are you back?  
 Cool. But that’s not all. We also released [v0.5](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.5), implementing frames support, tracing and many network events.
 
 ## New Milestones
