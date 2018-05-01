@@ -24,8 +24,8 @@ Cool. But that’s not all. We also released [v0.5](https://github.com/kblok/pup
 
 As [v1.0](https://github.com/kblok/puppeteer-sharp/projects/4) was getting too big (because everything we didn't know how to implement was being moved there), I decided to create two more milestones before v1.0:
 
-* [v0.7](https://github.com/kblok/puppeteer-sharp/projects/12). Here, we will implement Page tests we haven't implemented yet.
-* [v0.8](https://github.com/kblok/puppeteer-sharp/projects/13), related to ElementHandle features.
+* [v0.7](https://github.com/kblok/puppeteer-sharp/projects/12): Page tests we haven't implemented yet.
+* [v0.8](https://github.com/kblok/puppeteer-sharp/projects/13): ElementHandle features.
 
 # Progress
 
