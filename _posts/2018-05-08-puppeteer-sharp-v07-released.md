@@ -1,5 +1,5 @@
 ---
-title: Puppeteer Sharp v0.7: The dollar gate
+title: Puppeteer Sharp v0.7 - The dollar gate
 tags: puppeteer-sharp csharp
 permalink: /blogs/puppeteer-sharp-v07-released
 ---
