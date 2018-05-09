@@ -1,10 +1,10 @@
 ---
-title: Puppeteer Sharp v0.7 a.k.a The dollar gate
+title: Puppeteer Sharp v0.7: The dollar gate
 tags: puppeteer-sharp csharp
 permalink: /blogs/puppeteer-sharp-v07-released
 ---
 
-We are shipping Puppeteer Sharp v0.7 with many cool new features: Element selectors and evaluation over elements. But our big challenge on v0.7 was [one of the hard things in computer science](https://twitter.com/codinghorror/status/506010907021828096?lang=en): Naming Things.
+We are shipping Puppeteer Sharp [v0.7](https://github.com/kblok/puppeteer-sharp/projects/12) with many cool new features: Element selectors and evaluation over elements. But our big challenge on v0.7 was [one of the hard things in computer science](https://twitter.com/codinghorror/status/506010907021828096?lang=en): Naming Things.
 
 Puppeteer has these 5 cool functions:
 
@@ -28,6 +28,7 @@ So, in order to give these functions a clear and "csharpy" name, we decided to c
 These methods may be more verbose, but this naming convention makes them clearer and hopefully, easier to learn.
 
 This is the complete list of new APIs we implemented in this version: 
+
     - Page.XPathAsync
     - Page.QuerySelectorAsync
     - Page.QuerySelectorAllAsync
