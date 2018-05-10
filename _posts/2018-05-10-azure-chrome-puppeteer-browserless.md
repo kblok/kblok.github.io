@@ -150,8 +150,6 @@ private static async void BotClient_OnMessage(object sender, Telegram.Bot.Args.M
             await bot.SendTextMessageAsync(e.Message.Chat.Id, "Prepping a screenshot for you my friend");
 
             var url = (m.Value.StartsWith("http") ? string.Empty : "https://") + m.Value;
-MemoryStream stream = null;
-
             MemoryStream stream = null;
 
             try
