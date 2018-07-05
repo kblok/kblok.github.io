@@ -276,6 +276,6 @@ It turns out that the metadata is being generated despite getting that.
 This was a fun journey although a little bit longer than I expected. Though six Pomodoros are only two hours and a half, I only invested one Pomodoro per day for this task so my head was spinning on this for almost a week.
 I hope this post helps you to go through this process and makes your life easier.
 
-Never stop coding!
+Don't stop coding!
 
 
