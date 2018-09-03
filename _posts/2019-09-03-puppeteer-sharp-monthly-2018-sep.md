@@ -105,7 +105,7 @@ So, be patient and...
 Don't stop **coding**!
 
 #### Previous Reports
- * [June 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
+ * [June 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-**2018**)
  * [May 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
  * [April 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
  * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
