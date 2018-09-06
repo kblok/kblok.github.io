@@ -9,8 +9,7 @@ Let's see what we accomplished in the past two months. We released 4 versions: [
 
 # What's next
 
-Trying to catch Puppeteer always feels like a neverending race and, in fact, it is. Puppeteer is an active and growing project and when we feel that we are almost there they release a new version.
-But we are almost there! :)
+Trying to catch Puppeteer always feels like a never ending race and, in fact, it is. Puppeteer is an active and growing project and when we feel that we are almost there they release a new version. But we are almost there! :)
 
 We are only 4 versions back (at the moment of writing this post), and we have a plan for each of them:
 
@@ -21,7 +20,7 @@ We are only 4 versions back (at the moment of writing this post), and we have a 
 
 # Progress
 
-* Google Puppeteer’s test: 699
+* Google Puppeteer’s tests: 699
 * Puppeteer Sharp’s tests: 436 (prev. 370)
 
 # Activity 
@@ -37,13 +36,13 @@ We are only 4 versions back (at the moment of writing this post), and we have a 
 
 [xMarkos](https://github.com/xMarkos) stepped in implementing two super important changes:
  * First, something I knew we had to do sooner or later which is [adding ConfigureAwait(false) in all of our awaits](https://github.com/kblok/puppeteer-sharp/pull/525)
-* Second, something I didn't know about, he implemented [true async calls in faile handling](https://github.com/kblok/puppeteer-sharp/pull/526).
+* Second, something I didn't know about, he implemented [true async calls in file handling](https://github.com/kblok/puppeteer-sharp/pull/526).
 
 [Tim Watkins](https://github.com/jankcat) Also stepped in and helped us to fix some outdated docs we had.
 
 # Final Words
 
-xMarkos showed me once again how important is for my professional career to be involved in open source projects. You are always learning from people you never met or spoke with. If you are not participating in any open source project. I really encourage you to start doing it.
+xMarkos showed me once again how important is for my professional career to be involved in open source projects. You are always learning from people you never met or spoke with. If you are not participating in any open source project, I really encourage you to start doing it.
 
 I'm also thrilled for those 10k downloads, your support not only arouses a smile on my face but also motivates us to keep working on this project.
 
