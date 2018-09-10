@@ -69,7 +69,7 @@ public class Connection: IClosable
 }
 ```
 
-As you can see, it requires some boilerplate. The explicit method needs to call the internal method.
+As you can see, this requires some boilerplate. The explicit method needs to call the internal method, but, we managed to implement an internal interface on a public class.
 
 What are your thoughts?
 
