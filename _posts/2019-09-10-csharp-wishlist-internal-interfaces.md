@@ -4,7 +4,7 @@ tags: csharp dotnet
 permalink: /blog/csharp-wishlist-internal-interfaces
 ---
 
-I know that changing how C# deals with interfaces would be something hard to accomplish, and this implementation is quite "By the book",  but let me dream for a while and share this idea.
+I know that changing how internfaces work in C# would be something hard to accomplish, and its implementation is quite "by the book". But let me dream for a while and share this idea.
 
 When you create an `internal interface`, what you are saying is that any class implementing that interface should be also internal. So we can't do something like this:
 
@@ -20,9 +20,12 @@ public class Connection: IClosable
 }
 ```
 
+You would get a:
+
 >Error CS0737: 'Connection' does not implement interface member 'IClosable.Close()'. 'IClosable.Close()' cannot implement an interface member because it is not public. (CS0737)
 
-But, what if we change the definition and we say:
+
+So, what if we change the definition and we say that:
 
 > Any class implementing an internal interface can be cast to that interface *inside* the assembly.
 
