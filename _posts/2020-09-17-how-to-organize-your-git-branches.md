@@ -47,7 +47,7 @@ You could mix Gitflow with this module-based approach, something like "backoffic
 I first saw [Meir](https://twitter.com/MeirBlachman) using this approach and I loved it. It’s great for projects like [Puppeteer-sharp](https://github.com/kblok/puppeteer-sharp) where the roadmap is clear.
 In a version-based repo you create each branch inside a "vX.X" folder. What is cool about this is that it’s time-based, so it's easier to find branches and also it's super easy to delete old versions with this simple git command:
 
->git branch | grep -e "vX.X/" | xargs git branch -D
+`git branch | grep -e "vX.X/" | xargs git branch -D`
 
 <img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/version-based.png" width="250px" style="display: block; margin: auto;">
 
@@ -64,7 +64,7 @@ You could use a folder, such as "tickets/242" or "issues/242", or just simply ca
 
 If none of these systems is for you, you can follow [Nick's idea](https://twitter.com/Nick_Craver/status/1037841352053194752) and implement an Emoji-based system :)
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/emoji-based.png" width="250px" style="display: block; margin: auto;">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/emoji-based.jpg" width="250px" style="display: block; margin: auto;">
 
 # Final words
 
