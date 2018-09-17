@@ -69,6 +69,6 @@ If none of these systems is for you, you can follow [Nick's idea](https://twitte
 # Final words
 
 Two final thoughts to close this post. First, if you work on a team where you normally checkout each other branches, e.g. for local testing, I'd recommend you share the style with your team.
-And finally, clean your working copy frequently. This will help you find your branches quickly, and also speed up your local hit.
+And finally, clean your working copy frequently. This will help you find your branches quickly, and also speed up your local repo.
 
 Don't stop coding!
