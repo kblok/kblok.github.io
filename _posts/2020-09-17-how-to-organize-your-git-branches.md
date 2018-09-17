@@ -20,7 +20,7 @@ So basically, a GitFlow organization would have these three folders:
 
 As there is no public document talking about this, I've seen some working copies using those folders in plural and others in singular.
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/gitflow.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/gitflow.png" width="250px" style="display: block; margin: auto;">
 
 # Gitflow with steroids
 
@@ -32,13 +32,13 @@ I found myself adding two more folders to my Gitflow repos:
 
 I’ve seen this a lot in many projects. The branch-push-merge-prune is the anti-folder method. I'm not saying that chaos is a way of organizing branches. People using this method like to have their working copy clean. They would just branch, push, create a pull request and then delete the branch (manually or via git fetch prune) as soon as the PR is merged.
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/bpmp.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/bpmp.png" width="250px" style="display: block; margin: auto;">
 
 # Module-based
 
 I found myself using what I call a "module-based" branching model on a big project where I got quite lost in a sea of features and fixes. So I started to create branches based on its modules. 
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/module-based.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/module-based.png" width="250px" style="display: block; margin: auto;">
 
 You could mix Gitflow with this module-based approach, something like "backoffice/billing/fixes/billing-values", but that may be too much.
 
@@ -49,7 +49,7 @@ In a version-based repo you create each branch inside a "vX.X" folder. What is c
 
 >git branch | grep -e "vX.X/" | xargs git branch -D
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/version-based.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/version-based.png" width="250px" style="display: block; margin: auto;">
 
 Again, this could be mixed with Gitflow folders, but...
 
@@ -58,13 +58,13 @@ Again, this could be mixed with Gitflow folders, but...
 If tickets numbers (tickets, issues or whatever you call them) are part of your team's language using a ticket-based system could be a perfect fit.
 You could use a folder, such as "tickets/242" or "issues/242", or just simply call it "242".
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/tickets-based.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/tickets-based.png" width="250px" style="display: block; margin: auto;">
 
 # Emoji-based
 
 If none of these systems is for you, you can follow [Nick's idea](https://twitter.com/Nick_Craver/status/1037841352053194752) and implement an Emoji-based system :)
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/emoji-based.png" width="450px">
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/emoji-based.png" width="250px" style="display: block; margin: auto;">
 
 # Final words
 
