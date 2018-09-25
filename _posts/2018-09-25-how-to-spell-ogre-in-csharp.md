@@ -7,8 +7,8 @@ permalink: /blog/how-to-spell-ogre-in-csharp
 A few days ago, I had to implement a new feature on Puppeteer-Sharp. The library needed to be able to send emojis through its typing simulation.
 Trying to send and read an 👹 from a WebSocket might be quite confusing. You could get an □ on the other side or an �� on your side, and you would think that's an encoding issue. Maybe it's not. Let's see what the deal is with emojis.
 
-If you know nothing about programming, I bet you would at least feel that emojis are a different kind of character.
-If you know something about programming, you know that emojis are not ASCII characters, they are a different thing.
+If you know nothing about programming, I bet you would at least feel that emojis are a different kind of character.  
+If you know something about programming, you know that emojis are not ASCII characters, they are a different thing.  
 If you’ve coded something related with characters, you might know that they’re related to Unicode.
 
 Let's declare a variable called emojis
