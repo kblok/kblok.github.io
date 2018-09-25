@@ -1,74 +1,107 @@
 ---
-title: How to organize your git branches
-tags: git
-permalink: /blog/how-to-organize-your-git-branches
+title: How do you spell 👹 in C#?
+tags: csharp
+permalink: /blog/how-to-spell-ogre-in-csharp
 ---
 
-I remember implementing git in my team. I think it was more than 6 years ago. At that time, [A successful git branching model](https://nvie.com/posts/a-successful-git-branching-model/) by [Vincent Driessen](https://twitter.com/nvie) was required reading if you wanted to learn how to work with git effectively. Since then, I've been following the "Git Flow" style. But, this past year, I've been influenced by many developers from the community, and started using git in different ways depending on the projects I was working on.
+A few days ago, I had to implement a new feature on Puppeteer-Sharp. The library needed to be able to send emojis through its typing simulation.
+Trying to send and read an 👹 from a WebSocket might be quite confusing. You could get an □ on the other side or an �� on your side, and you would think that's an encoding issue. Maybe it's not. Let's see what the deal is with emojis.
 
-Before getting into the different branching styles, it's important to remember that, although many git clients treat slashes ("/") as a directory separator, there is no such thing as folders or directories in the git specification. You will see this implemented in many UI clients, but I never found it on console clients, or on websites like Github or GitLab.
+If you know nothing about programming, I bet you would at least feel that emojis are a different kind of character.
+If you know something about programming, you know that emojis are not ASCII characters, they are a different thing.
+If you’ve coded something related with characters, you might know that they’re related to Unicode.
 
-That being said, Let's explore some ways of organizing branches, so you don't get lost in a sea of code.
+Let's declare a variable called emojis
+```cs
+var emojis = "👹 in 🇯🇵";
+Console.WriteLine(emojis);
+```
+_note: The flag might break your IDE. Don't try this at home._ 
+>👹 in 🇯🇵
 
-# Gitflow
- 
-Although Gitflow doesn't mention branch folders, many devs use "Feature branches", "Hotfix branches" and "Release branches" and create folders accordingly.
-So basically, a GitFlow organization would have these three folders:
-* feature[s]
-* hotfix[es]/fixes
-* release[s]
+Cool. It works. Now let's try to "spell" that string using ToCharArray.
 
-As there is no public document talking about this, I've seen some working copies using those folders in plural and others in singular.
+```cs
+foreach(var c in emojis)
+{
+    Console.WriteLine(c);
+}
+````
+_Note: This is getting fun. This code broke dotnetfiddle.com. Switching to VS Code._
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/gitflow.png" width="250px" style="display: block; margin: auto;">
+We get this beautiful result:
 
-# Gitflow with steroids
+>�  
+>�
+> 
+>i  
+>n
+> 
+>�  
+>�  
+>�  
+>�
 
-I found myself adding two more folders to my Gitflow repos:
- * Docs: For branches related to markdown or release documents.
- * Task: For branches which are neither features nor fixes. Such as, clean up scripts or refactors.
+# What is a char?
+This [definition of a char](https://docs.microsoft.com/en-us/dotnet/api/system.char?view=netframework-4.7.2) at docs.microsoft.com:
 
-# BPMP (Branch-Push-Merge-Prune)
+>The .NET Framework uses the Char structure to represent a Unicode character. The Unicode Standard identifies each Unicode character with a unique 21-bit scalar number called a code point and defines the UTF-16 encoding form that specifies how a code point is encoded into a sequence of one or more 16-bit values. Each 16-bit value ranges from hexadecimal 0x0000 through 0xFFFF and is stored in a Char structure. The value of a Char object is its 16-bit numeric (ordinal) value.
 
-I’ve seen this a lot in many projects. The branch-push-merge-prune is the anti-folder method. I'm not saying that chaos is a way of organizing branches. People using this method like to have their working copy clean. They would just branch, push, create a pull request and then delete the branch (manually or via git fetch prune) as soon as the PR is merged.
+Two important things here: Chars are Unicode, and chars are 16-bit (2 bytes) objects.
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/bpmp.png" width="250px" style="display: block; margin: auto;">
+# What is an 👹
 
-# Module-based
+Most emojis are 32-bit characters so they won't fit on a 16-bit char. So when we make a `ToCharArray` of `\u1F479` (the ogre) we get a `\u1F47` and a `9` .
 
-I found myself using what I call a "module-based" branching model on a big project where I got quite lost in a sea of features and fixes. So I started to create branches based on its modules. 
+# What is Japan?
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/module-based.png" width="250px" style="display: block; margin: auto;">
+Flags are even more interesting because they are [emoji sequence](http://unicode.org/reports/tr51/#Emoji_Sequences). In the case of the Japanese flag, it's the sequence of the Regional Indicator Symbol Letter J "🇯" and the Regional Indicator Symbol Letter P "🇵". This makes the Japanese flag a 64-bit character.
 
-You could mix Gitflow with this module-based approach, something like "backoffice/billing/fixes/billing-values", but that may be too much.
+Now we can understand why we were getting the following:
 
-# Version-based
+>�  
+>�  
+> 
+>i  
+>n
+> 
+>�  
+>�  
+>�  
+>�
 
-I first saw [Meir](https://twitter.com/MeirBlachman) using this approach and I loved it. It’s great for projects like [Puppeteer-sharp](https://github.com/kblok/puppeteer-sharp) where the roadmap is clear.
-In a version-based repo you create each branch inside a "vX.X" folder. What is cool about this is that it’s time-based, so it's easier to find branches and also it's super easy to delete old versions with this simple git command:
+If we use `ToCharArray` for emojis, we are "breaking" them.
 
-`git branch | grep -e "vX.X/" | xargs git branch -D`
+# StringInfo to the rescue
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/version-based.png" width="250px" style="display: block; margin: auto;">
+According to [its documentation](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo?view=netframework-4.7.2):
 
-Again, this could be mixed with Gitflow folders, but...
+>StringInfo provides functionality to split a string into text elements and to iterate through those text elements.
 
-# Ticket-based
+StringInfo provides a method called [GetTextElementEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo.gettextelementenumerator?view=netframework-4.7.2#System_Globalization_StringInfo_GetTextElementEnumerator_System_String_) which helps us split a string not in chars, but into text elements. 
 
-If tickets numbers (tickets, issues or whatever you call them) are part of your team's language using a ticket-based system could be a perfect fit.
-You could use a folder, such as "tickets/242" or "issues/242", or just simply call it "242".
+So now, if we do this:
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/tickets-based.png" width="250px" style="display: block; margin: auto;">
+```cs
+var textParts = StringInfo.GetTextElementEnumerator(emojis);
+while (textParts.MoveNext())
+{
+    Console.WriteLine(textParts.Current);
+}
+```
 
-# Emoji-based
+We get:
+>👹
+> 
+>i  
+>n  
+> 
+>🇯  
+>🇵
 
-If none of these systems is for you, you can follow [Nick's idea](https://twitter.com/Nick_Craver/status/1037841352053194752) and implement an Emoji-based system :)
+`GetTextElementEnumerator`  splits the Japanese flag into its two emoji characters, but it won't break it. If you type a 🇯 and then a 🇵, you'll get a 🇯🇵. 
 
-<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/git-branches/emoji-based.jpg" width="250px" style="display: block; margin: auto;">
-
-# Final words
-
-Two final thoughts to close this post. First, if you work on a team where you normally checkout each other branches, e.g. for local testing, I'd recommend you share the style with your team.
-And finally, clean your working copy frequently. This will help you find your branches quickly, and also speed up your local repo.
+Try it by yourself copying and pasting those characters in this input element.
+<input>
 
 Don't stop coding!
