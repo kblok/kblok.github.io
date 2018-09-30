@@ -19,7 +19,7 @@ I learned how to [handle files asynchronously for real](https://github.com/kblok
 
 Getting out of my comfort zone improved my coding skills. When your code is being reviewed by the same people over and over, you know what they expect from your code, and you adapt yourself to that review style. Getting out to the OSS world means that your code will be reviewed by people you don’t work with every day. That means people who see the code different and have different expectations. That ends up being a big win for both parts. The reviewer learns new approaches to a problem and the reviewed learns better ways to code a solution.
 
-Being humble. Exposing your code, and even your WIP code, means that people you never met or spoke with, will review your code. That requires accepting that you are not perfect and you have many things to learn.
+Being humble, exposing your code, and even your WIP code, means that people you never met or spoke with, will review your code. That requires accepting that you are not perfect and you have many things to learn.
 
 # What's next?
 
