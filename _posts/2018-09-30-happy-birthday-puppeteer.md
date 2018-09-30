@@ -1,5 +1,5 @@
 ---
-title: Happy Birthday Puppeteer-Sharp!
+title: Happy Birthday Puppeteer Sharp!
 tags: puppeteer-sharp csharp
 permalink: /blog/happy-birthday-puppeteer
 ---
