@@ -21,7 +21,7 @@ Once we catch Puppeteer, again, we will have more time to implement Docker examp
 
 # Progress
 
-* Google Puppeteer’s test: 724
+* Google Puppeteer’s test: 493
 * Puppeteer Sharp’s tests: 482 (prev. 436)
 
 # Activity 
