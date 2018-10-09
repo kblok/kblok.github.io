@@ -15,6 +15,7 @@ During the first week of October, we were able to deliver  [v1.8](https://github
 But they released v1.9 the next day.
 
 ![demned](https://66.media.tumblr.com/44ec508988cce30877b60372cf648035/tumblr_nab8jeCDIW1tv4k5po1_400.gif)
+
 We are almost there. We have planned [v1.9](https://github.com/kblok/puppeteer-sharp/projects/26), and I think we can deliver it in a week or so.
 
 Once we catch Puppeteer, again, we will have more time to implement Docker examples and test Linux support.
