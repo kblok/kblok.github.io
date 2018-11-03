@@ -6,23 +6,23 @@ permalink: /blog/puppeteer-sharp-monthly-nov-2018
  
 >Now that we (almost) catch Puppeteer, I wonder whether this monthly report will still be useful or not in the future. However, I think it’s an excellent place to thank the contributors who stepped in and also the users who join this community.
 
-This is how I closed the [report](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018) last month. It was a pleasant surprise getting this comment (I don't get many comments on my blog) a few days after I published th post.
+This is how I closed the [report](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018) last month. It was a pleasant surprise to get this comment (I don't get many comments on my blog) a few days after I published th post.
 
 ![Tweet Comment](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/nov-2018-report/MarkComment.png)
 
-So here we are, welcome to the November report. We shipped [v1.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.8) and [v1.9](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.9) during October. We shared the same version with our mother project Puppeteer for over a week. However, this morning (November 2nd), they release [v1.10](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.10.0) with an awesome feature: [Accessibility](https://github.com/GoogleChrome/puppeteer/blob/v1.10.0/docs/api.md#class-accessibility), so we have work to do!
+So here we are, welcome to the November report. We shipped [v1.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.8) and [v1.9](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.9) during October. We shared the same version with [our mother project Puppeteer](https://github.com/googleChrome/puppeteer) for over a week. However, this morning (November 2nd), they released [v1.10](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.10.0) with an awesome feature: [Accessibility](https://github.com/GoogleChrome/puppeteer/blob/v1.10.0/docs/api.md#class-accessibility). We have work to do!
 
-One small milestone was introducing [burst mode screenshots](https://github.com/kblok/puppeteer-sharp/pull/705). I consider it a milestone because it's the first feature asked by the community and implemented before the mother project.
+One small milestone was introducing [burst mode screenshots](https://github.com/kblok/puppeteer-sharp/pull/705). I consider it a milestone because it's the first feature asked by the community and implemented in Puppeteer-Sharp before the mother project.
 
 # What's next
 
-[Bilal Durrani](https://github.com/bdurrani) stepped into the project during October. He suggested we needed more code examples. I said "Of course! Let's go for it.". So, during this month we are going to have, not only a samples project on our repo but also an examples section on the site.
+[Bilal Durrani](https://github.com/bdurrani) stepped into the project during October. He suggested we needed more code examples. I said "Of course! Let's go for it.". So, during this month we are going to have, not only a samples project on our repo but also an examples section on the site. Did you know we have a [site](https://www.puppeteersharp.com/)?
 
 ![Tweet Comment](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/nov-2018-report/ExamplesSection.jpg)
 
-We had a little debate there, whether we should have examples on the site, or in real runnable code. We are going to do both. I think Google will do a great job crawling our site and at the same time, you will be able to download those samples from the repo and play with them. I'm super excited about this.
+We had a little debate there, whether we should have examples on the site, or in real runnable code. We are going to do both. I think Google will do a great job crawling our site and, at the same time, you will be able to download those samples from the repo and play with them. I'm super excited about this.
 
-I hope we can also release v1.10. I have the feeling that Google's teams are releasing one version per month, so that's a good thing.
+I hope we can also release v1.10. I have the feeling that Google's teams are releasing one version per month, so that's a good thing, because it give us some time for housekeeping.
 
 We are also working hard with a few users on heavy usage scenarios. We will have some good improvements in performance and stability in the next release.
 
@@ -48,7 +48,7 @@ This will be the last time I publish a tests comparison between these two projec
 
 # Final Words
 
-I’m looking forward to getting more feedback. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter @hardkoded.
+I’m looking forward to getting more feedback. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
 Never stop coding!
 
