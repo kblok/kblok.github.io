@@ -59,7 +59,7 @@ I think most of us have read this rule at least once:
 
 _[Cleary, Stephen. Concurrency in C# Cookbook](https://www.amazon.com/dp/B00KCY2CB4)_
 
-But many times I got in a situation where I needed to code an async void event, so it looked like a perfect excuse: "I know that async void is bad, but I need to code an async Event handler, so I have to use async voids, I’m following the rules everything will be ok".
+But many times I got in a situation where I needed to code an async void event, so it looked like a perfect excuse: "I know that async void is bad, but I need to code an async Event handler, so I have to use async voids, I’m following the rules, everything will be ok".
 
 Well… No.
 
@@ -67,7 +67,7 @@ Well… No.
 
 _[Cleary, Stephen. Concurrency in C# Cookbook](https://www.amazon.com/dp/B00KCY2CB4)_
 
-And, as Ben said, on a console app it will be propagated to the ThreadPool, taking down the entire process.
+But, as Ben said, in a console app, the exception will be propagated to the ThreadPool without being caught, taking down the entire process.
 
 ## Where are those async voids?
 You might be thinking: "Ok, but why are you talking about async voids? that piece of code has no async void?"
