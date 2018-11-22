@@ -59,7 +59,7 @@ I think most of us have read this rule at least once:
 
 _[Cleary, Stephen. Concurrency in C# Cookbook](https://www.amazon.com/dp/B00KCY2CB4)_
 
-But many times I got in a situation where I needed to code an async void event, so it looked like a perfect excuse: "I know that async void is bad, but I need to code an async Event handler, so I have to use async voids, I’m following the rules, everything will be ok".
+But many times I got in a situation where I needed to code an async void event. It looked like a perfect excuse: "I know that async void is bad. But I need to code an async Event handler, so I have to use async voids. I’m following the rules, everything will be ok".
 
 Well… No.
 
