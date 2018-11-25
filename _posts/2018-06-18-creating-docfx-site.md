@@ -27,7 +27,7 @@ As we need to run CI builds many times and we don't want to mess with Puppeteer'
 
 ![Repo Image](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/docfx-tutorial/1_repo.png)
 
-We also need to set up a CI for this new project. [Done](https://ci.appveyor.com/project/kblok/docfx-playground).
+We also need to set up a CI for this new project.
 ![App Veyor](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/docfx-tutorial/2_appveyor.png)
 
 Now, let's copy our P# (yes, I call Puppeteer-Sharp, P#) to this new repo.
