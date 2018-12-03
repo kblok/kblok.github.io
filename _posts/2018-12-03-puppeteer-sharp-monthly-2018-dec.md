@@ -16,7 +16,8 @@ As I mentioned in our [previous report](http://www.hardkoded.com/blog/puppeteer-
 
 This is the first step, but I hope this section to grow a lot in the future.
 
-## Concurrency improvement
+## Concurrency improvement
+
 
 [PR 720](https://github.com/kblok/puppeteer-sharp/pull/720) was quite hard to pull off. However, we managed to improve a lot our code, and now we have better concurrency support and error handling.
 
