@@ -23,7 +23,7 @@ But then, you start using asyncs more and more, and problems arise. As you don't
 There nothing bad about having commandments to follow. But I got fed up with them. I wanted to have an explanation for each of those. Because if you want to master a technology you have to go deeper. So I decided to start reading more about async programming. Trying to get answers to questions like _"What the heck is that false on the ConfigureAwait call"_ or _"Why do I need to call GetAwaiter()?"_ Or even, _"What the heck is an awaiter?"_, _"SynchronizationContext truth or myth?"_, _"If a Task fails in the forest and no one is there, does it still make a sound?"_... well maybe not that one.
 
 So I added three books to my To-Read list:
- * [Concurrency in C# Cookbook, Stephen Cleary](https://www.amazon.com/gp/product/B00KCY2CB4)
+ * [Concurrency in C# Cookbook, Stephen Cleary](https://www.amazon.com/gp/product/B00KCY2CB4). [Go to the review](https://www.hardkoded.com/blog/concurrency-cookbook-review)
  * [Async in C# 5.0, Alex Davies](https://www.amazon.com/gp/product/B0099BJ4DU)
  * [Pro Asynchronous Programming with .NET](https://www.amazon.com/gp/product/B00I01FWGS)
 
