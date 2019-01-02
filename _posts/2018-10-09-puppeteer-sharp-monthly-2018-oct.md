@@ -45,7 +45,7 @@ Now that we (almost) catch Puppeteer, I wonder whether this monthly report will 
 
 I’m looking forward to getting more feedback. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter @hardkoded.
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [September 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)

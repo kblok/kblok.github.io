@@ -56,7 +56,7 @@ There are some code debt that it would be great if we can make some progress: [R
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter @hardkoded.
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [November 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-nov-2018)

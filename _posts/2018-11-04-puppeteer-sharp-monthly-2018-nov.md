@@ -50,7 +50,7 @@ This will be the last time I publish a tests comparison between these two projec
 
 I’m looking forward to getting more feedback. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [October 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
