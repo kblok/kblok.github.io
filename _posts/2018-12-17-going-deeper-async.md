@@ -12,11 +12,11 @@ But then, you start using asyncs more and more, and problems arise. As you don't
 
 ![commandments](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/deeper-async/ten-commandments.jpg)
 
- * You shall use ConfigureAwait(false).
- * You shall not use "async void".
- * You shall not use .Result.
- * Use "GetAwaiter().GetResult()" instead of "Result".
- * Return Task.
+ * You shall use `ConfigureAwait(false)`.
+ * You shall not use `async void`.
+ * You shall not use `.Result`.
+ * Use `GetAwaiter().GetResult()` instead of `.Result`.
+ * Return `Task`.
  * etc.
 
 
