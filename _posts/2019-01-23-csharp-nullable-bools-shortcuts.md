@@ -20,7 +20,7 @@ if (Infinity)
 if (-Infinity)
 ```
 
-When you come from C# you tend to add `> 0` or `!= ''`. Although is could be quite tricky, once you get the idea it becomes super simple to express conditions.
+Coming from C# you tend to add `> 0` or `!= ''`, so this looks quite tricky. But, once you get the idea, it becomes super simple to express conditions.
 
 C# applies the same shortcuts but only for booleans, which is good. You can do:
 
@@ -31,7 +31,7 @@ var falsy = false;
 if (truthy || falsy)
 ```
 
-But the C# team is [very strong](https://github.com/dotnet/csharplang/issues/134), [very strong](https://github.com/dotnet/csharplang/issues/871), not supporting that for `Nullable<bool>` a.k.a. `bool?` (am I the only one how reads nullables as questions?). So you can't do
+But the C# team is [very strong](https://github.com/dotnet/csharplang/issues/134), [very strong](https://github.com/dotnet/csharplang/issues/871), not supporting that for `Nullable<bool>` a.k.a. `bool?` (am I the only one how reads nullables as questions?). So you can't do:
 
 ```cs
 bool? falsy = false;
