@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-feb-2019
 ---
  
-We didn't have a (Google's) Puppeteer release in January. But that doesn't mean that we didn't make good progress on Puppeteer-Sharp.
+We didn't get a (Google's) Puppeteer release last month, but that doesn't mean that we didn't make good progress on Puppeteer-Sharp.
 
 We were working a lot on tech debt. We tried to make our builds more reliable. Many builds tend to fail due to timeouts or race conditions, so we worked in many of them.
 We also went through many [async recommendations](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md) made by [David Fowler](https://twitter.com/davidfowl). If you didn't read that post, go check that out!
