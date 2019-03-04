@@ -27,7 +27,7 @@ I hope I can work on that this month.
 
 * [Meir Blachman](https://www.twitter.com/MeirBlachman) worked a lot on v1.12, pushing   8 PRs.
 
-* [rgelb](https://github.com/rgelb) [improved defaults in screenshots](https://github.com/kblok/puppeteer-sharp/commit/9b1a597d57ff1c20d2ccb850dc1451a8a23727b4).
+* [rgelb](https://github.com/rgelb) improved [defaults in screenshots](https://github.com/kblok/puppeteer-sharp/commit/9b1a597d57ff1c20d2ccb850dc1451a8a23727b4).
 
  * [Stuart Blackler](https://github.com/Im5tu)  pushed 2 PRs, improving [ cancellation tokens](https://github.com/kblok/puppeteer-sharp/commit/7a1de994ccd6325122020c7af95d1898b71e359d) and fixing some [concurrency issues](https://github.com/kblok/puppeteer-sharp/commit/3e082897697dcf4e97f05d4c51e1c218c7f59cb4). 
 
