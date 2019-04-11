@@ -37,7 +37,7 @@ I recommend you to read chapter 8.
 
 >When you await a Task, the current SynchronizationContext is stored as part of pausing the method. Then, when it’s time for the method to be resumed, the await keyword’s infrastructure uses Post to resume the method on the captured SynchronizationContext.
 
-[Mind blown meme]
+![Mind blown](https://media2.giphy.com/media/3o8dFn5CXJlCV9ZEsg/giphy.gif?cid=790b76115caf296f7466586a77225c66)
 
 And it finally has a great explanation of why, and when, we need to use `ConfigureAwait`
 

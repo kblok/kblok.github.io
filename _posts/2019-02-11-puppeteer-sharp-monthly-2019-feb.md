@@ -31,7 +31,7 @@ Another issue that is driving me crazy is [UnobservedTaskExceptions](https://git
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [January 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jan-2019)

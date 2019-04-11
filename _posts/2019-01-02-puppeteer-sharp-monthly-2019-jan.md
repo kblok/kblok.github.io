@@ -39,8 +39,7 @@ As I mentioned before, [Dominic Böttger](https://twitter.com/dboettger) did a g
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-Never stop coding!
-
+Don't stop coding!
 
 #### Previous Reports
  * [December 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-dec-2018)

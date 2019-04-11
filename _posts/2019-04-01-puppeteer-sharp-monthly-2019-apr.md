@@ -60,7 +60,7 @@ As I mentioned before, the more hands we have in this project, the easier for us
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [March 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019)

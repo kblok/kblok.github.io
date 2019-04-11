@@ -41,7 +41,7 @@ We've got 6 contributors in February! I can't believe that. You are welcome to s
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
 
-Never stop coding!
+Don't stop coding!
 
 #### Previous Reports
  * [February 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-feb-2019)
