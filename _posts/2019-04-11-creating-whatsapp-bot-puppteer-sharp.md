@@ -18,8 +18,8 @@ A few days ago I found a video where [Jarrod Overson](https://twitter.com/jsover
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VDGiQ2cwFP4?start=500" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-After watching the video, I was like
-![Idea](https://www.reddit.com/r/reactiongifs/comments/1jg1o9/mrw_i_get_a_wonderful_awful_idea/)
+After watching the video, I was like  
+![Idea](https://media.giphy.com/media/B5AVgxf0OzlyE/giphy.gif)
 
 
 >If he was able to automate VS Code because it was an electron app, I should be able to do that with the WhatsApp app.
@@ -36,7 +36,7 @@ We want to create a basic chatbot. It would wait for a **trigger word** and resp
 
 Let's take a look at the WebApp.
 
-[main-whatsapp.png]
+![main page](https://github.com/kblok/kblok.github.io/raw/master/img/whatsappbot/main-whatsapp.png)
 
 This is what we need to do:
  * Open that page.
@@ -49,7 +49,7 @@ This is what we need to do:
 
 I need to know how to search for a group, click on that group and type a message. DevTools is our best friend for this task.
 
-[devtools.png] 
+![DevTools](https://github.com/kblok/kblok.github.io/raw/master/img/whatsappbot/devtools.png)
 
 After exploring the DOM, we found that:
  * All the page is inside a `#pane-side` div.
@@ -136,14 +136,14 @@ public class BotArguments
 }
 ```
 
-Now my `Main` method looks like this:
+This is how my `Main` method looks like:
 
 ```cs
 static async Task Main(string[] args)
 {
     await Parser.Default.ParseArguments<BotArguments>(args).MapResult(
-            async (BotArguments result) => await LaunchProcessAsync(result),
-            _ => Task.FromResult<object>(null));
+        async (BotArguments result) => await LaunchProcessAsync(result),
+        _ => Task.FromResult<object>(null));
 }
 ```
 
@@ -158,6 +158,7 @@ var input = await _whatsAppPage.QuerySelectorAsync(WhatsAppMetadata.SearchInput)
 await input.TypeAsync(args.ChatName);
 await _whatsAppPage.WaitForTimeoutAsync(500);
 ```
+
 Pretty cool ah?
 We query for an element, we type on it, and then we wait just a little bit for the DOM to be refreshed.
 
@@ -165,7 +166,7 @@ We query for an element, we type on it, and then we wait just a little bit for t
 
 If we assume that the person we are looking for will be the first one on our list, we will know that it will be the second item on that list, because "CHATS" will be the first item.
 
-[first-item.png]
+![First Item](https://github.com/kblok/kblok.github.io/raw/master/img/whatsappbot/first-item.png)
 
 Now that we know that, we can do:
 
@@ -189,7 +190,7 @@ We will need two things:
 
 `ExposeFunctionAsync` will help us register a C# function on the Chromium side.
 
-[What? meme]
+![What?](https://media3.giphy.com/media/lsU7mOh76j4QM/giphy.gif?cid=790b76115caf2a587652616e2e96ddfa)
 
 ```cs
 await _whatsAppPage.ExposeFunctionAsync("newChat", async (string text) =>
