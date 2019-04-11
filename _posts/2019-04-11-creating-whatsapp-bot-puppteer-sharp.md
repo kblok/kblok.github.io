@@ -220,21 +220,22 @@ When `newChat` is called we will:
 If `ExposeFunctionAsync` was our best friend on the C# side, [MutatorObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) will be our best friend on the Javascript side.
 
 ```cs
-await _whatsAppPage.EvaluateFunctionAsync($@"() => {{
-    var observer = new MutationObserver((mutations) => {{
-        for(var mutation of mutations) {{
+await _whatsAppPage.EvaluateFunctionAsync($@"() => {
+    var observer = new MutationObserver((mutations) => {
+        for(var mutation of mutations) {
             if(mutation.addedNodes.length &&
-               mutation.addedNodes[0].classList.value === '{WhatsAppMetadata.MessageLine}') {{
+               mutation.addedNodes[0].classList.value === '{WhatsAppMetadata.MessageLine}') {
                 newChat(mutation.addedNodes[0].querySelector('.copyable-text span').innerText);
-            }}
-        }}
-    }});
+            }
+        }
+    });
     observer.observe(
         document.querySelector('{WhatsAppMetadata.ChatContainer}'),
         {{ attributes: false, childList: true, subtree: true }});
-}}");
+}");
 }
 ```
+_Note: The [real code](https://github.com/kblok/WhatsAppBot/blob/master/WhatsAppBot/Program.cs#L72) has double curly brackets. I removed them ~~because it breaks jekyll~~ so it's more clear_
 
 What we are doing here is observing changes on the childList of our `WhatsAppMetadata.ChatContainer` element. Inside the observer, we will filter items where the class value is our `MessageLine` const.
 If we have a match, we call `newChat` sending that `innerText` to C#.
