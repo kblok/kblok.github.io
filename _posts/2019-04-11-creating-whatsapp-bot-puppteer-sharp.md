@@ -242,7 +242,7 @@ If we have a match, we call `newChat` sending that `innerText` to C#.
 
 ## Type a message when needed.
 
-I found that (MarkovSharp)[https://github.com/chriscore/MarkovSharp] could help me build some responses based on a chat export I have.
+I found that [MarkovSharp](https://github.com/chriscore/MarkovSharp) could help me build some responses based on a chat export I have.
 
 Setting up `MarkupSharp` is as easy as this:
 
