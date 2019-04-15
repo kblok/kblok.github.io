@@ -14,7 +14,7 @@ Now that I read both books, I would recommend Async in C# 5.0 as the first book 
 
 This statement is so simple, but I love it. Asynchronous code is contagious. It's simple, but it's essential. When you use an async method, don't try to make it synchronous, don't try to `Wait` it, don't try to just `.Result` it. You have to let that method spread the async through all your code.
 
-There are no excuses not to make your code async. Controllers can return a Task<IActionResult> in ASP.NET MVC. You can enable [async](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ydy4x04a(v=vs.100)) in ASP.NET Full Framework pages.  Even in console apps, You can make your main method async with [C# 7.1](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#async-main).
+There are no excuses not to make your code async. Controllers can return a Task<IActionResult> in ASP.NET MVC. You can enable [async](https://bit.ly/2v3FHrz) in ASP.NET Full Framework pages.  Even in console apps, You can make your main method async with [C# 7.1](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#async-main).
 
 
 ## Await under the hood
