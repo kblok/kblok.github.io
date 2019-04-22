@@ -10,7 +10,7 @@ As you may have heard, Microsoft made available to the public its [Chromium-powe
 
 ![Idea](https://media.giphy.com/media/B5AVgxf0OzlyE/giphy.gif)
 
-When you call `Puppeteer.LaunchAsync`, one of the properties you can pass in using `LaunchOptions` is the [ExecutablePath](https://www.puppeteersharp.com/api/PuppeteerSharp.LaunchOptions.html#PuppeteerSharp_LaunchOptions_ExecutablePath).
+When you call `Puppeteer.LaunchAsync`, one of the values you can set in the `LaunchOptions` is the [ExecutablePath](https://www.puppeteersharp.com/api/PuppeteerSharp.LaunchOptions.html#PuppeteerSharp_LaunchOptions_ExecutablePath).
 
 So, what would happen if we launch Puppeteer passing our Microsoft Edge browser path?
 
