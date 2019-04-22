@@ -4,11 +4,9 @@ tags: puppeteer-sharp csharp
 permalink: /blog/automating-microsoft-edge-puppteer-sharp
 ---
 
-As you may have heard, Microsoft made available to the public its [Chromium-powered Edge browser](https://www.microsoftedgeinsider.com/en-us/).
+As you may have heard, Microsoft made available to the public its [Chromium-powered Edge browser](https://www.microsoftedgeinsider.com/en-us/).  Maybe this question won't qualify as technical interview question but:
 
-So, maybe this question won't qualify for a technical interview but:
-
->If Puppeteer-Sharp automates Chromium and Microsoft Edge (insider) is powered by chromium, that would mean that
+>If Puppeteer-Sharp automates Chromium, and Microsoft Edge (insider) is powered by chromium, that would mean that
 
 ![Idea](https://media.giphy.com/media/B5AVgxf0OzlyE/giphy.gif)
 
