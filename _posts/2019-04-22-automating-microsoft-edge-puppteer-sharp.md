@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/automating-microsoft-edge-puppteer-sharp
 ---
 
-As you may have heard, Microsoft Launched made available to the public its [Chromium-powered Edge browser](https://www.microsoftedgeinsider.com/en-us/).
+As you may have heard, Microsoft made available to the public its [Chromium-powered Edge browser](https://www.microsoftedgeinsider.com/en-us/).
 
 So, maybe this question won't qualify for a technical interview but:
 
