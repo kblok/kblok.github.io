@@ -4,18 +4,18 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-may-2019
 ---
 
-We shipped [v1.14]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.14) and a tiny [v1.14.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.14.1) in the past month. As the main work in Puppeteer is around Firefox, there were no significant changes in these versions.
-Linux users will be glad to know that we drop Mono as a dependency. We used a Mono dll just to fix Chromium permissions, and now we are doing that using only `libc`.
+We shipped [v1.14](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.14) and a tiny [v1.14.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.14.1) in the past month. As the main work in Puppeteer is around Firefox, there were no significant changes in these versions.  
+**But**, Linux users will be glad to know that we drop Mono as a dependency. We used a Mono dll just to fix Chromium permissions, and now we are doing that using only `libc`.
 
 # Firefox is coming.
 
-[Meir Blachman](https://www.twitter.com/MeirBlachman) made [some progress](https://github.com/kblok/puppeteer-sharp/pull/1073) on the abstraction layer we need to support Firefox. I hope we keep moving that way in May.
+[Meir Blachman](https://www.twitter.com/MeirBlachman) has made [some progress](https://github.com/kblok/puppeteer-sharp/pull/1073) on the abstraction layer we need to support Firefox. I hope we keep moving that way in May.
 
 # What's next
 
 We are almost done with [v1.15](https://github.com/kblok/puppeteer-sharp/projects/33). I hope we can publish it early this month.
 
-I wasn't able to work on this during ~~March~~April, and I feel terrible, well not that terrible.
+I wasn't able to work on this during ~~March~~April. I hope I can work on that this month.
 >I wasn't able to work on  this during February:
 >Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/kblok/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
 
