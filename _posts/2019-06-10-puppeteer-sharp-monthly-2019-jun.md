@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-jun-2019
 ---
 
-May was a month full of releases. We shipped [v1.15]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.15), [v1.16]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.16), [v1.17]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17) and a small [v1.17.1]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17.1).
+May was a month full of releases. We shipped [v1.15](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.15), [v1.16](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.16), [v1.17](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17) and a small [v1.17.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17.1).
 
 # What's next
 
