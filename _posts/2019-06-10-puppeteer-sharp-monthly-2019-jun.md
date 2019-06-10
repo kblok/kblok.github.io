@@ -5,6 +5,9 @@ permalink: /blog/puppeteer-sharp-monthly-jun-2019
 ---
 
 May was a month full of releases. We shipped [v1.15](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.15), [v1.16](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.16), [v1.17](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17) and a small [v1.17.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17.1).
+Ok, this was really short. Let me compensate that with a puppeteer gif.
+
+![Puppeteer](https://media2.giphy.com/media/l2QE4vQGIiwMzszh6/giphy.gif?cid=790b76115cfe432b3448756749c600bb&rid=giphy.gif)
 
 # What's next
 
