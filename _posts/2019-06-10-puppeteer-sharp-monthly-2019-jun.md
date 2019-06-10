@@ -11,7 +11,7 @@ Ok, this was really short. Let me compensate that with a puppeteer gif.
 
 # What's next
 
-I want to prepare some examples using Azure Functions. We have a lot of questions related to Puppeteer in Azure. So I think this will be really valued by the community.
+I want to prepare some examples using Azure Functions. We have a lot of questions related to Puppeteer in Azure, so I think this will be really valued by the community.
 
 # Activity 
 
