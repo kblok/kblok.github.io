@@ -100,7 +100,7 @@ You can read about running SQL Server on Docker [here](https://docs.microsoft.co
 
 ### You need data to work with
 
-As each developer would have her own database, having data to create an useful and ready-to- use database becomes another very important piece of the project. It's very easy to create all this data if you already have an existing database.
+As each developer would have her own database, having data to create a useful and ready-to- use database becomes another very important piece of the project. It's very easy to create all this data if you already have an existing database.
 
 First, let's create a Data folder where we'll save all our insert scripts.
 
