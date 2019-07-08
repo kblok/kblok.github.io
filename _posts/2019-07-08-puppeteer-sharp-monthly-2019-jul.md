@@ -28,7 +28,7 @@ I'm still working on this. I hope I have more time this month to make some progr
 
 # Contributors
 
-No contributors this month
+No contributors this month.
 
 ![Sad](https://i.giphy.com/media/UGygQcQhTyjmw/giphy.webp)
 
