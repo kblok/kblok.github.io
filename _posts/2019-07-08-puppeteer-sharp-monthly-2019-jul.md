@@ -14,7 +14,7 @@ As we were able to ship [v1.17](https://github.com/kblok/puppeteer-sharp/release
 
 # What's next
 
-We're now working on v1.18. Doing [evaluations with one trip](https://github.com/GoogleChrome/puppeteer/commit/90df69cf77e88cc4a057cb2ec04b6aa973f568c7) and [OOPIF](https://github.com/GoogleChrome/puppeteer/commit/015e3308155e23282d76b9f846636a5c4eb4e49e support) will be some cool features.
+We're now working on v1.18. Doing [evaluations with one trip](https://github.com/GoogleChrome/puppeteer/commit/90df69cf77e88cc4a057cb2ec04b6aa973f568c7) and [OOPIF](https://github.com/GoogleChrome/puppeteer/commit/015e3308155e23282d76b9f846636a5c4eb4e49e support) will be some the cool features you will see on v1.18.
 
 >I want to prepare some examples using Azure Functions. We have many questions related to Puppeteer in Azure. So I think this will be valued by the community.
 
