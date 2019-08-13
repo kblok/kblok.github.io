@@ -50,7 +50,7 @@ Now, we can create a 1.0 release on Github.
 
 ![Seventhh step](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/pushing-to-docker/7.png)
 
-And voilà! We have a 1.0 on Docker!
+And voilà! We have a v1.0 on Docker!
 
 ![Eight step](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/pushing-to-docker/8.png)
 
@@ -70,7 +70,7 @@ Boom! We have our new image working!
 ![Celebration](https://media2.giphy.com/media/3o8doT9BL7dgtolp7O/giphy.gif?cid=ecf05e47466ea3c4637d81e4575ee127d7e94f854c1c9c11&rid=giphy.gif)
 
 
-Final Words
+## Final Words
 
 I hope this journey can help you to setup your own images, and also to start using Puppeteer-Sharp on Docker.
 As you can see, I'm not a Docker expert. If you are, and you found something off on my post, please let me know!
