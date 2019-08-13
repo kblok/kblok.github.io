@@ -1,5 +1,5 @@
 ---
-title: Pushing your Docker image to Docker Hub
+title: Pushing your Docker images to Docker Hub
 tags: puppeteer-sharp docker
 permalink: /blog/pushing-to-docker
 ---
