@@ -1,6 +1,6 @@
 ---
 title: Running Puppeteer-Sharp on Docker
-tags: puppeteer-sharp csharp
+tags: puppeteer-sharp docker
 permalink: /blog/puppeteer-sharp-docker
 ---
 
