@@ -12,7 +12,8 @@ We also shipped [v1.19](https://github.com/kblok/puppeteer-sharp/releases/tag/v1
 
 ## Docker
 
-I wrote a [post](http://www.hardkoded.com/blog/puppeteer-sharp-docker) about running Puppeteer-Sharp on Docker. I think this is going to be super helpful. But there is more, I also published [another post](http://www.hardkoded.com/blog/pushing-to-docker) about pushing that image to Docker Hub. So now we have [puppeteer-sharp-base](https://hub.docker.com/r/hardkoded/puppeteer-sharp-base) on Docker for you to test. I would really love to have some feedback there.
+I wrote a [post](http://www.hardkoded.com/blog/puppeteer-sharp-docker) about running Puppeteer-Sharp on Docker. I think this is going to be super helpful. But there is more.  
+I also published [another post](http://www.hardkoded.com/blog/pushing-to-docker) about pushing that image to Docker Hub. So now we have [puppeteer-sharp-base](https://hub.docker.com/r/hardkoded/puppeteer-sharp-base) on Docker for you to test. I would really love to have some feedback there.
 
 # What's next
 
