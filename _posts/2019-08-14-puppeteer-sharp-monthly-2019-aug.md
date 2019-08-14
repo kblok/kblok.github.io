@@ -16,7 +16,7 @@ I wrote a [post](http://www.hardkoded.com/blog/puppeteer-sharp-docker) about run
 
 # What's next
 
-I bet v1.20 is around the corner. So we will work on that.
+I bet v1.20 is around the corner. So we will work on that.  
 On the other hand, I wasn't able to get Puppeteer-Sharp working on Azure Functions, but I will see if that new recipe I got will help me make some progress there.
 
 # Activity 
