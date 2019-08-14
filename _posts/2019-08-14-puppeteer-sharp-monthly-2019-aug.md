@@ -4,9 +4,9 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-aug-2019
 ---
 
-We shipped [v1.18]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.18) in July. If you are using `EvaluateOnNewDocumentAsync`, please take a look at that version because we had a breaking change there. 
+We shipped [v1.18](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.18) in July. If you are using `EvaluateOnNewDocumentAsync`, please take a look at that version because we had a breaking change there. 
 
-We also shipped [v1.19]https://github.com/kblok/puppeteer-sharp/releases/tag/v1.19), but that will be on the September report :p. 
+We also shipped [v1.19](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.19), but that will be on the September report :p. 
 
 ![Too fast](https://media3.giphy.com/media/Mo0XNBGMKQtYtv5Jq9/giphy.gif?cid=790b7611177a6f05253ffe4be7db6c7e9b480878232c29a7&rid=giphy.gif)
 
