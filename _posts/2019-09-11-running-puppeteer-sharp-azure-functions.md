@@ -6,7 +6,8 @@ permalink: /blog/running-puppeteer-sharp-azure-functions
 
 Let's see if we can get Puppeteer-Sharp running into an Azure Function.
 
-Finally!!! 
+Finally!!!  
+
 ![Finally](https://media2.giphy.com/media/13HdQUsXSa6QYU/giphy.gif?cid=790b7611775d3f466a85a8b08e6a669c01659359ddc1eb2c&rid=giphy.gif)
 
 # Environment
@@ -74,11 +75,11 @@ public static async Task<IActionResult> Run(
     {
         Headless = true,
         Args = new[] { "--no-sandbox" },
-                DefaultViewport = new ViewPortOptions
-                {
-                    Width = 2000,
-                    Height = 800
-                } 
+        DefaultViewport = new ViewPortOptions
+        {
+            Width = 2000,
+            Height = 800
+        } 
     }))
     using (var page = await browser.NewPageAsync())
     {
