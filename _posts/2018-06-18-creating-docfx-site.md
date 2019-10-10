@@ -17,7 +17,7 @@ We have documented all the code on [Puppeteer-Sharp](https://github.com/kblok/pu
 
 # What do we know?
 
- * We know that we need to tell the dotnet compiler to generate an XML file with the documentation. [We are already doing that](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj#L67).
+ * We know that we need to tell the dotnet compiler to generate an XML file with the documentation. [We are already doing that](https://github.com/kblok/puppeteer-sharp/blob/v1.20/lib/PuppeteerSharp/PuppeteerSharp.csproj#L40).
 * We know we want to use [DocFX].(https://dotnet.github.io/docfx/tutorial/walkthrough/walkthrough_create_a_docfx_project.html)
 * We want it to be an automatic step in our CI.
 
