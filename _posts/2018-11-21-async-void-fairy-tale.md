@@ -159,7 +159,7 @@ Now it makes more sense when you read this on the [Using Asynchronous Methods in
 
 >The downside to async void events is that developers no longer have full control over when events execute. For example, if both an .aspx and a .Master define Page_Load events, and one or both of them are asynchronous, the order of execution can't be guaranteed. The same indeterminate order for non event handlers (such as async void Button_Click ) applies.
 
-Of course, the order of execution can't be guaranteed, because **the `Invoke` method won't await your `async` event handlers.
+Of course, the order of execution can't be guaranteed, because **the `Invoke` method won't await your `async` event handlers**.
 
 ## Wait for frames to be created.
 
