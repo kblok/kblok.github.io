@@ -14,6 +14,8 @@ Now, let's go to the important part of the post. Are we going to have a `Playwri
 
 ![yes](https://media2.giphy.com/media/10Jpr9KSaXLchW/giphy.gif?cid=790b7611f42ab6c5c6cf35c80cf2a14aff294637a1a6ef38&rid=giphy.gif)
 
+Yes, we are going to build a .NET port of Playwright (I just added this sentence for SEO purposes).
+
 We already have the most important things:
 
  * A repo [https://github.com/kblok/playwright-sharp](https://github.com/kblok/playwright-sharp)
