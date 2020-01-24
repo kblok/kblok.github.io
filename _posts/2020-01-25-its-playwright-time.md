@@ -16,10 +16,10 @@ Now, let's go to the important part of the post. Are we going to have a `Playwri
 
 We already have the most important things:
 
-A repo https://github.com/kblok/playwright-sharp
-A NuGet package https://www.nuget.org/packages/PlaywrightSharp/. Although we are going to have many packages (an abstraction package, and one package per browser).
-A domain http://www.playwrightsharp.com/ (don't even bother to click on the link yet)
-And a project! https://github.com/kblok/playwright-sharp/projects/1
+ * A repo [https://github.com/kblok/playwright-sharp](https://github.com/kblok/playwright-sharp)
+ * A NuGet package [https://www.nuget.org/packages/PlaywrightSharp/](https://github.com/kblok/playwright-sharp). Although we are going to have many packages (an abstraction package, and one package per browser).
+ * A domain [http://www.playwrightsharp.com/](http://www.playwrightsharp.com/) (don't even bother to click on the link yet)
+ * And a project! [https://github.com/kblok/playwright-sharp/projects/1](https://github.com/kblok/playwright-sharp/projects/1)
 
 # Core Guidelines
 
@@ -33,8 +33,8 @@ We won't (technically speaking) respect [semver](https://semver.org/). We will a
 
 Although this is not defined yet, Playwright sharp will look something like this:
 
-**PlaywrightSharp.Abstractions**, with interfaces and base classes.
-**PlaywrightSharp.<BrowserEngine>**. We will have browser-specific packages, e.g., PlaywrightSharp.Chromium
+ * **PlaywrightSharp.Abstractions**, with interfaces and base classes.
+ * **PlaywrightSharp.<BrowserEngine>**. We will have browser-specific packages, e.g., PlaywrightSharp.Chromium
 
 # The plan
 
