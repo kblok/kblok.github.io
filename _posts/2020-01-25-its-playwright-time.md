@@ -35,7 +35,8 @@ We won't (technically speaking) respect [semver](https://semver.org/). We will a
 
 Although this is not defined yet, Playwright sharp will look something like this:
 
- * **PlaywrightSharp.Abstractions**, with interfaces and base classes.
+ * **Playwright**, with base clases.
+ * **PlaywrightSharp.Abstractions**, with interfaces, using the namespace `Playwright`.
  * **PlaywrightSharp._#BrowserEngine#_**. We will have browser-specific packages, e.g., PlaywrightSharp.Chromium
 
 # The plan
