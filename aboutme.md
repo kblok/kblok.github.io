@@ -19,7 +19,13 @@ Joining MultiTracks.com in 2015 was a life changer. I started working as a remot
 
 **Side projects**
 
-I'm passionate about software. I love learning something new every day. I love Node JS for scripting. I had fun creating a [bot](https://github.com/kblok/TelegramBotFriend) using Python. I coded a [content generator](https://github.com/kblok/RNN-bible-generator) using TensorFlow. And my last project, which I'm super excited about, is [Puppeteer-Sharp](https://github.com/kblok/puppeteer-sharp), a C# port of Google's [puppeteer](https://github.com/GoogleChrome/puppeteer) library.
+I'm passionate about software. I love learning something new every day. I love Node JS for scripting. I had fun creating a [bot](https://github.com/kblok/TelegramBotFriend) using Python. I coded a [content generator](https://github.com/kblok/RNN-bible-generator) using TensorFlow. 
+
+One of my main projects, which I'm super excited about, is [Puppeteer-Sharp](https://github.com/kblok/puppeteer-sharp), a C# port of Google's [puppeteer](https://github.com/GoogleChrome/puppeteer) library.
+
+2020 arrived with new challenges, [It's playwright time!](https://www.hardkoded.com/blog/its-playwright-time) As I did with Puppeteer-Sharp, Playwright will have its .NET version:[Playwright-Sharp](https://github.com/kblok/playwright-sharp).
+
+I love the open source community. I love not only contributing to open source projects but also help developers to be part of this great community.
 
 **Final words**
 
