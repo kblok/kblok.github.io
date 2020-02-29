@@ -6,7 +6,7 @@ permalink: /blog/puppeteer-sharp-monthly-nov-2018
  
 >Now that we (almost) catch Puppeteer, I wonder whether this monthly report will still be useful or not in the future. However, I think it’s an excellent place to thank the contributors who stepped in and also the users who join this community.
 
-This is how I closed the [report](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018) last month. It was a pleasant surprise to get this comment (I don't get many comments on my blog) a few days after I published th post.
+This is how I closed the [report](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018) last month. It was a pleasant surprise to get this comment (I don't get many comments on my blog) a few days after I published th post.
 
 ![Tweet Comment](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/nov-2018-report/MarkComment.png)
 
@@ -53,10 +53,10 @@ I’m looking forward to getting more feedback. The issues tab in GitHub is open
 Don't stop coding!
 
 #### Previous Reports
- * [October 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
- * [September 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
- * [July 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
- * [June 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
- * [May 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
- * [April 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
- * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [October 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
+ * [September 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
+ * [July 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
+ * [June 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
+ * [May 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
+ * [April 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
+ * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)

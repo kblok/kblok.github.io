@@ -12,8 +12,8 @@ We also shipped [v1.19](https://github.com/kblok/puppeteer-sharp/releases/tag/v1
 
 ## Docker
 
-I wrote a [post](http://www.hardkoded.com/blog/puppeteer-sharp-docker) about running Puppeteer-Sharp on Docker. I think this is going to be super helpful. But there is more.  
-I also published [another post](http://www.hardkoded.com/blog/pushing-to-docker) about pushing that image to Docker Hub. So now we have [puppeteer-sharp-base](https://hub.docker.com/r/hardkoded/puppeteer-sharp-base) on Docker for you to test. I would really love to have some feedback there.
+I wrote a [post](https://www.hardkoded.com/blog/puppeteer-sharp-docker) about running Puppeteer-Sharp on Docker. I think this is going to be super helpful. But there is more.  
+I also published [another post](https://www.hardkoded.com/blog/pushing-to-docker) about pushing that image to Docker Hub. So now we have [puppeteer-sharp-base](https://hub.docker.com/r/hardkoded/puppeteer-sharp-base) on Docker for you to test. I would really love to have some feedback there.
 
 # What's next
 
@@ -41,11 +41,11 @@ I'm looking forward to getting more feedback. Having real-world feedback helps u
 Don't stop coding!
 
 #### Previous Reports
- * [July 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2019)
+ * [July 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2019)
  * [June 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2019)
- * [May 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-may-2019)
- * [April 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-apr-2019)
- * [March 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019)
- * [February 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-feb-2019)
+ * [May 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-may-2019)
+ * [April 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-apr-2019)
+ * [March 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019)
+ * [February 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-feb-2019)
  * [January 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jan-2019)
  

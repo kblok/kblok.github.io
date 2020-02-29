@@ -2,6 +2,7 @@
 title: Going deeper with async programming
 tags: csharp books
 permalink: /blog/going-deeper-async
+cross-site-link: https://www.hardkoded.com/es/blog/yendo-a-las-profundidades-async
 ---
 
 When you start coding async apps in C# it looks super simple, almost magical. You put some asyncs here some awaits there, and you are done! 

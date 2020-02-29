@@ -2,7 +2,8 @@
 title: A fairy tale about async voids, events and error handling
 tags: puppeteer-sharp csharp
 permalink: /blog/async-void-fairy-tale
----
+cross-site-link: https://www.hardkoded.com/es/blog/cuento-async-void
+ ---
  
 Let me tell you a story about async voids, SynchronizationContext, and async programming. A few days ago we got [an issue on Puppeteer-Sharp](https://github.com/kblok/puppeteer-sharp/issues/717) describing two problems:
  * Puppeteer-Sharp crashes with exceptions which cannot be caught.

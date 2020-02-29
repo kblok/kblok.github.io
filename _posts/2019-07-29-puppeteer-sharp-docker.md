@@ -2,6 +2,7 @@
 title: Running Puppeteer-Sharp on Docker
 tags: puppeteer-sharp docker
 permalink: /blog/puppeteer-sharp-docker
+cross-site-link: https://www.hardkoded.com/es/blog/puppeteer-sharp-docker
 ---
 
 I get many questions about running Puppeteer-Sharp on Docker. Let's see if we can get a:

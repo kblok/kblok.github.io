@@ -39,7 +39,7 @@ If you want to code for a few days and have some fun, go ahead, you don't need a
 
 I'm sorry, I know it's boring, but you will need to spend a few [Pomodoros](https://en.wikipedia.org/wiki/Pomodoro_Technique) building a roadmap instead of writing code. The good thing, at least in my experience, is that you don't necessarily need to set dates. Although people would like to know when they will be able to use some feature, they also know you are doing it on your free time. Project followers shouldn't push you to implement a feature within a certain time (unless your project reaches the popularity of Newtonsoft JSON or ReactJS).
 
-When I realized I needed a [Roadmap](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018) for Puppeteer Sharp, I put every feature I knew the library should have into different shippable versions. I didn't mention when I was going to implement those features, but instead, how I would prioritize them. And that not only helped the guys interested in the project, but also helped me to code in order.
+When I realized I needed a [Roadmap](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018) for Puppeteer Sharp, I put every feature I knew the library should have into different shippable versions. I didn't mention when I was going to implement those features, but instead, how I would prioritize them. And that not only helped the guys interested in the project, but also helped me to code in order.
 
 ## Your tests are your lighthouse
 

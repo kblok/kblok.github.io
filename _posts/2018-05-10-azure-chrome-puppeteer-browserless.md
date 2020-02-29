@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blogs/azure-chrome-puppeteer-browserless
 ---
 
-One of the most exciting features of [Puppeteer Sharp v0.4](http://www.hardkoded.com/blogs/puppeteer-sharp-v04-is-here) is the ability to connect to remote browsers, like browserless.io. So, when I decided to write a post about using Chrome in Azure, I knew I had two options:
+One of the most exciting features of [Puppeteer Sharp v0.4](https://www.hardkoded.com/blogs/puppeteer-sharp-v04-is-here) is the ability to connect to remote browsers, like browserless.io. So, when I decided to write a post about using Chrome in Azure, I knew I had two options:
 
 The first option would be something like this:
 

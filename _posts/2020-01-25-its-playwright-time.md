@@ -2,6 +2,7 @@
 title: It's Playwright time!
 tags: playwright
 permalink: /blog/its-playwright-time
+cross-site-link: https://www.hardkoded.com/es/blog/es-hora-de-playwright
 ---
 
 If you are a puppeteer/puppeteer-sharp user, I bet you might be as excited as I am with the new [Playwright](https://github.com/microsoft/playwright) project. Playwright will take browser automation to the next level.
@@ -45,7 +46,7 @@ Chasing an active project is quite a challenge. You are always one step behind. 
 
 We have our [first project](https://github.com/kblok/playwright-sharp/projects/1). 157 issues that will take us to the [first-snapshot](https://github.com/kblok/playwright/tree/first-snapshot) I created today (Jan 24th).
 
-As [I learned in the past](http://www.hardkoded.com/blogs/how-to-start-an-oss-project), tests will be our lighthouse. They will be the first thing we are going to code (second, technically), and they will guide our implementation process.
+As [I learned in the past](https://www.hardkoded.com/blogs/how-to-start-an-oss-project), tests will be our lighthouse. They will be the first thing we are going to code (second, technically), and they will guide our implementation process.
 
 # Final Words
 

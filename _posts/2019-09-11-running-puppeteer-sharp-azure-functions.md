@@ -14,7 +14,7 @@ Finally!!!
 
 Azure sandboxes have [some restrictions](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html). They also have blocked many GDI APIs. So, copying and executing a chrome.exe file in the build folder won't work.
 
-**But**, we can [create a function using a custom docker image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image), and we’ve already learned [how to run puppeteer-sharp on Docker ](http://www.hardkoded.com/blog/puppeteer-sharp-docker).
+**But**, we can [create a function using a custom docker image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image), and we’ve already learned [how to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker).
 
 ![Idea](https://media1.giphy.com/media/l3mZasrfwrWUMnndS/giphy.gif?cid=790b7611ce327bb0e3f23a0d7571e481e562dcbc8c362319&rid=giphy.gif)
 
@@ -24,7 +24,7 @@ I think these three posts will be super helpful:
 
  * [Create a function on Linux using a custom image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image).
  * [Azure Functions in a Docker Container](https://medium.com/faun/azure-functions-in-a-docker-container-56e625da3243) by [Matias Miguenz](https://medium.com/@miguenz.matias)
- * [How to run puppeteer-sharp on Docker ](http://www.hardkoded.com/blog/puppeteer-sharp-docker) ;)
+ * [How to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker) ;)
 
 # Prerequisites
 
@@ -135,7 +135,7 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 
 COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
 ```
-So, [a few posts ago](http://www.hardkoded.com/blog/puppeteer-sharp-docker), we learned how to run Puppeteer-Sharp on Docker. What if we mix the DockerFile `func` created with our recipe?
+So, [a few posts ago](https://www.hardkoded.com/blog/puppeteer-sharp-docker), we learned how to run Puppeteer-Sharp on Docker. What if we mix the DockerFile `func` created with our recipe?
 
 It would be something like this:
 

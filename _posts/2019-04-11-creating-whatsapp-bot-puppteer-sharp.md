@@ -2,11 +2,12 @@
 title: Creating a WhatsApp bot with Puppeteer-Sharp
 tags: puppeteer-sharp csharp
 permalink: /blog/creating-whatsapp-bot-puppteer-sharp
+cross-site-link: https://www.hardkoded.com/es/blog/creando-un-bot-para-whatsapp-con-puppeteer-sharp
 ---
 
 # Once upon a time
 
-[Not enough friends? Get a bot!](http://www.hardkoded.com/blogs/not-enough-friends-get-a-bot) was my second post on this blog. I was learning some Machine Learning back then. I found that many devs were using [Marcovify](https://github.com/jsvine/markovify) and I thought it would be fun to create a bot to interact with my friends. But I found that it was not so simple to create a bot for WhatsApp. You need to set up a [business account](https://www.whatsapp.com/business/) and pay for it. So I built it on Telegram.
+[Not enough friends? Get a bot!](https://www.hardkoded.com/blogs/not-enough-friends-get-a-bot) was my second post on this blog. I was learning some Machine Learning back then. I found that many devs were using [Marcovify](https://github.com/jsvine/markovify) and I thought it would be fun to create a bot to interact with my friends. But I found that it was not so simple to create a bot for WhatsApp. You need to set up a [business account](https://www.whatsapp.com/business/) and pay for it. So I built it on Telegram.
 
 There is one problem with Telegram. **It wasn't our primary chat app**. We all love it, but we use WhatsApp...
 

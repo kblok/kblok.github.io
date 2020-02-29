@@ -2,6 +2,7 @@
 title: How to work with stored procedures and not die trying 
 tags: sqlserver
 permalink: /blogs/how-to-work-with-stored-procedures-and-not-die-trying
+cross-site-link: https://www.hardkoded.com/es/blog/trabajando-con-stored-procedures-parte1
 ---
 
 ## What's wrong with databases?

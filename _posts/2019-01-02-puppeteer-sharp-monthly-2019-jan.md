@@ -42,12 +42,12 @@ I’m looking forward to getting more feedback. Having real-world feedback helps
 Don't stop coding!
 
 #### Previous Reports
- * [December 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-dec-2018)
- * [November 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-nov-2018)
- * [October 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
- * [September 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
- * [July 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
- * [June 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
- * [May 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
- * [April 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
- * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [December 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-dec-2018)
+ * [November 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-nov-2018)
+ * [October 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
+ * [September 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
+ * [July 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
+ * [June 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
+ * [May 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
+ * [April 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
+ * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)

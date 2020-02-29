@@ -2,9 +2,10 @@
 title: Concurrency in C# Cookbook Book Review 
 tags: csharp books
 permalink: /blog/concurrency-cookbook-review
+cross-site-link: https://www.hardkoded.com/es/blog/concurrency-cookbook-review
 ---
 
-[Concurrency in C# Cookbook](https://www.amazon.com/gp/product/B00KCY2CB4) by [Steve Cleary](https://twitter.com/aSteveCleary) is the first of a series of books [I planned to read to improve my async programming skills](http://www.hardkoded.com/blog/going-deeper-async).
+[Concurrency in C# Cookbook](https://www.amazon.com/gp/product/B00KCY2CB4) by [Steve Cleary](https://twitter.com/aSteveCleary) is the first of a series of books [I planned to read to improve my async programming skills](https://www.hardkoded.com/blog/going-deeper-async).
 
 
 In case you don’t know Steve Cleary, he’s an async rock star. His blog has great [async posts](https://blog.stephencleary.com/2012/02/async-and-await.html), and his [reputation on StackOverflow](https://stackoverflow.com/users/263693/stephen-cleary) is impressive. If you’ve ever asked, or looked for, an async question on StackOverflow, chances are that you read one of his answers.
@@ -53,7 +54,7 @@ I got a more in-depth explanation about synchronization contexts from another bo
 
 >It’s good practice to always call ConfigureAwait in your core “library” methods, and only resume the context when you need it; in your outer “user interface” methods.
 
-[One of the commandments](http://www.hardkoded.com/blog/going-deeper-async) was about using `GetAwaiter().GetResult()`. But, what is an awaiter? 
+[One of the commandments](https://www.hardkoded.com/blog/going-deeper-async) was about using `GetAwaiter().GetResult()`. But, what is an awaiter? 
 It turns out that the `await` keyword can await not only a task but any awaitable that follows a certain pattern. I found a cool explanation about the `await` keyword in another book (TODO: Dario insert link to new post).
 
 There are many things we take for granted when using the async/await keywords. One of those is error handling.

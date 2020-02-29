@@ -4,7 +4,7 @@ tags: csharp books
 permalink: /blog/pro-asynchronous-programming-with-net-book-review
 ---
 
-[Pro Asynchronous Programming with .NET by Richard Blewett and  Andrew Clymer](https://www.amazon.com/Asynchronous-Programming-NET-Richard-Blewett/dp/1430259205/ref=sr_1_2?ie=UTF8&qid=1547464429&sr=8-2&keywords=pro+asynchronous+programming+with+.net) was the third book [on my list](http://www.hardkoded.com/blog/going-deeper-async).
+[Pro Asynchronous Programming with .NET by Richard Blewett and  Andrew Clymer](https://www.amazon.com/Asynchronous-Programming-NET-Richard-Blewett/dp/1430259205/ref=sr_1_2?ie=UTF8&qid=1547464429&sr=8-2&keywords=pro+asynchronous+programming+with+.net) was the third book [on my list](https://www.hardkoded.com/blog/going-deeper-async).
 
 # About the book
 
@@ -24,7 +24,7 @@ Chapter 2 also give us some great explanations about the Synchronization Context
 
 ## Tasks
 
-Chapter 3 is about Tasks. I didn't find there anything different from what [I read on the previous books](http://www.hardkoded.com/blog/going-deeper-async)
+Chapter 3 is about Tasks. I didn't find there anything different from what [I read on the previous books](https://www.hardkoded.com/blog/going-deeper-async)
 
 ## Thread Safety
 

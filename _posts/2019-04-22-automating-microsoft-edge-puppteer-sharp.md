@@ -2,6 +2,7 @@
 title: Automating Microsoft Edge with Puppeteer-Sharp
 tags: puppeteer-sharp csharp
 permalink: /blog/automating-microsoft-edge-puppteer-sharp
+cross-site-link: https://www.hardkoded.com/es/blog/automatizando-edge-con-puppeteer
 ---
 
 As you may have heard, Microsoft made available to the public its [Chromium-powered Edge browser](https://www.microsoftedgeinsider.com/en-us/).  Maybe this question won't qualify as technical interview question but:

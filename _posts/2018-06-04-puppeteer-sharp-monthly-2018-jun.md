@@ -8,7 +8,7 @@ And here we are in June, halfway through the year. And I'm so excited to announc
 
 It's impressive all we accomplished in only one month.
 
-On [v0.7](http://www.hardkoded.com/blogs/puppeteer-sharp-v07-released) we completed the Page class implementing many selector methods.
+On [v0.7](https://www.hardkoded.com/blogs/puppeteer-sharp-v07-released) we completed the Page class implementing many selector methods.
 
 Then, on [v0.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.8), we implemented the same functionality but at the ElementHandle level.
 
@@ -68,8 +68,8 @@ And of course, I’m looking forward to getting more feedback. The issues tab in
 Don't stop coding!
 
 #### Previous Reports
- * [May 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
- * [April 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
- * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [May 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
+ * [April 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
+ * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
 
 

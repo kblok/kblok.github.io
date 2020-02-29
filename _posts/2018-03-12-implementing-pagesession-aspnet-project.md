@@ -24,7 +24,7 @@ The recipe is simple. We will need:
 
 ## Prerequisites
 
-As I mentioned in my [previous post](http://www.hardkoded.com/blogs/implementing-base-page-aspnet-project), Having a `BasePage` is a great place to build these kinds of solutions.
+As I mentioned in my [previous post](https://www.hardkoded.com/blogs/implementing-base-page-aspnet-project), Having a `BasePage` is a great place to build these kinds of solutions.
 
 ## Step 1: Create your unique identifier
 

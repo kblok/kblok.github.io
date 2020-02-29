@@ -8,7 +8,7 @@ We shipped [v1.13](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.13) 
 
 # Firefox is coming.
 
-As I mentioned in a [previous post](http://www.hardkoded.com/blog/getting-ready-for-puppeteer-sharp-firefox), we are going to start working on Firefox sooner or later. That would depend on how long it takes me to keep up with Puppeteer every month and how many extra hands I can get on the project to help me out. 
+As I mentioned in a [previous post](https://www.hardkoded.com/blog/getting-ready-for-puppeteer-sharp-firefox), we are going to start working on Firefox sooner or later. That would depend on how long it takes me to keep up with Puppeteer every month and how many extra hands I can get on the project to help me out. 
 
 # What's next
 
@@ -55,7 +55,7 @@ It also means that, if you find a bug, I encourage you to help me out as much as
 
 # Final Words
 
-I was super happy in [February](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019) when I found that we've got 6 contributors. So in March, we've got 5 contributors! that's awesome!
+I was super happy in [February](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019) when I found that we've got 6 contributors. So in March, we've got 5 contributors! that's awesome!
 As I mentioned before, the more hands we have in this project, the easier for us to help you out with issues and improvements.
 
 I’m looking forward to getting more feedback. Having real-world feedback helps us a lot. The issues tab in GitHub is open for all of you to share your ideas and thoughts. You can also follow me on Twitter [@hardkoded](https://twitter.com/hardkoded).
@@ -63,15 +63,15 @@ I’m looking forward to getting more feedback. Having real-world feedback helps
 Don't stop coding!
 
 #### Previous Reports
- * [March 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019)
- * [February 2019](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-feb-2019)
+ * [March 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-mar-2019)
+ * [February 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-feb-2019)
  * [January 2019](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jan-2019)
- * [December 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-dec-2018)
- * [November 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-nov-2018)
- * [October 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
- * [September 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
- * [July 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
- * [June 2018](http://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
- * [May 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
- * [April 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
- * [March 2018](http://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [December 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-dec-2018)
+ * [November 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-nov-2018)
+ * [October 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-oct-2018)
+ * [September 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-sep-2018)
+ * [July 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jul-2018)
+ * [June 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-jun-2018)
+ * [May 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-may-2018)
+ * [April 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
+ * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)

@@ -4,7 +4,7 @@ tags: csharp books
 permalink: /blog/async-csharp-5-book-review
 ---
 
-[Async in C# 5.0 by Alex Davies](https://www.amazon.com/Async-5-0-Unleash-Power/dp/1449337163) was the second book [in the list](http://www.hardkoded.com/blog/going-deeper-async). It was a recommended reading on the [Concurrency in C# Cookbook](http://www.hardkoded.com/blog/concurrency-cookbook-review), so I knew it was going to be a good one.
+[Async in C# 5.0 by Alex Davies](https://www.amazon.com/Async-5-0-Unleash-Power/dp/1449337163) was the second book [in the list](https://www.hardkoded.com/blog/going-deeper-async). It was a recommended reading on the [Concurrency in C# Cookbook](https://www.hardkoded.com/blog/concurrency-cookbook-review), so I knew it was going to be a good one.
 
 Now that I read both books, I would recommend Async in C# 5.0 as the first book in your list, not because it's better, but because it covers the foundations of async programming so then you can go to the cookbook.
 
