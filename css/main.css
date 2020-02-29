@@ -32,6 +32,10 @@ a:hover,
 a:focus {
   color: {{ site.hover-col }};
 }
+.cross-site-link {
+  float: right;
+  font-size: 14px;
+}
 blockquote {
   color: #808080;
   font-style: italic;
