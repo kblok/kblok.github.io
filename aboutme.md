@@ -5,7 +5,7 @@ title: About me
 
 If you got to this page, and you are not a bot, thank you for taking the time to read about me!
 
-My name is Darío Kondratiuk, and I’m a software developer.
+My name is Darío Kondratiuk, and I’m a software developer from [Buenos Aires, Argentina](https://www.google.com/maps/place/Buenos+Aires/@-34.6158037,-58.5033386,12z/data=!3m1!4b1!4m5!3m4!1s0x95bcca3b4ef90cbd:0xa0b3812e88e88e87!8m2!3d-34.6036844!4d-58.3815591).
 
 **Early days**
 
