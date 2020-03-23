@@ -4,18 +4,18 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-jun-2018
 ---
  
-And here we are in June, halfway through the year. And I'm so excited to announce that, in this past 30 days, we released not only [v0.7](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.7) and [v0.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.8) but also [V1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.0)!
+And here we are in June, halfway through the year. And I'm so excited to announce that, in this past 30 days, we released not only [v0.7](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.7) and [v0.8](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.8) but also [V1](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.0)!
 
 It's impressive all we accomplished in only one month.
 
 On [v0.7](https://www.hardkoded.com/blogs/puppeteer-sharp-v07-released) we completed the Page class implementing many selector methods.
 
-Then, on [v0.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.8), we implemented the same functionality but at the ElementHandle level.
+Then, on [v0.8](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.8), we implemented the same functionality but at the ElementHandle level.
 
-Finally [V1](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.8). The primary goals there were implementing CSS and JS coverage and completing missing tests we had left behind. We also finished all the documentation.
+Finally [V1](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.8). The primary goals there were implementing CSS and JS coverage and completing missing tests we had left behind. We also finished all the documentation.
 
 I’m also excited about two things that happened in May.
-The project got to 100 stars on [GitHub](https://github.com/kblok/puppeteer-sharp). I’m thrilled about the support this project is getting.
+The project got to 100 stars on [GitHub](https://github.com/hardkoded/puppeteer-sharp). I’m thrilled about the support this project is getting.
 Also, [Andrey Lushnikov](https://twitter.com/aslushnikov) created the Slack channel [#puppeteer-sharp](https://join.slack.com/t/puppeteer/shared_invite/enQtMzU4MjIyMDA5NTM4LTM1OTdkNDhlM2Y4ZGUzZDdjYjM5ZWZlZGFiZjc4MTkyYTVlYzIzYjU5NDIyNzgyMmFiNDFjN2UzNWU0N2ZhZDc) on their Puppeteer workspace. Come by and say hi!
 
 ## What do we mean with V1?
@@ -34,7 +34,7 @@ YES, the library is fully functional, tested and ready to use.
 
 ## What's next
 
-Puppeteer is now on v1.4, which means that we are 4 releases behind. So, the next step would be implementing and shipping v1.1 and we already have [a project]( https://github.com/kblok/puppeteer-sharp/projects/14) for that.
+Puppeteer is now on v1.4, which means that we are 4 releases behind. So, the next step would be implementing and shipping v1.1 and we already have [a project]( https://github.com/hardkoded/puppeteer-sharp/projects/14) for that.
 
 # Progress
 

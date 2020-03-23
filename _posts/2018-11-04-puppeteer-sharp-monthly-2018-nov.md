@@ -10,9 +10,9 @@ This is how I closed the [report](https://www.hardkoded.com/blog/puppeteer-sharp
 
 ![Tweet Comment](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/nov-2018-report/MarkComment.png)
 
-So here we are, welcome to the November report. We shipped [v1.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.8) and [v1.9](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.9) during October. We shared the same version with [our mother project Puppeteer](https://github.com/googleChrome/puppeteer) for over a week. However, this morning (November 2nd), they released [v1.10](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.10.0) with an awesome feature: [Accessibility](https://github.com/GoogleChrome/puppeteer/blob/v1.10.0/docs/api.md#class-accessibility). We have work to do!
+So here we are, welcome to the November report. We shipped [v1.8](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.8) and [v1.9](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.9) during October. We shared the same version with [our mother project Puppeteer](https://github.com/googleChrome/puppeteer) for over a week. However, this morning (November 2nd), they released [v1.10](https://github.com/GoogleChrome/puppeteer/releases/tag/v1.10.0) with an awesome feature: [Accessibility](https://github.com/GoogleChrome/puppeteer/blob/v1.10.0/docs/api.md#class-accessibility). We have work to do!
 
-One small milestone was introducing [burst mode screenshots](https://github.com/kblok/puppeteer-sharp/pull/705). I consider it a milestone because it's the first feature asked by the community and implemented in Puppeteer-Sharp before the mother project.
+One small milestone was introducing [burst mode screenshots](https://github.com/hardkoded/puppeteer-sharp/pull/705). I consider it a milestone because it's the first feature asked by the community and implemented in Puppeteer-Sharp before the mother project.
 
 # What's next
 
@@ -44,7 +44,7 @@ This will be the last time I publish a tests comparison between these two projec
 
 [Bilal Durrani](https://github.com/bdurrani) pushed 4 PRs and, as mentioned before, he is starting to write code samples.
 
-[Tommy Monk](https://github.com/tommymonk) did a great job [removing the use of dynamics](https://github.com/kblok/puppeteer-sharp/pull/652) and [improving concurrency](https://github.com/kblok/puppeteer-sharp/pull/715).
+[Tommy Monk](https://github.com/tommymonk) did a great job [removing the use of dynamics](https://github.com/hardkoded/puppeteer-sharp/pull/652) and [improving concurrency](https://github.com/hardkoded/puppeteer-sharp/pull/715).
 
 # Final Words
 

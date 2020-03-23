@@ -6,7 +6,7 @@ permalink: /blog/puppeteer-sharp-monthly-dec-2018
  
 Last report of 2018! No, I won't get emotional. Let's go to the facts _(cries a little bit thinking about December)_.
 
-We launched [v1.10](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.10) during November. Every time I say "and we caught Puppeteer" they release a new version at the very next day, so I won't say that. But November wasn't only about v1.10.
+We launched [v1.10](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.10) during November. Every time I say "and we caught Puppeteer" they release a new version at the very next day, so I won't say that. But November wasn't only about v1.10.
 
 ## Examples Section
 
@@ -19,15 +19,15 @@ This is the first step, but I hope this section to grow a lot in the future.
 ## Concurrency improvement
 
 
-[PR 720](https://github.com/kblok/puppeteer-sharp/pull/720) was quite hard to pull off. However, we managed to improve a lot our code, and now we have better concurrency support and error handling.
+[PR 720](https://github.com/hardkoded/puppeteer-sharp/pull/720) was quite hard to pull off. However, we managed to improve a lot our code, and now we have better concurrency support and error handling.
 
 ## CamelCase the world
 
-When you read [PR 769](https://github.com/kblok/puppeteer-sharp/pull/769), you might think: "Why didn't you do that the very first time?". You know the way projects grow, you have to prioritize and try to move on. Now the code is way cleaner without all those `JsonProperty` attributes.
+When you read [PR 769](https://github.com/hardkoded/puppeteer-sharp/pull/769), you might think: "Why didn't you do that the very first time?". You know the way projects grow, you have to prioritize and try to move on. Now the code is way cleaner without all those `JsonProperty` attributes.
 
 ## Better ASP.NET Full Framework support
 
-We launched `PuppeteerSharp.AspNetFramework` . This library provides a new [IConnectionTransport](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) called [AspNetWebSocketTransport](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp.AspNetFramework/AspNetWebSocketTransport.cs), which uses [HostingEnvironment.QueueBackgroundWorkItem](https://docs.microsoft.com/en-us/dotnet/api/system.web.hosting.hostingenvironment.queuebackgroundworkitem?view=netframework-4.7.2) instead of `Task.Run`, which is something [we shouldn't use in ASP.NET](https://blog.stephencleary.com/2013/11/taskrun-etiquette-examples-dont-use.html). If you are launching PuppeteerSharp on ASP.NET Full Framework you should pass this connection transport to PuppeteerSharp:
+We launched `PuppeteerSharp.AspNetFramework` . This library provides a new [IConnectionTransport](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) called [AspNetWebSocketTransport](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp.AspNetFramework/AspNetWebSocketTransport.cs), which uses [HostingEnvironment.QueueBackgroundWorkItem](https://docs.microsoft.com/en-us/dotnet/api/system.web.hosting.hostingenvironment.queuebackgroundworkitem?view=netframework-4.7.2) instead of `Task.Run`, which is something [we shouldn't use in ASP.NET](https://blog.stephencleary.com/2013/11/taskrun-etiquette-examples-dont-use.html). If you are launching PuppeteerSharp on ASP.NET Full Framework you should pass this connection transport to PuppeteerSharp:
 
 ```cs
 using (var browser = await Puppeteer.LaunchAsync(new LaunchOptions()
@@ -40,7 +40,7 @@ using (var browser = await Puppeteer.LaunchAsync(new LaunchOptions()
 # What's next
 
 Puppeteer v1.11 was released a few days ago. We made good progress there. I hope we can ship it next week.  
-There are some code debt that it would be great if we can make some progress: [Review ContinueWith usage](https://github.com/kblok/puppeteer-sharp/issues/771),  [use cancellation tokens](https://github.com/kblok/puppeteer-sharp/issues/709), among many others.
+There are some code debt that it would be great if we can make some progress: [Review ContinueWith usage](https://github.com/hardkoded/puppeteer-sharp/issues/771),  [use cancellation tokens](https://github.com/hardkoded/puppeteer-sharp/issues/709), among many others.
 
 # Activity 
 

@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-mar-2019
 ---
 
-We were able to ship [v1.12](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.12) in February, ok it was in March, but let me count this as February :p
+We were able to ship [v1.12](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.12) in February, ok it was in March, but let me count this as February :p
 
 Puppeteer v1.12 included quite an interesting refactor, introducing [Worlds](https://chromium.googlesource.com/chromium/src.git/+/62.0.3178.1/third_party/WebKit/Source/bindings/core/v8/V8BindingDesign.md#world). This took us some time to adapt our code to that new implementation.
 
@@ -13,7 +13,7 @@ Puppeteer v1.12 included quite an interesting refactor, introducing [Worlds](htt
 I bet Puppeteer v1.13 is around the corner, as they ship as soon as I write these reports :p
 
 I wasn't able to work on  this during February:
->Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/kblok/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
+>Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/hardkoded/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
 
 I hope I can work on that this month.
 
@@ -27,13 +27,13 @@ I hope I can work on that this month.
 
 * [Meir Blachman](https://www.twitter.com/MeirBlachman) worked a lot on v1.12, pushing   8 PRs.
 
-* [rgelb](https://github.com/rgelb) improved [defaults in screenshots](https://github.com/kblok/puppeteer-sharp/commit/9b1a597d57ff1c20d2ccb850dc1451a8a23727b4).
+* [rgelb](https://github.com/rgelb) improved [defaults in screenshots](https://github.com/hardkoded/puppeteer-sharp/commit/9b1a597d57ff1c20d2ccb850dc1451a8a23727b4).
 
- * [Stuart Blackler](https://github.com/Im5tu)  pushed 2 PRs, improving [ cancellation tokens](https://github.com/kblok/puppeteer-sharp/commit/7a1de994ccd6325122020c7af95d1898b71e359d) and fixing some [concurrency issues](https://github.com/kblok/puppeteer-sharp/commit/3e082897697dcf4e97f05d4c51e1c218c7f59cb4). 
+ * [Stuart Blackler](https://github.com/Im5tu)  pushed 2 PRs, improving [ cancellation tokens](https://github.com/hardkoded/puppeteer-sharp/commit/7a1de994ccd6325122020c7af95d1898b71e359d) and fixing some [concurrency issues](https://github.com/hardkoded/puppeteer-sharp/commit/3e082897697dcf4e97f05d4c51e1c218c7f59cb4). 
 
- * [Vitalii Maklai](https://github.com/HarinezumiSama) implemented [mouse wheel support](https://github.com/kblok/puppeteer-sharp/commit/db2753d0c9875b764e040a04827a67bd58c84dec).
+ * [Vitalii Maklai](https://github.com/HarinezumiSama) implemented [mouse wheel support](https://github.com/hardkoded/puppeteer-sharp/commit/db2753d0c9875b764e040a04827a67bd58c84dec).
 
- * [Gerke Geurts](https://github.com/ggeurts) fixed a[ race condition in our WebSocket transport](https://github.com/kblok/puppeteer-sharp/commit/69798e443c97b0fd4041db73260fff4b35a14390)
+ * [Gerke Geurts](https://github.com/ggeurts) fixed a[ race condition in our WebSocket transport](https://github.com/hardkoded/puppeteer-sharp/commit/69798e443c97b0fd4041db73260fff4b35a14390)
 
 # Final Words
 

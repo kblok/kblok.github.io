@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blogs/puppeteer-sharp-v04-is-here
 ---
 
-I’m so excited to announce that [Puppetter Sharp v0.4](https://github.com/kblok/puppeteer-sharp) is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). It includes more than 25 Page APIs such as:
+I’m so excited to announce that [Puppetter Sharp v0.4](https://github.com/hardkoded/puppeteer-sharp) is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). It includes more than 25 Page APIs such as:
 
 * Full Page.GoToAsync/ReloadAsync support
 * Emulate/EmulateMedia/SetViewport/SetUserAgent

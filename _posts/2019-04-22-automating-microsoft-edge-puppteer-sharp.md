@@ -42,7 +42,7 @@ Voilà!
 
 ![demo running](https://github.com/kblok/kblok.github.io/raw/master/img/microsoft-edge-puppeteer/demo-running.png)
 
-And after a [few tweaks](https://github.com/kblok/puppeteer-sharp/pull/1074) in puppeteer-sharp, and [one similar change](https://github.com/GoogleChrome/puppeteer/pull/4314) in puppeteer, we managed to get all tests running using Microsoft Edge!
+And after a [few tweaks](https://github.com/hardkoded/puppeteer-sharp/pull/1074) in puppeteer-sharp, and [one similar change](https://github.com/GoogleChrome/puppeteer/pull/4314) in puppeteer, we managed to get all tests running using Microsoft Edge!
 
 ![tests running](https://github.com/kblok/kblok.github.io/raw/master/img/microsoft-edge-puppeteer/tests-running.png)
 

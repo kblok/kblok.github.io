@@ -4,9 +4,9 @@ tags: puppeteer-sharp csharp
 permalink: /blogs/puppeteer-sharp-monthly-april-2018
 ---
  
-March was an exciting Month for Puppeteer Sharp. [CI Server](https://ci.appveyor.com/project/kblok/puppeteer-sharp) is up an running. [Version 0.3](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.3) was released, implementing IDisposable, many `Puppeteer` features (such as `User dat dir` support) and also fixing many process leaks. We also released v.0.3.1, adding .NET Framework support.
+March was an exciting Month for Puppeteer Sharp. [CI Server](https://ci.appveyor.com/project/kblok/puppeteer-sharp) is up an running. [Version 0.3](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.3) was released, implementing IDisposable, many `Puppeteer` features (such as `User dat dir` support) and also fixing many process leaks. We also released v.0.3.1, adding .NET Framework support.
 
-We are now working on [v0.4](https://github.com/kblok/puppeteer-sharp/projects/7), which is mostly `Page` releated. We have implemented all these features:
+We are now working on [v0.4](https://github.com/hardkoded/puppeteer-sharp/projects/7), which is mostly `Page` releated. We have implemented all these features:
 
 * Page.SetJavascriptEnable
 * Page.SetContent
@@ -69,7 +69,7 @@ using (var page = await Browser.NewPageAsync())
 
 # What's Next
 
-I hope we can release [v0.4](https://github.com/kblok/puppeteer-sharp/projects/7) in April. 39% of the features are implemented but this version is important and many features are challenging.
+I hope we can release [v0.4](https://github.com/hardkoded/puppeteer-sharp/projects/7) in April. 39% of the features are implemented but this version is important and many features are challenging.
 
 # Final words
 

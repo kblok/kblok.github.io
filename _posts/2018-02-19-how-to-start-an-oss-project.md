@@ -5,7 +5,7 @@ permalink: /blogs/how-to-start-an-oss-project
 ---
 An [OSS](https://opensource.com/resources/what-open-source) project is very different from a project you work on in your daily job. At first, It's like being in a fairy tale but, without discipline, your dream project can quickly become *[insert a boring movie reference here]*.
 
-I started the [Puppeteer Sharp](https://github.com/kblok/puppeteer-sharp) project in October 2017, and although I'm still learning how to do this thing we call OSS, here’s what I’ve learned so far.
+I started the [Puppeteer Sharp](https://github.com/hardkoded/puppeteer-sharp) project in October 2017, and although I'm still learning how to do this thing we call OSS, here’s what I’ve learned so far.
 
 ## Open up to the community
 

@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-apr-2019
 ---
 
-We shipped [v1.13](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.13) in March. I must confess it wasn't the funniest thing to work on. It was mostly about getting many tests ready for Firefox.
+We shipped [v1.13](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.13) in March. I must confess it wasn't the funniest thing to work on. It was mostly about getting many tests ready for Firefox.
 
 # Firefox is coming.
 
@@ -12,11 +12,11 @@ As I mentioned in a [previous post](https://www.hardkoded.com/blog/getting-ready
 
 # What's next
 
-I just created the [project for v1.14](https://github.com/kblok/puppeteer-sharp/projects/31). It seems it's a small one. So it would help me catch up with some open issues.
+I just created the [project for v1.14](https://github.com/hardkoded/puppeteer-sharp/projects/31). It seems it's a small one. So it would help me catch up with some open issues.
 
 I wasn't able to work on this during March, and I feel terrible, well not that terrible. However, it's something I really want to work on, but v1.13 took me the entire month.
 >I wasn't able to work on  this during February:
->Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/kblok/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
+>Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/hardkoded/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
 
 ## How about Firefox?  
 I would love to work on the Firefox implementation, but that's my third priority.
@@ -43,15 +43,15 @@ It also means that, if you find a bug, I encourage you to help me out as much as
 
 # Contributors
 
-* [Gerke Geurts](https://github.com/ggeurts) worked on some significant improvements on [ASP.NET Full Framework](https://github.com/kblok/puppeteer-sharp/commit/2e7961ccbfac0735120f796e06674d21166e5a2c), [Task Management](https://github.com/kblok/puppeteer-sharp/commit/44956cc88dc6e6c356e6fcc7b8c4dda071ae02b2), [target destruction reliability](https://github.com/kblok/puppeteer-sharp/commit/644c8e08b8bc0fb0ece0b986ec89e1fdd3563190) and [WebSockets](https://github.com/kblok/puppeteer-sharp/commit/8e61e2cdeb70b4911007ba021a9f0356521e75ad).
+* [Gerke Geurts](https://github.com/ggeurts) worked on some significant improvements on [ASP.NET Full Framework](https://github.com/hardkoded/puppeteer-sharp/commit/2e7961ccbfac0735120f796e06674d21166e5a2c), [Task Management](https://github.com/hardkoded/puppeteer-sharp/commit/44956cc88dc6e6c356e6fcc7b8c4dda071ae02b2), [target destruction reliability](https://github.com/hardkoded/puppeteer-sharp/commit/644c8e08b8bc0fb0ece0b986ec89e1fdd3563190) and [WebSockets](https://github.com/hardkoded/puppeteer-sharp/commit/8e61e2cdeb70b4911007ba021a9f0356521e75ad).
 
-* [kkempster94](https://github.com/kkempster94) cought [one bad default we had in our timeout settins](https://github.com/kblok/puppeteer-sharp/commit/82640f6cac7e0f213de4291a6f4181221c87028e).
+* [kkempster94](https://github.com/kkempster94) cought [one bad default we had in our timeout settins](https://github.com/hardkoded/puppeteer-sharp/commit/82640f6cac7e0f213de4291a6f4181221c87028e).
 
-* [Meir Blachman](https://www.twitter.com/MeirBlachman) added [page.accessibility.snapshot tests](https://github.com/kblok/puppeteer-sharp/commit/23a64347ff936abd4b2388dfcaf64daac4242ca3).
+* [Meir Blachman](https://www.twitter.com/MeirBlachman) added [page.accessibility.snapshot tests](https://github.com/hardkoded/puppeteer-sharp/commit/23a64347ff936abd4b2388dfcaf64daac4242ca3).
 
-* [Ismael Martin Alabarce](http://ismaeld.com/) found an [issue on our readme and fixed it](https://github.com/kblok/puppeteer-sharp/commit/8c071a04222ddd0abf90c112f1511b5623514c50).
+* [Ismael Martin Alabarce](http://ismaeld.com/) found an [issue on our readme and fixed it](https://github.com/hardkoded/puppeteer-sharp/commit/8c071a04222ddd0abf90c112f1511b5623514c50).
 
-* [Simon Le Bourdais-Cabana](https://github.com/scabana) did a great job [removing Mono dependency](https://github.com/kblok/puppeteer-sharp/commit/9a82a81f600f1e8f3b9431a4be4988ee9e840590). I hope this can help Linux users. 
+* [Simon Le Bourdais-Cabana](https://github.com/scabana) did a great job [removing Mono dependency](https://github.com/hardkoded/puppeteer-sharp/commit/9a82a81f600f1e8f3b9431a4be4988ee9e840590). I hope this can help Linux users. 
 
 # Final Words
 

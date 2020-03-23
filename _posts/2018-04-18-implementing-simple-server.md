@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blogs/implementing-simple-server
 ---
 
-One thing we needed to start testing [Puppeteer Sharp](https://github.com/kblok/puppeteer-sharp) was a simple web server to run a testing website. I knew the ideal scenario was something like this: Run `dotnet test`, the test would load a web server, run all tests and shut down the server. I also knew that ASP.NET Core was able to run in any process so, starting a web server inside the unit test process seemed to be easy to implement.
+One thing we needed to start testing [Puppeteer Sharp](https://github.com/hardkoded/puppeteer-sharp) was a simple web server to run a testing website. I knew the ideal scenario was something like this: Run `dotnet test`, the test would load a web server, run all tests and shut down the server. I also knew that ASP.NET Core was able to run in any process so, starting a web server inside the unit test process seemed to be easy to implement.
 
 It wasn't.
 
@@ -70,7 +70,7 @@ private async Task StartWebServerAsync()
 
 # First internal process
 
-Luckily for me, [Meir Blachman](https://www.twitter.com/MeirBlachman) jumped into the project and, among many other things, he was able to [make the web host run inside the test project](https://github.com/kblok/puppeteer-sharp/pull/101). It was a great day.
+Luckily for me, [Meir Blachman](https://www.twitter.com/MeirBlachman) jumped into the project and, among many other things, he was able to [make the web host run inside the test project](https://github.com/hardkoded/puppeteer-sharp/pull/101). It was a great day.
 
 Now we were starting the server with only these 4 lines:
 
@@ -81,7 +81,7 @@ _host = builder.Build();
 await _host.StartAsync();
 ```
 
-Meir [wrote a simple and cool explanation](https://github.com/kblok/puppeteer-sharp/pull/101#issuecomment-378902668) in his PR.
+Meir [wrote a simple and cool explanation](https://github.com/hardkoded/puppeteer-sharp/pull/101#issuecomment-378902668) in his PR.
 
 * DllNotFoundException: Unable to load DLL 'libuv' - especially this comment. Looking at aspnet/KestrelHttpServer#1292 (comment), I realized I only needed to add the RuntimeIdentifier element.
 * Adding the RuntimeIdentifier to PuppeteerSharp.Tests.csproj instead of PuppeteerSharp.TestServer.csproj
@@ -98,7 +98,7 @@ We were able to keep working on Puppeteer Sharp. We stopped getting process leak
 server.setAuth('/empty.html', 'user', 'pass');
 ```
 
-This was easy to implement. We created a controller and [implemented a basic HTTP authentication](https://github.com/kblok/puppeteer-sharp/blob/8c5a9e531efcc0a6eaa406489eb3092bc1fc49a3/lib/PuppeteerSharp.TestServer/Controllers/AuthenticationTestController.cs).
+This was easy to implement. We created a controller and [implemented a basic HTTP authentication](https://github.com/hardkoded/puppeteer-sharp/blob/8c5a9e531efcc0a6eaa406489eb3092bc1fc49a3/lib/PuppeteerSharp.TestServer/Controllers/AuthenticationTestController.cs).
 
 But then, some things became quite tricky. For instance, we needed to wait for a request on the server-side:
 
@@ -110,7 +110,7 @@ We had to integrate the Web host **into** the test suite. We needed to be able t
 
 # Let's implement a Simple Server
 
-Again, [Meir Blachman](https://www.twitter.com/MeirBlachman) said ["We need a Simple Server"](https://github.com/kblok/puppeteer-sharp/issues/116). He ended up implementing a [really cool solution](https://github.com/Meir017/puppeteer-sharp/blob/a522f3062e53a019ed6a4c06e00c7545b610135e/lib/PuppeteerSharp.TestServer/SimpleServer.cs)
+Again, [Meir Blachman](https://www.twitter.com/MeirBlachman) said ["We need a Simple Server"](https://github.com/hardkoded/puppeteer-sharp/issues/116). He ended up implementing a [really cool solution](https://github.com/Meir017/puppeteer-sharp/blob/a522f3062e53a019ed6a4c06e00c7545b610135e/lib/PuppeteerSharp.TestServer/SimpleServer.cs)
 
 The API is simple
 

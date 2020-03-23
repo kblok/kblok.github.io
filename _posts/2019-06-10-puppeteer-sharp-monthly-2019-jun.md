@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-jun-2019
 ---
 
-May was a month full of releases. We shipped [v1.15](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.15), [v1.16](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.16), [v1.17](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17) and a small [v1.17.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17.1).  
+May was a month full of releases. We shipped [v1.15](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.15), [v1.16](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.16), [v1.17](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.17) and a small [v1.17.1](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.17.1).  
 Ok, this was really short. Let me compensate that with a puppeteer gif.
 
 ![Puppeteer](https://media2.giphy.com/media/l2QE4vQGIiwMzszh6/giphy.gif?cid=790b76115cfe432b3448756749c600bb&rid=giphy.gif)
@@ -23,9 +23,9 @@ I also want to create a Puppeteer-Sharp [CLI](https://docs.microsoft.com/en-us/d
 
 # Contributors
 
-* [Meir Blachman](https://www.twitter.com/MeirBlachman) worked on two features: [Verify overriding post data and method on navigation](https://github.com/kblok/puppeteer-sharp/commit/2b2f1d290f87350fe6fc7929605e499e3616d2b3) and [Migrate onto Fetch domain](https://github.com/kblok/puppeteer-sharp/commit/6f3dc0908857270d04afb9e905bb3624b9c94c6c).
+* [Meir Blachman](https://www.twitter.com/MeirBlachman) worked on two features: [Verify overriding post data and method on navigation](https://github.com/hardkoded/puppeteer-sharp/commit/2b2f1d290f87350fe6fc7929605e499e3616d2b3) and [Migrate onto Fetch domain](https://github.com/hardkoded/puppeteer-sharp/commit/6f3dc0908857270d04afb9e905bb3624b9c94c6c).
 
-* [Aurimas Laureckis](https://github.com/Aurimas1) fixed some [headers issues](https://github.com/kblok/puppeteer-sharp/commit/d485d03f36c46b64952e39c0cc05b4e74156de4c).
+* [Aurimas Laureckis](https://github.com/Aurimas1) fixed some [headers issues](https://github.com/hardkoded/puppeteer-sharp/commit/d485d03f36c46b64952e39c0cc05b4e74156de4c).
 
 # Final Words
 

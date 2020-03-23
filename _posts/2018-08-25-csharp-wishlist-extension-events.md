@@ -20,7 +20,7 @@ myEmitter.emit('event');
 // Ignored
 ```
 
-In order to implement  `Once` on [puppeteer-sharp](https://github.com/kblok/puppeteer-sharp), we are implementing this boilerplate over and over:
+In order to implement  `Once` on [puppeteer-sharp](https://github.com/hardkoded/puppeteer-sharp), we are implementing this boilerplate over and over:
 
 ```cs
 void EventHandler(object sender, ConsoleEventArgs e)

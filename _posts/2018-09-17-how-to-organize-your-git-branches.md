@@ -44,7 +44,7 @@ You could mix Gitflow with this module-based approach, something like "backoffic
 
 # Version-based
 
-I first saw [Meir](https://twitter.com/MeirBlachman) using this approach and I loved it. It’s great for projects like [Puppeteer-sharp](https://github.com/kblok/puppeteer-sharp) where the roadmap is clear.
+I first saw [Meir](https://twitter.com/MeirBlachman) using this approach and I loved it. It’s great for projects like [Puppeteer-sharp](https://github.com/hardkoded/puppeteer-sharp) where the roadmap is clear.
 In a version-based repo you create each branch inside a "vX.X" folder. What is cool about this is that it’s time-based, so it's easier to find branches and also it's super easy to delete old versions with this simple git command:
 
 `git branch | grep -e "vX.X/" | xargs git branch -D`

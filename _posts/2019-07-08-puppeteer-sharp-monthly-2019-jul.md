@@ -10,7 +10,7 @@ We reached 100k downloads in June!!!
 
 Thanks to all CIs build that made this possible :)
 
-As we were able to ship [v1.17](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17) late in May, we only shipped a tiny [v1.17.2](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.17.2) version in June.
+As we were able to ship [v1.17](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.17) late in May, we only shipped a tiny [v1.17.2](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.17.2) version in June.
 
 # What's next
 

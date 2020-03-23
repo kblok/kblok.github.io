@@ -103,7 +103,7 @@ I want to thank [Meir Blachman](https://twitter.com/MeirBlachman), the first con
 
 # What's Next
 
-March will be about: First, Complete all tasks for (pseudo) version [0.2](https://github.com/kblok/puppeteer-sharp/projects/9). Basically, setting up AppVeyor and creating all the community docs we need. Then, start with version [0.3](https://github.com/kblok/puppeteer-sharp/projects/8) which is about implementing Puppeteer.launch tests.
+March will be about: First, Complete all tasks for (pseudo) version [0.2](https://github.com/hardkoded/puppeteer-sharp/projects/9). Basically, setting up AppVeyor and creating all the community docs we need. Then, start with version [0.3](https://github.com/hardkoded/puppeteer-sharp/projects/8) which is about implementing Puppeteer.launch tests.
 
 # Final words
 

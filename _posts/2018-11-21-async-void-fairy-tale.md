@@ -5,9 +5,9 @@ permalink: /blog/async-void-fairy-tale
 cross-site-link: https://www.hardkoded.com/es/blog/cuento-async-void
  ---
  
-Let me tell you a story about async voids, SynchronizationContext, and async programming. A few days ago we got [an issue on Puppeteer-Sharp](https://github.com/kblok/puppeteer-sharp/issues/717) describing two problems:
+Let me tell you a story about async voids, SynchronizationContext, and async programming. A few days ago we got [an issue on Puppeteer-Sharp](https://github.com/hardkoded/puppeteer-sharp/issues/717) describing two problems:
  * Puppeteer-Sharp crashes with exceptions which cannot be caught.
- * KeyNotFoundException trying to get a [Frame](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Frame.cs)
+ * KeyNotFoundException trying to get a [Frame](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Frame.cs)
 The code was pretty simple:
 
 ```cs
@@ -73,8 +73,8 @@ But, as Ben said, in a console app, the exception will be propagated to the Thre
 ## Where are those async voids?
 You might be thinking: "Ok, but why are you talking about async voids? that piece of code has no async void?"
 Well, async voids event handlers are being used internally by Puppeteer. So, from `Puppeteer.LaunchAsync` to the `Dispose` being called by the using block, many events will be triggered internally.
-When a new message comes from Chromium, an [IConnectionTransport](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) would parse and then broadcast it using the [MessageReceived event](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs#L33).
-Many classes, like the [Page](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Page.cs#L1774) class, would listen to events coming from the connection and perform **asynchronous** tasks.
+When a new message comes from Chromium, an [IConnectionTransport](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) would parse and then broadcast it using the [MessageReceived event](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs#L33).
+Many classes, like the [Page](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Page.cs#L1774) class, would listen to events coming from the connection and perform **asynchronous** tasks.
 And here we have our **async voids**.
 
 End of story.
@@ -146,13 +146,13 @@ private async void Client_MessageReceived(object sender, MessageEventArgs e)
 
 Next issue.
 
-## KeyNotFoundException trying to get a [Frame](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Frame.cs) … What?
+## KeyNotFoundException trying to get a [Frame](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Frame.cs) … What?
 
 If you take a look at the sequence diagram again, you will see that the first message we get from Chromium is “Target.targetCreated”. How is it possible that we are getting a KeyNotFoundException exception?
 
 I'll give you a hint, it begins with `async` and ends with `void`. 
 
-An [IConnectionTransport](https://github.com/kblok/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) will start receiving a stream of messages from Chromium, parse them and trigger a `MessageReceived` event.
+An [IConnectionTransport](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/Transport/IConnectionTransport.cs) will start receiving a stream of messages from Chromium, parse them and trigger a `MessageReceived` event.
 
 The problem here is that `MessageReceived?.Invoke` will trigger and forget an `async void` event handler. *Of Course!* there is not `await` involved! This **will** be a fire and forget.
 

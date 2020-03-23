@@ -18,14 +18,14 @@ Please, go and read the [v0.4](https://www.hardkoded.com/blogs/puppeteer-sharp-v
 <br/>
 <br/>
 Are you back?  
-Cool. But that’s not all. We also released [v0.5](https://github.com/kblok/puppeteer-sharp/releases/tag/v0.5), implementing frames support, tracing and many network events.
+Cool. But that’s not all. We also released [v0.5](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.5), implementing frames support, tracing and many network events.
 
 ## New Milestones
 
-As [v1.0](https://github.com/kblok/puppeteer-sharp/projects/4) was getting too big (because everything we didn't know how to implement was being moved there), I decided to create two more milestones before v1.0:
+As [v1.0](https://github.com/hardkoded/puppeteer-sharp/projects/4) was getting too big (because everything we didn't know how to implement was being moved there), I decided to create two more milestones before v1.0:
 
-* [v0.7](https://github.com/kblok/puppeteer-sharp/projects/12): Page tests we haven't implemented yet.
-* [v0.8](https://github.com/kblok/puppeteer-sharp/projects/13): ElementHandle features.
+* [v0.7](https://github.com/hardkoded/puppeteer-sharp/projects/12): Page tests we haven't implemented yet.
+* [v0.8](https://github.com/hardkoded/puppeteer-sharp/projects/13): ElementHandle features.
 
 # Progress
 
@@ -49,7 +49,7 @@ If you are going to connect Puppeteer Sharp to a remote browser, it will be than
 
 # What's Next
 
-We are now working on [v0.6](https://github.com/kblok/puppeteer-sharp/projects/5), which is about user interaction (inputs, clicks, taps, etc). It will be an important version. I hope we can also ship [v0.7](https://github.com/kblok/puppeteer-sharp/projects/12) with many Page improvements.
+We are now working on [v0.6](https://github.com/hardkoded/puppeteer-sharp/projects/5), which is about user interaction (inputs, clicks, taps, etc). It will be an important version. I hope we can also ship [v0.7](https://github.com/hardkoded/puppeteer-sharp/projects/12) with many Page improvements.
 
 # Final words
 

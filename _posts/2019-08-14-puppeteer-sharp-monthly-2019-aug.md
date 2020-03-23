@@ -4,9 +4,9 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-aug-2019
 ---
 
-We shipped [v1.18](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.18) in July. If you are using `EvaluateOnNewDocumentAsync`, please take a look at that version because we had a breaking change there. 
+We shipped [v1.18](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.18) in July. If you are using `EvaluateOnNewDocumentAsync`, please take a look at that version because we had a breaking change there. 
 
-We also shipped [v1.19](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.19), but that will be on the September report :p. 
+We also shipped [v1.19](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.19), but that will be on the September report :p. 
 
 ![Too fast](https://media3.giphy.com/media/Mo0XNBGMKQtYtv5Jq9/giphy.gif?cid=790b7611177a6f05253ffe4be7db6c7e9b480878232c29a7&rid=giphy.gif)
 
@@ -28,7 +28,7 @@ On the other hand, I wasn't able to get Puppeteer-Sharp working on Azure Functio
 
 # Contributors
 
-* [Lucas Devescovi](https://github.com/LucasMetal) stepped into the project and implemented [Page.BringToFrontAsync](https://github.com/kblok/puppeteer-sharp/commit/a9828a287a4e6c2cb4606f7e317282626530d54b). He is also reviewing my PRs.
+* [Lucas Devescovi](https://github.com/LucasMetal) stepped into the project and implemented [Page.BringToFrontAsync](https://github.com/hardkoded/puppeteer-sharp/commit/a9828a287a4e6c2cb4606f7e317282626530d54b). He is also reviewing my PRs.
 
 ![Welcome](https://media0.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif?cid=790b761150d30cdb987f4f49add7a2f15352cab5f1c0c625&rid=giphy.gif)
 

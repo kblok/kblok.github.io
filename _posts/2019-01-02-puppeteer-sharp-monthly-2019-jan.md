@@ -6,7 +6,7 @@ permalink: /blog/puppeteer-sharp-monthly-jan-2019
  
 Happy new year Puppeteerers! (Is that even a word?)
 
-We launched [v1.11](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.11) during December.  The most important feature on v1.11 was _drum rolls_ LINUX SUPPORT!
+We launched [v1.11](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.11) during December.  The most important feature on v1.11 was _drum rolls_ LINUX SUPPORT!
 
 ![yeah](https://media0.giphy.com/media/l0COGE9TXQ5Z1Syis/giphy.gif?cid=3640f6095c2a03e9656a344c6babc230)
 

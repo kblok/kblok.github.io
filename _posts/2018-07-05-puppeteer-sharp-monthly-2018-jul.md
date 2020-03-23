@@ -4,7 +4,7 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-jul-2018
 ---
  
-The World Cup is here, but it didn’t stop is from releasing  [v1.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.1) in June!
+The World Cup is here, but it didn’t stop is from releasing  [v1.1](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.1) in June!
 v1.1 is the first version created from a diff between two puppeteer versions: v1.0 and v1.1. This brought about some challenges, but let's talk about features first.
 
 # New Features
@@ -33,7 +33,7 @@ await Page.SetContentAsync("<div>some text</div>");
 var text = await Page.WaitForXPathAsync("//div/text()");
 ```
 
-You'll be able to see a more complete [version report](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.1) on GitHub.
+You'll be able to see a more complete [version report](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.1) on GitHub.
 
 # Missing Features :(
 
@@ -48,11 +48,11 @@ Don’t think that .NET is not "good enough" or "incomplete". I think that the p
 
 As I mentioned before, v1.1 was the first version created based on a diff. Before v1.1, tracking differences between Puppeteer Sharp and Puppeteer was relatively easy: We needed to implement [all the tests in the test.js file, looking at the v1.0 tag](https://github.com/GoogleChrome/puppeteer/blob/v1.0.0/test/test.js).
 
-But now, we need to compare [two Puppeteer versions](https://github.com/kblok/puppeteer/pull/1) and see what's changed. The challenge is, of course, **not to miss a thing**. I found two approaches:
+But now, we need to compare [two Puppeteer versions](https://github.com/hardkoded/puppeteer/pull/1) and see what's changed. The challenge is, of course, **not to miss a thing**. I found two approaches:
 
 ## v1.1: The diff approach
 
-The approach we took on v1.1 was looking at the diff. We created a Pull Request from v1.1 to 1.0, we looked at changes in the test file and then we created [a project](https://github.com/kblok/puppeteer-sharp/projects/14) based on those changes.
+The approach we took on v1.1 was looking at the diff. We created a Pull Request from v1.1 to 1.0, we looked at changes in the test file and then we created [a project](https://github.com/hardkoded/puppeteer-sharp/projects/14) based on those changes.
 
 ### PROS
 
@@ -64,7 +64,7 @@ We don't know what changes in the libraries are related to a change in a test.
 
 ## v1.2 The commit approach
 
-I knew that Puppeteer's devs refactored their test file and broke it into many files. So I knew that the diff approach was going to be useless at some point. So, for v1.2, we're taking a commit approach. We [compared v1.2 to v1.2](https://github.com/kblok/puppeteer/pull/2) and created a [project](https://github.com/kblok/puppeteer-sharp/projects/16) based on Puppeteer commits.
+I knew that Puppeteer's devs refactored their test file and broke it into many files. So I knew that the diff approach was going to be useless at some point. So, for v1.2, we're taking a commit approach. We [compared v1.2 to v1.2](https://github.com/hardkoded/puppeteer/pull/2) and created a [project](https://github.com/hardkoded/puppeteer-sharp/projects/16) based on Puppeteer commits.
 
 ### Pros 
  
@@ -90,16 +90,16 @@ Using a commit approach forces our memory. When we create an issue for a commit 
 
 [Meir Blachman](https://www.twitter.com/MeirBlachman) pushed 26 PRs out of 54 and reviewed all my PRs.
 
-[Ryan O'Neill](https://github.com/RyanONeill1970) found an [issue](https://github.com/kblok/puppeteer-sharp/issues/333) with special characters. You should always have an O'Neill on your team :)
+[Ryan O'Neill](https://github.com/RyanONeill1970) found an [issue](https://github.com/hardkoded/puppeteer-sharp/issues/333) with special characters. You should always have an O'Neill on your team :)
 
-[Ariex](https://github.com/Ariex) fixed another [issue](https://github.com/kblok/puppeteer-sharp/pull/364) related to duplicated requests on the Page class.
+[Ariex](https://github.com/Ariex) fixed another [issue](https://github.com/hardkoded/puppeteer-sharp/pull/364) related to duplicated requests on the Page class.
 
 # Final Words
 
 I hope we can get more users like Ryan and Ariex who not only use the library but are willing to help to improve it.
-I'm stumbling upon features that are taking longer than expected. The (failed) pipes feature stole one week of my time. The [DumpIO test](https://github.com/kblok/puppeteer-sharp/pull/344) also took me more than expected.
+I'm stumbling upon features that are taking longer than expected. The (failed) pipes feature stole one week of my time. The [DumpIO test](https://github.com/hardkoded/puppeteer-sharp/pull/344) also took me more than expected.
 
-Now I'm struggling with ["making sure chrome is closed"](https://github.com/kblok/puppeteer-sharp/issues/356). The problem there is that I have not been able to kill child processes gracefully.Although it might be complex to test, it's too important to put off. You deserve it.
+Now I'm struggling with ["making sure chrome is closed"](https://github.com/hardkoded/puppeteer-sharp/issues/356). The problem there is that I have not been able to kill child processes gracefully.Although it might be complex to test, it's too important to put off. You deserve it.
 So, be patient and...
 
 Don't stop **coding**!

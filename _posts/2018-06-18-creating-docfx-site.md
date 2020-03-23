@@ -14,11 +14,11 @@ So I wanted to share with you a real-time(ish) post, explaining how I created a 
 
 # Introduction
 
-We have documented all the code on [Puppeteer-Sharp](https://github.com/kblok/puppeteer-sharp/) using [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments), and we want to create a site using [DocFX](https://dotnet.github.io/docfx/) and [Github Pages](https://pages.github.com/). Finally, we want to make it available on http://www.puppeteer-sharp.com.
+We have documented all the code on [Puppeteer-Sharp](https://github.com/hardkoded/puppeteer-sharp/) using [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments), and we want to create a site using [DocFX](https://dotnet.github.io/docfx/) and [Github Pages](https://pages.github.com/). Finally, we want to make it available on http://www.puppeteer-sharp.com.
 
 # What do we know?
 
- * We know that we need to tell the dotnet compiler to generate an XML file with the documentation. [We are already doing that](https://github.com/kblok/puppeteer-sharp/blob/v1.20/lib/PuppeteerSharp/PuppeteerSharp.csproj#L40).
+ * We know that we need to tell the dotnet compiler to generate an XML file with the documentation. [We are already doing that](https://github.com/hardkoded/puppeteer-sharp/blob/v1.20/lib/PuppeteerSharp/PuppeteerSharp.csproj#L40).
 * We know we want to use [DocFX].(https://dotnet.github.io/docfx/tutorial/walkthrough/walkthrough_create_a_docfx_project.html)
 * We want it to be an automatic step in our CI.
 

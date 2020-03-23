@@ -9,13 +9,13 @@ We didn't get a (Google's) Puppeteer release last month, but that doesn't mean t
 We were working a lot on tech debt. We tried to make our builds more reliable. Many builds tend to fail due to timeouts or race conditions, so we worked in many of them.
 We also went through many [async recommendations](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md) made by [David Fowler](https://twitter.com/davidfowl). If you didn't read that post, go check that out!
 
-So after all this cleanup, we were able to ship two small releases: [v1.11.1](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.11.1) and [v1.11.2](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.11.2)
+So after all this cleanup, we were able to ship two small releases: [v1.11.1](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.11.1) and [v1.11.2](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.11.2)
 
 # What's next
 
 Google did release Puppeteer v1.12 a few days ago. So we are working on this version right now.
 
-Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/kblok/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
+Another issue that is driving me crazy is [UnobservedTaskExceptions](https://github.com/hardkoded/puppeteer-sharp/issues/891). Brian Feucht found out that tons of UnobservedTaskExceptions are being logged. Though there are not many user tracking that I think that's something we do need to work on.
 
 # Activity 
 
@@ -25,7 +25,7 @@ Another issue that is driving me crazy is [UnobservedTaskExceptions](https://git
 
 # Contributors
 
-[Henk Mollema](https://github.com/henkmollema) pushed two PRs, fixing documentation and [DevTools](https://github.com/kblok/puppeteer-sharp/pull/831) property.
+[Henk Mollema](https://github.com/henkmollema) pushed two PRs, fixing documentation and [DevTools](https://github.com/hardkoded/puppeteer-sharp/pull/831) property.
 
 # Final Words
 

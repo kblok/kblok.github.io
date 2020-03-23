@@ -5,7 +5,7 @@ permalink: /blog/puppeteer-sharp-monthly-sep-2018
 ---
  
 No, we didn't miss the August Report, I just had my deserved vacation :), but we are back and ready to puppeteer!
-Let's see what we accomplished in the past two months. We released 4 versions: [1.2](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.2), [1.3](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.3), [1.4](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.4) and [1.5](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.5). I invite you to follow the links and read all the changes we made in each version.
+Let's see what we accomplished in the past two months. We released 4 versions: [1.2](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.2), [1.3](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.3), [1.4](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.4) and [1.5](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.5). I invite you to follow the links and read all the changes we made in each version.
 
 # What's next
 
@@ -13,10 +13,10 @@ Trying to catch Puppeteer always feels like a never ending race and, in fact, it
 
 We are only 4 versions back (at the moment of writing this post), and we have a plan for each of them:
 
-* [1.6](https://github.com/kblok/puppeteer-sharp/projects/21) (In progress)
-* [1.6.1](https://github.com/kblok/puppeteer-sharp/projects/22)
-* [1.6.2](https://github.com/kblok/puppeteer-sharp/projects/23)
-* [1.7](https://github.com/kblok/puppeteer-sharp/projects/24)
+* [1.6](https://github.com/hardkoded/puppeteer-sharp/projects/21) (In progress)
+* [1.6.1](https://github.com/hardkoded/puppeteer-sharp/projects/22)
+* [1.6.2](https://github.com/hardkoded/puppeteer-sharp/projects/23)
+* [1.7](https://github.com/hardkoded/puppeteer-sharp/projects/24)
 
 # Progress
 
@@ -35,8 +35,8 @@ We are only 4 versions back (at the moment of writing this post), and we have a 
 [Meir Blachman](https://www.twitter.com/MeirBlachman) pushed 28 PRs out of 72 and reviewed all my PRs. We kept the project moving while I was on holidays, I really appreciate his help.
 
 [xMarkos](https://github.com/xMarkos) stepped in implementing two super important changes:
- * First, something I knew we had to do sooner or later which is [adding ConfigureAwait(false) in all of our awaits](https://github.com/kblok/puppeteer-sharp/pull/525)
-* Second, something I didn't know about, he implemented [true async calls in file handling](https://github.com/kblok/puppeteer-sharp/pull/526).
+ * First, something I knew we had to do sooner or later which is [adding ConfigureAwait(false) in all of our awaits](https://github.com/hardkoded/puppeteer-sharp/pull/525)
+* Second, something I didn't know about, he implemented [true async calls in file handling](https://github.com/hardkoded/puppeteer-sharp/pull/526).
 
 [Tim Watkins](https://github.com/jankcat) Also stepped in and helped us to fix some outdated docs we had.
 

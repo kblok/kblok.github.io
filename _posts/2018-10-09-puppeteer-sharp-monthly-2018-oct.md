@@ -4,11 +4,11 @@ tags: puppeteer-sharp csharp
 permalink: /blog/puppeteer-sharp-monthly-oct-2018
 ---
  
-September is gone but it left us 3 new versions: [v1.6](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.6), [v1.6.2](https://github.com/kblok/puppeteer-sharp/releases/tag/v.1.6.2) and [v1.7](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.7). It left us only 1 version behind Puppeteer!
+September is gone but it left us 3 new versions: [v1.6](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.6), [v1.6.2](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v.1.6.2) and [v1.7](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.7). It left us only 1 version behind Puppeteer!
 
 # What's next
 [SPOILER ALERT]  
-During the first week of October, we were able to deliver  [v1.8](https://github.com/kblok/puppeteer-sharp/releases/tag/v1.8) one of the most important releases we ever had. Not because of the features we delivered but because we caught Puppeteer!
+During the first week of October, we were able to deliver  [v1.8](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v1.8) one of the most important releases we ever had. Not because of the features we delivered but because we caught Puppeteer!
 
 ![woohoo](https://media3.giphy.com/media/l3q2K2I2vCZqvaqoE/giphy.gif?cid=3640f6095bbc93e441752f4a6fcfe876)
 
@@ -16,7 +16,7 @@ But they released v1.9 the next day.
 
 ![demned](https://66.media.tumblr.com/44ec508988cce30877b60372cf648035/tumblr_nab8jeCDIW1tv4k5po1_400.gif)
 
-We are almost there. We have planned [v1.9](https://github.com/kblok/puppeteer-sharp/projects/26), and I think we can deliver it in a week or so.
+We are almost there. We have planned [v1.9](https://github.com/hardkoded/puppeteer-sharp/projects/26), and I think we can deliver it in a week or so.
 
 Once we catch Puppeteer, again, we will have more time to implement Docker examples and test Linux support.
 
@@ -35,7 +35,7 @@ Once we catch Puppeteer, again, we will have more time to implement Docker examp
 
 [Meir Blachman](https://www.twitter.com/MeirBlachman) did a great job reviewing all our pull request and also giving support to our users.
 
-[Gerke Geurts](https://github.com/ggeurts) did a great job [improving directory cleanup](https://github.com/kblok/puppeteer-sharp/pull/544), [implementing custom WebSocket clients](https://github.com/kblok/puppeteer-sharp/pull/574) and [improving our process manager](https://github.com/kblok/puppeteer-sharp/pull/585).
+[Gerke Geurts](https://github.com/ggeurts) did a great job [improving directory cleanup](https://github.com/hardkoded/puppeteer-sharp/pull/544), [implementing custom WebSocket clients](https://github.com/hardkoded/puppeteer-sharp/pull/574) and [improving our process manager](https://github.com/hardkoded/puppeteer-sharp/pull/585).
 
 [Ahmet Salih](https://github.com/asalih) helped us exposing Client.SendAsync as a public method.
 
