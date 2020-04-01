@@ -51,3 +51,6 @@ I hope I can ship some version in April so you can download it and play a little
 Don't forget to follow me on Twitter [@hardkoded](https://twitter.com/hardkoded) to get more updates.
 
 Don't stop coding!
+
+#### Previous Reports
+ * [March 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-march-2020)
