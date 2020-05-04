@@ -4,7 +4,7 @@ tags: playwright-sharp csharp
 permalink: /blogs/playwright-sharp-monthly-may-2020
 ---
 
-The score on v0.10.0: is 89 issues done, 3 in progress, and 88 to do. Halfway!
+The score on v0.10.0 is: 89 issues done, 3 in progress, and 88 to do. Halfway!
 
 We only have 22 tests left on the Chromium side, so I hope we can ship v0.10.0 for Chromium by the end of May.
 
