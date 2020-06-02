@@ -1,7 +1,7 @@
 ---
 title: Playwright Sharp Monthly Report - May 2020
 tags: playwright-sharp csharp
-permalink: /blogs/playwright-sharp-monthly-may-2020
+permalink: /blog/playwright-sharp-monthly-may-2020
 ---
 
 The score on v0.10.0 is: 89 issues done, 3 in progress, and 88 to do. Halfway!
@@ -49,5 +49,5 @@ Don't forget to follow me on Twitter [@hardkoded](https://twitter.com/hardkoded)
 Don't stop coding!
 
 #### Previous Reports
- * [April 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-apr-2020)
- * [March 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-march-2020)
+ * [April 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-apr-2020)
+ * [March 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-march-2020)

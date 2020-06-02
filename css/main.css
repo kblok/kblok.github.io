@@ -54,6 +54,13 @@ hr.small {
 .main-content {
   padding-top: 80px;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
 @media only screen and (min-width: 768px) {
   .main-content {
     padding-top: 130px;

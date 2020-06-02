@@ -1,7 +1,7 @@
 ---
 title: Playwright Sharp Monthly Report - March 2020
 tags: playwright-sharp csharp
-permalink: /blogs/playwright-sharp-monthly-march-2020
+permalink: /blog/playwright-sharp-monthly-march-2020
 ---
 
 Monthly reports are back!

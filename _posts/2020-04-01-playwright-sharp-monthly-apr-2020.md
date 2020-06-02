@@ -1,7 +1,7 @@
 ---
 title: Playwright Sharp Monthly Report - April 2020
 tags: playwright-sharp csharp
-permalink: /blogs/playwright-sharp-monthly-apr-2020
+permalink: /blog/playwright-sharp-monthly-apr-2020
 ---
 
 We are making significant progress on the project. We coded all the tests we need to get to v0.10.0. **A total of 820 tests!**
@@ -53,4 +53,4 @@ Don't forget to follow me on Twitter [@hardkoded](https://twitter.com/hardkoded)
 Don't stop coding!
 
 #### Previous Reports
- * [March 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-march-2020)
+ * [March 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-march-2020)
