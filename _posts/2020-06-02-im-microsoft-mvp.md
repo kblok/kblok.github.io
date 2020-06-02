@@ -2,6 +2,7 @@
 title: I'm a Microsoft MVP!
 tags: community
 permalink: /blogs/im-microsoft-mvp
+cross-site-link: https://www.hardkoded.com/es/blog/soy-microsoft-mvp
 ---
 
 I'm super excited to share with you that yesterday I was announced I had received the Microsoft MVP Award!
