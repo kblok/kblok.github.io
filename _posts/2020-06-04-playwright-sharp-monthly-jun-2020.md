@@ -11,10 +11,10 @@ As promised last month, We have PlaywrightSharp.Chromium v0.10!!!
 It's PlaywrightSharp.Chromium 0.10.3 to be accurate.  
 Following the style of many .NET libraries, PlaywrightSharp will deliver four NuGet packages:
 
- * PlaywrightSharp.Abstractions: You will need this package if you want to make a browser-agnostic library. In other words, Playwright-Sharp extensions. We shipped v0.10.3 of this package.
- * PlaywrightSharp.Chromium: Chromium client. We shipped v0.10.3 of this package.
- * PlaywrightSharp.Firefox: Firefox client. I hope we can ship v0.10.3 this month.
- * PlaywrightSharp.Webkit: Webkit client. We are not going to ship a v0.10 of this package. You will get this on v1.
+ * **PlaywrightSharp.Abstractions**: You will need this package if you want to make a browser-agnostic library. In other words, Playwright-Sharp extensions. We shipped v0.10.3 of this package.
+ * **PlaywrightSharp.Chromium**: Chromium client. We shipped v0.10.3 of this package.
+ * **PlaywrightSharp.Firefox**: Firefox client. I hope we can ship v0.10.3 this month.
+ * **PlaywrightSharp.Webkit**: Webkit client. We are not going to ship a v0.10 of this package. You will get this on v1.
 
 
 ## What can I do with PlaywrightSharp.Chromium?
