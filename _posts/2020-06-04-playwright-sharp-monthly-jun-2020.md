@@ -84,6 +84,6 @@ Don't forget to follow me on Twitter [@hardkoded](https://twitter.com/hardkoded)
 Don't stop coding!
 
 #### Previous Reports
- * [May 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-may-2020)
- * [April 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-apr-2020)
- * [March 2020](https://www.hardkoded.com/blogs/playwright-sharp-monthly-march-2020)
+ * [May 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-may-2020)
+ * [April 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-apr-2020)
+ * [March 2020](https://www.hardkoded.com/blog/playwright-sharp-monthly-march-2020)
