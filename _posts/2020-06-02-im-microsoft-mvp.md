@@ -16,3 +16,5 @@ I think it's all about that. It's about being little heroes where you are. Did I
 I want to thank [Nico Milcoff](https://twitter.com/nmilcoff) for opening this door and guide me through the process, Thank you Nico!
 
 I hope this award opens more doors to keep helping what I consider one of the best communities in the world: The developer's community.
+
+Don't stop coding!
