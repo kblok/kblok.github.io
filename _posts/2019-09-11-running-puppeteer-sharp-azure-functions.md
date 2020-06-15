@@ -172,6 +172,8 @@ RUN wget --no-verbose -O /tmp/chrome.deb http://dl.google.com/linux/chrome/deb/p
 ENV PUPPETEER_EXECUTABLE_PATH "/usr/bin/google-chrome-unstable"
 ```
 
+_Thanks to [Tobias Sundqvist](https://disqus.com/by/tobiassundqvist/) for the updated recipe._
+
 We also know that we need to remove the browser download method, because the docker image will have a chromium installed:
 
 ```cs
