@@ -5,7 +5,7 @@ permalink: /blog/playwright-sharp-firefox-010
 ---
 
 ![firefox](https://media.giphy.com/media/xsE65jaPsUKUo/giphy.gif)  
-Firefox joined to the PlaywrightSharp familiy!
+Firefox joined to the PlaywrightSharp family!
 
 
 ## What can I do with PlaywrightSharp.Firefox?
@@ -19,7 +19,7 @@ Seriously!
 
 
 You should be able to do almost everything you would do with his older brother PuppeteerSharp or his younger brother PlaywrightSharp.Chromium.  
-This is how you can take an screenshot in PlaywrightSharp **NOW**!
+This is how you can take a screenshot in PlaywrightSharp **NOW**!
 
 ```cs 
 var options = new LaunchOptions
@@ -51,7 +51,7 @@ There are only two features not implemented on PlaywrightSharp.Firefox: PDF gene
 
 As [I mentioned when we launched Playwrightsharp.Chromium](https://www.hardkoded.com/blog/playwright-sharp-monthly-jun-2020), If you start using PlaywrightSharp now, the API is going to change, guaranteed, but you will jump into a project that will have way more support and new features.
 
-PuppeteerSharp doesn't support Fireofox yet. So I believe PlaywrightSharp.Firefox, even in its 0.10 version is the best library to automate Firefox in .NET.
+PuppeteerSharp doesn't support Firefox yet. So I believe PlaywrightSharp.Firefox, even in its 0.10 version, is the best library to automate Firefox in .NET.
 
 # Final words
 
