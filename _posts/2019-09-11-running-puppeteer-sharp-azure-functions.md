@@ -169,7 +169,7 @@ RUN wget --no-verbose -O /tmp/chrome.deb http://dl.google.com/linux/chrome/deb/p
 #END PUPPETEER RECIPE
 #####################
 
-ENV PUPPETEER_EXECUTABLE_PATH "/usr/bin/google-chrome-unstable"
+ENV PUPPETEER_EXECUTABLE_PATH "/usr/bin/google-chrome-stable"
 ```
 
 _Thanks to [Tobias Sundqvist](https://disqus.com/by/tobiassundqvist/) for the updated recipe._
