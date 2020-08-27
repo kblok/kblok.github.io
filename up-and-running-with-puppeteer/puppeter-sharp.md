@@ -1,7 +1,7 @@
 ---
 layout: redirected
 sitemap: false
-permalink: /up-and-running-with-puppeteer/puppeteer-repo
-redirect_to: https://github.com/puppeteer/puppeteer
+permalink: /up-and-running-with-puppeteer/puppeteer-sharp
+redirect_to: https://github.com/hardkoded/puppeteer-sharp/
 ---
 
