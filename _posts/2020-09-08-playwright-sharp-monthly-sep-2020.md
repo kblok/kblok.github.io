@@ -1,5 +1,5 @@
 ---
-title: Playwright Sharp Monthly Report - Sep 2020
+title: Playwright Sharp Monthly Report - September 2020
 tags: playwright-sharp csharp
 permalink: /blog/playwright-sharp-monthly-sep-2020
 ---
