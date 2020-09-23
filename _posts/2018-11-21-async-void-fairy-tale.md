@@ -83,7 +83,7 @@ No just kidding we didn't even find the bug yet.
 
 ## Is async void the problem?
 
-This past week I was obsessed with this async void issue. I considered replacing those events calls with other tools, such us [DataFlows](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library) or [System.Reactive](https://github.com/dotnet/reactive), but I wasn't able to find a clean and (most important) right solution.
+This past week I was obsessed with this async void issue. I considered replacing those events calls with other tools, such us [DataFlows](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library?WT.mc_id=DT-MVP-5003814) or [System.Reactive](https://github.com/dotnet/reactive), but I wasn't able to find a clean and (most important) right solution.
 
 As I finished the [Concurrency C# cookbook](http://shop.oreilly.com/product/0636920030171.do) a few weeks I ago, I decided to take my chances and contact [Steve Cleary](https://twitter.com/aSteveCleary) on Twitter. He was super friendly and replied my tweet. To my surprise, in the middle of the conversation, he said:
 
@@ -156,7 +156,7 @@ An [IConnectionTransport](https://github.com/hardkoded/puppeteer-sharp/blob/mast
 
 The problem here is that `MessageReceived?.Invoke` will trigger and forget an `async void` event handler. *Of Course!* there is not `await` involved! This **will** be a fire and forget.
 
-Now it makes more sense when you read this on the [Using Asynchronous Methods in ASP.NET 4.5 post](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45)
+Now it makes more sense when you read this on the [Using Asynchronous Methods in ASP.NET 4.5 post](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45?WT.mc_id=DT-MVP-5003814)
 
 >The downside to async void events is that developers no longer have full control over when events execute. For example, if both an .aspx and a .Master define Page_Load events, and one or both of them are asynchronous, the order of execution can't be guaranteed. The same indeterminate order for non event handlers (such as async void Button_Click ) applies.
 

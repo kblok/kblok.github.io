@@ -31,7 +31,7 @@ The idea is implementing in Puppeteer-Sharp all the interfaces we created in the
 
 ### 1. Implement explicit interfaces
 
-We are going to [implement explicit interfaces](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation). This means that, for instance, the [Browser class](https://www.puppeteersharp.com/api/PuppeteerSharp.Browser.html) will have methods expecting and returning concrete classes, and methods expecting and returning interfaces.
+We are going to [implement explicit interfaces](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation?WT.mc_id=DT-MVP-5003814). This means that, for instance, the [Browser class](https://www.puppeteersharp.com/api/PuppeteerSharp.Browser.html) will have methods expecting and returning concrete classes, and methods expecting and returning interfaces.
 
 So if you have an instance of a Browser class you will see a:
 

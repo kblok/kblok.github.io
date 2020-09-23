@@ -8,7 +8,7 @@ I started to prepare two posts, one about Page Sessions and the other one about 
 
 ## What is a BasePage?
 
-I bet you have noticed that all your pages inherit from [Page](https://msdn.microsoft.com/en-us/library/system.web.ui.page%28v=vs.110%29.aspx). This implementation has three goals:
+I bet you have noticed that all your pages inherit from [Page](https://msdn.microsoft.com/en-us/library/system.web.ui.page%28v=vs.110%29.aspx?WT.mc_id=DT-MVP-5003814). This implementation has three goals:
 
  * The ASP.NET Runtime knows how to instantiate a Page class and interact with it.
  * The Page class does all the hard work for us, Nothing less than turning our page into HTML.

@@ -84,7 +84,7 @@ You might not know it but if you have Visual Studio installed there is a high ch
 
 <img src="https://raw.githubusercontent.com/kblok/tech-posts/master/images/working-with-stored-procedures/SQLServerObjectExplorer.png" height="200px">
  
-If you don't find a LocalDB there you can see how to install it [here](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb). There are other versions you can install, for instance the full [Microsoft SQL Server Developer Edition](https://blogs.technet.microsoft.com/dataplatforminsider/2016/03/31/microsoft-sql-server-developer-edition-is-now-free/).
+If you don't find a LocalDB there you can see how to install it [here](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb?WT.mc_id=DT-MVP-5003814). There are other versions you can install, for instance the full [Microsoft SQL Server Developer Edition](https://blogs.technet.microsoft.com/dataplatforminsider/2016/03/31/microsoft-sql-server-developer-edition-is-now-free/?WT.mc_id=DT-MVP-5003814).
 
 ##### Pros
 * Your localDB is already there, you just need to use it.
@@ -99,7 +99,7 @@ If you don't find a LocalDB there you can see how to install it [here](https://d
 This solution is similar to the localDB one, but better suited if you use Mac OS. 
 When running Visual Studio on a virtual machine on Mac OS, running your SQL Server on a Docker container (directly on the Mac OS) will speed up your virtual machine. I would strongly recommend this solution if you use Mac OS.
 
-You can read about running SQL Server on Docker [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+You can read about running SQL Server on Docker [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?WT.mc_id=DT-MVP-5003814).
 
 ### Developers need data
 
@@ -109,7 +109,7 @@ First let's create a Data folder where we'll save all our insert scripts.
 
 <img src="https://raw.githubusercontent.com/kblok/tech-posts/master/images/working-with-stored-procedures/CreateDataFolder.png" height="200px">
 
-[SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) has a very cool tool to generate scripts, it is called... drum rolls... Generate Scripts!
+[SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?WT.mc_id=DT-MVP-5003814) has a very cool tool to generate scripts, it is called... drum rolls... Generate Scripts!
 
 <img src="https://raw.githubusercontent.com/kblok/tech-posts/master/images/working-with-stored-procedures/GenerateScripts.png" height="400px">
 

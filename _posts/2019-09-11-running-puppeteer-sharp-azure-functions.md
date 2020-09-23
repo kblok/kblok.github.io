@@ -14,7 +14,7 @@ Finally!!!
 
 Azure sandboxes have [some restrictions](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html). They also have blocked many GDI APIs. So, copying and executing a chrome.exe file in the build folder won't work.
 
-**But**, we can [create a function using a custom docker image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image), and we’ve already learned [how to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker).
+**But**, we can [create a function using a custom docker image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814), and we’ve already learned [how to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker).
 
 ![Idea](https://media1.giphy.com/media/l3mZasrfwrWUMnndS/giphy.gif?cid=790b7611ce327bb0e3f23a0d7571e481e562dcbc8c362319&rid=giphy.gif)
 
@@ -22,13 +22,13 @@ Azure sandboxes have [some restrictions](https://github.com/projectkudu/kudu/wik
 
 I think these three posts will be super helpful:
 
- * [Create a function on Linux using a custom image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image).
+ * [Create a function on Linux using a custom image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814).
  * [Azure Functions in a Docker Container](https://medium.com/faun/azure-functions-in-a-docker-container-56e625da3243) by [Matias Miguenz](https://medium.com/@miguenz.matias)
  * [How to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker) ;)
 
 # Prerequisites
 
-I followed all the steps mentioned in the "[Create your first function from the command line](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli)" post.
+I followed all the steps mentioned in the "[Create your first function from the command line](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=DT-MVP-5003814)" post.
  
 # Let's get started
 
@@ -193,7 +193,7 @@ And boom!
 
 ## Publish to Azure
 
-Now, let's follow [Microsoft Tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image#push-the-custom-image-to-docker-hub)
+Now, let's follow [Microsoft Tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#push-the-custom-image-to-docker-hub)
 
 ```
 docker login --username hardkoded
@@ -235,7 +235,7 @@ Let's see if it works...
 
 ## A few things to consider
 
-I didn't configure the app [as the tutorial says](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image#configure-the-function-app), you should do it on a real app.
+I didn't configure the app [as the tutorial says](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#configure-the-function-app), you should do it on a real app.
 
 This setup uses a Premium plan. You might need to check the pricing.
 ![Premium](https://i.ytimg.com/vi/Xjzmjh-9ee4/maxresdefault.jpg)

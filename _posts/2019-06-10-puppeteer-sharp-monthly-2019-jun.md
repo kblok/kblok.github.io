@@ -13,7 +13,7 @@ Ok, this was really short. Let me compensate that with a puppeteer gif.
 
 I want to prepare some examples using Azure Functions. We have a lot of questions related to Puppeteer in Azure, so I think this will be really valued by the community.
 
-I also want to create a Puppeteer-Sharp [CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools), With that CLI, it will be easier for devs to download Chromium without adding extra code on their apps.
+I also want to create a Puppeteer-Sharp [CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools?WT.mc_id=DT-MVP-5003814), With that CLI, it will be easier for devs to download Chromium without adding extra code on their apps.
 
 # Activity 
 

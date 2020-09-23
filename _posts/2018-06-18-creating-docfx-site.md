@@ -14,7 +14,7 @@ So I wanted to share with you a real-time(ish) post, explaining how I created a 
 
 # Introduction
 
-We have documented all the code on [Puppeteer-Sharp](https://github.com/hardkoded/puppeteer-sharp/) using [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments), and we want to create a site using [DocFX](https://dotnet.github.io/docfx/) and [Github Pages](https://pages.github.com/). Finally, we want to make it available on http://www.puppeteer-sharp.com.
+We have documented all the code on [Puppeteer-Sharp](https://github.com/hardkoded/puppeteer-sharp/) using [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments?WT.mc_id=DT-MVP-5003814), and we want to create a site using [DocFX](https://dotnet.github.io/docfx/) and [Github Pages](https://pages.github.com/). Finally, we want to make it available on http://www.puppeteer-sharp.com.
 
 # What do we know?
 

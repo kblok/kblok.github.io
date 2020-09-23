@@ -43,7 +43,7 @@ We get this beautiful result:
 >�
 
 # What is a char?
-This [definition of a char](https://docs.microsoft.com/en-us/dotnet/api/system.char?view=netframework-4.7.2) at docs.microsoft.com:
+This [definition of a char](https://docs.microsoft.com/en-us/dotnet/api/system.char?view=netframework-4.7.2&WT.mc_id=DT-MVP-5003814) at docs.microsoft.com:
 
 >The .NET Framework uses the Char structure to represent a Unicode character. The Unicode Standard identifies each Unicode character with a unique 21-bit scalar number called a code point and defines the UTF-16 encoding form that specifies how a code point is encoded into a sequence of one or more 16-bit values. Each 16-bit value ranges from hexadecimal 0x0000 through 0xFFFF and is stored in a Char structure. The value of a Char object is its 16-bit numeric (ordinal) value.
 
@@ -74,11 +74,11 @@ If we use `ToCharArray` for emojis, we are "breaking" them.
 
 # StringInfo to the rescue
 
-According to [its documentation](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo?view=netframework-4.7.2):
+According to [its documentation](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo?view=netframework-4.7.2&WT.mc_id=DT-MVP-5003814):
 
 >StringInfo provides functionality to split a string into text elements and to iterate through those text elements.
 
-StringInfo provides a method called [GetTextElementEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo.gettextelementenumerator?view=netframework-4.7.2#System_Globalization_StringInfo_GetTextElementEnumerator_System_String_) which helps us split a string not in chars, but into text elements. 
+StringInfo provides a method called [GetTextElementEnumerator](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.stringinfo.gettextelementenumerator?view=netframework-4.7.2&WT.mc_id=DT-MVP-5003814#System_Globalization_StringInfo_GetTextElementEnumerator_System_String_) which helps us split a string not in chars, but into text elements. 
 
 So now, if we do this:
 

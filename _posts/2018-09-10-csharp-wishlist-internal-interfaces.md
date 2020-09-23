@@ -48,7 +48,7 @@ In this case, I should be able to treat my public `Connection` class as `IClosab
 
 ## Implementing internal interfaces explicitly
 
-One workaround is through an explicit implementation. Let's review the definition of [Explicit Interface Implementation](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation):
+One workaround is through an explicit implementation. Let's review the definition of [Explicit Interface Implementation](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation?WT.mc_id=DT-MVP-5003814):
 
 >If a class implements two interfaces that contain a member with the same signature, then implementing that member in the class will cause both interfaces to use that member as their implementation.
 

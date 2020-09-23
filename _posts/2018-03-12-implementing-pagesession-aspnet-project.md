@@ -30,7 +30,7 @@ As I mentioned in my [previous post](https://www.hardkoded.com/blogs/implementin
 
 A unique page identifier will help us identify elements corresponding to that specific page instance in the global Session collection. One easy way to implement this is by using a GUID.
 
-I find the [PreLoad](https://msdn.microsoft.com/en-us/library/system.web.ui.page.preload(v=vs.110).aspx) event a great place to initialize this GUID, because we can be sure that the PageSession will be ready when the developer needs it (which would be most likely on Page_Load, Control Events and Page_PreRender)
+I find the [PreLoad](https://msdn.microsoft.com/en-us/library/system.web.ui.page.preload(v=vs.110).aspx?WT.mc_id=DT-MVP-5003814) event a great place to initialize this GUID, because we can be sure that the PageSession will be ready when the developer needs it (which would be most likely on Page_Load, Control Events and Page_PreRender)
 
 ```cs
 public class BasePage : Page
@@ -168,7 +168,7 @@ public class BasePage : Page
 
 This is where things become a little bit messy. The idea behind the PageSession expiration is trying to identify when the user leaves the page. So we're are going to play with the javascript [unload event](https://developer.mozilla.org/en-US/docs/Web/Events/unload).
 
-First, we need to create a [WebMethod](https://msdn.microsoft.com/en-us/library/system.web.services.webmethodattribute(v=vs.110).aspx) so we can clear the PageSession from javascript.
+First, we need to create a [WebMethod](https://msdn.microsoft.com/en-us/library/system.web.services.webmethodattribute(v=vs.110).aspx?WT.mc_id=DT-MVP-5003814) so we can clear the PageSession from javascript.
 
 ```cs
 [WebMethod(true)]

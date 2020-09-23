@@ -124,7 +124,7 @@ reader.on('data', data => writer.write('echo: ' + data + '\n'));
 setInterval(()=> {}, 1000 * 60 * 60);
 ```
 
-Now, let's go to the .NET world. We know there is something called [Anonimous Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication).
+Now, let's go to the .NET world. We know there is something called [Anonimous Pipes](https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication?WT.mc_id=DT-MVP-5003814).
 Let's see if that works:
 
 
