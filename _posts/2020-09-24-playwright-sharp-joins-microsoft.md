@@ -16,13 +16,14 @@ Yes, I did. And I have to a few things say about it.
 
 ## It's our project
 
-Playwright Sharp uses the MIT License. That means that Playwright Sharp is mine, and also yours, and also Microsoft's.
+Playwright Sharp uses the MIT License. That means that Playwright Sharp is mine, and it's also yours, and it's also Microsoft's.
 
 You can do the same! You can fork the project and make it better.
 
 ## Playwright team rocks!
 
-They could just copy my code and ship it with a different name. But instead, they opened the doors of their team and embraced the  Playwright Sharp project.
+They could just copy my code and ship it with a different name. But instead, they opened the doors of their team and embraced the  Playwright Sharp project.  
+They have a great vision for the project and they know where the project goes.
 
 # But, why?
 
@@ -30,7 +31,7 @@ They could just copy my code and ship it with a different name. But instead, the
 
 I think it's what needs to be done to take this project to the next level. [Aaron Stannard](https://twitter.com/Aaronontheweb) explained very well on his post [The Next Decade of .NET Open Source](https://aaronstannard.com/next-decade-dotnet/).
 
-First, When a .NET team needs to add a third-party tool to their toolbox, the management would think about support. And the final though tends to be: "I'd better use a tool from Microsoft than from a random Argentinian guy". 
+First, When a .NET team needs to add a third-party tool to their toolbox, the management would think about long term support. The final though tends to be: "I'd better use a tool from Microsoft than from a random Argentinian guy". 
 
 We developers also have some responsibility. The biggest risk for a .NET developer involved in open-source is Microsoft creating a similar project. And it's not Microsoft fault at all. But developers would pick Entity Framework over Nhibernate, the default ASP.NET DI over Windsor Castle, etc.  
 I love how Microsoft embraced open-source and became a big player in the open-source community. But I think the .NET community has a lot to learn yet.
@@ -53,7 +54,7 @@ My dream is to make Playwright-Sharp a first-class automation tool for the .NET 
 
 # Give some love!
 
-So, Playwright Sharp has a new home: [https://github.com/microsoft/playwright-sharp](https://github.com/microsoft/playwright-sharp). I invite you to go there and give it some love ⭐️.
+So, Playwright Sharp has a new home: [https://github.com/microsoft/playwright-sharp](https://github.com/microsoft/playwright-sharp). Let's go there and give it some love ⭐️.
 
 
 Happy automation!  
