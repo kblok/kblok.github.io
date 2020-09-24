@@ -37,8 +37,8 @@ When a .NET team needs to add a third-party tool to their toolbox, the managemen
 We developers also have some responsibility. The biggest risk for a .NET developer involved in open-source is Microsoft creating a similar project. And it's not Microsoft fault at all. But developers would pick Entity Framework over Nhibernate, the default ASP.NET DI over Windsor Castle, etc.  
 I love how Microsoft embraced open-source and became a big player in the open-source community. But I think the .NET community has a lot to learn yet.
 
-Another reason to move the project is that, despite the relative popularity of Puppeteer-Sharp, it is still a solo project.
-My hope with this move is to serve way more developers compared to Puppeteer-Sharp and also get more people involved in this project.  
+Another reason to move the project is that, despite the relative popularity of Puppeteer-Sharp, I wasn't able to build a stable team.
+My hope with this move is to serve way more developers compared to Puppeteer-Sharp and also get more people involved in the project.  
 
 Remember, it's not my project. It's OURS.
  
