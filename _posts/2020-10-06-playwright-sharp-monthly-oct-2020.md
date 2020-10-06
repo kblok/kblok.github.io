@@ -7,7 +7,7 @@ permalink: /blog/playwright-sharp-monthly-oct-2020
 We accomplish two big milestones in September. [Microsoft adopted Playwright Sharp](https://www.hardkoded.com/blog/playwright-sharp-joins-microsoft) and now is part of the Playwright suite.  
 We shipped v0.142.0,  which is the first version with full feature match with Playwright!
 
-https://media1.giphy.com/media/PSyqVLhwDvjXO/giphy.gif?cid=ecf05e47ehdpfrsgwhc0yi5v6wzm6o4e543tqj0rbe30ya7v&rid=giphy.gif
+![boom](https://media1.giphy.com/media/PSyqVLhwDvjXO/giphy.gif?cid=ecf05e47ehdpfrsgwhc0yi5v6wzm6o4e543tqj0rbe30ya7v&rid=giphy.gif)
 
 # No v1 yet?
 
