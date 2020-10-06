@@ -11,7 +11,7 @@ We shipped v0.142.0,  which is the first version with full feature match with Pl
 
 # No v1 yet?
 
-We decided to leave PlaywrightSharp in v0, so we give **you** the chance to send us feedback and help us shape the API.
+We decided to leave PlaywrightSharp in v0, so we can give **you** the chance to send us feedback and help us shape the API.  
 Until we decide to make it v1, the minor version will map to the Playwright version. In this case, v0.142.0 maps to v1.4.2 in Playwright.
 
 # Breaking Changes
@@ -24,10 +24,11 @@ During this evaluation, **we decided to drop most option classes**, like ClickOp
 
 The tools we use shape how we code. If you use Entity Framework, you will use Linq a lot. If you use Playwright Sharp, we will want you to take advantage of [named arguments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments?WT.mc_id=DT-MVP-5003814).
 
-So, if we drop `PdfOptions` in `Page.GetPdfAsync` is not for you to do this:
+So, if we drop `PdfOptions` in `Page.GetPdfAsync`, we woulnd't like you to do this:
 
 ```cs 
-await page.GetPdfAsync(null, 1, true, headerTemplate, "<div>Test footer template</div>", true, false, "", null, null, null, new Margin { Bottom = "1in", Top = "2in" }, false);
+await page.GetPdfAsync(null, 1, true, headerTemplate, "<div>Test footer template</div>", 
+true, false, "", null, null, null, new Margin { Bottom = "1in", Top = "2in" }, false);
 ``` 
 
 But this
@@ -43,7 +44,7 @@ await page.GetPdfAsync(
 
 # playwright-sharp dotnet tool
 
-One of the weak spots of Playwright Sharp was the need for a `await Playwright.InstallAsync();` in runtime. That wasn't ideal.
+One of the weak spots of Playwright Sharp was the need for a `await Playwright.InstallAsync();` in runtime. That wasn't ideal.  
 Now we can get rid of that line using the new `playwright-sharp` dotnet tool. It's as easy as installing the tool and running the install command:
 
 ```cs 
