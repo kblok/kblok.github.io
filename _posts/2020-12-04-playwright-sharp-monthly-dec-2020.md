@@ -4,7 +4,7 @@ tags: playwright-sharp csharp
 permalink: /blog/playwright-sharp-monthly-dec-2020
 ---
 
-Wait, What happened with the November report? Well, well, November was a fun month. But here we are in the December report.
+Wait, What happened with the November report? Well, well, November was a fun month. But here we are in the December report. Let's get started!
 
 # Important Notice.
 
@@ -16,11 +16,13 @@ Too much talk. Let's got to the fun part.
  
 # What's new
 
-Since the last report, we got two new versions: [v0.151.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.151.0), [v0.152.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.152.0), and [v0.162.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.162.0).
-If you read [my previous report](https://www.hardkoded.com/blog/playwright-sharp-monthly-oct-2020), you will know that those versions map the versions v1.5.1, v1.5.2, and 1.6.2, respectively.
+Since the last report, we got three new versions: [v0.151.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.151.0), [v0.152.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.152.0), and [v0.162.0](https://github.com/microsoft/playwright-sharp/releases/tag/v0.162.0).
+If you read [my previous report](https://www.hardkoded.com/blog/playwright-sharp-monthly-oct-2020), you will know that those versions map Playwright's versions v1.5.1, v1.5.2, and 1.6.2, respectively.
 
-PlaywrightSharp now offers some pretty cool new features, such as **Video Screencasts**, **HAR recording**,  **WebSockets inspection** and **Tap support** on mobile emulation.
+PlaywrightSharp now offers some pretty cool new features, such as **Video Screencasts**, **HAR recording**,  **WebSockets inspection** and **Tap support** on mobile emulation.  
 Do you want to take a look at these new features? Comment this post with the feature you'd like to see, and I'll create a post just for you, well, for everybody.
+
+![comment](https://media0.giphy.com/media/MXQmDs1c8oAOVkIYHz/giphy.gif)
 
 # Driver and browser install refactor
 
@@ -29,15 +31,15 @@ We have one driver for each platform: OSX, Linux, Win64, and Win32. And we have 
 
 ## The first approach
 
-The first approach was to embed the drivers inside the dll. When you call `Playwright.CreateAsync`. We would extract the driver for your platform and copy it to your bin folder.
+The first approach was to embed the drivers inside the PlaywrightSharp.dll. When you call `Playwright.CreateAsync`. We would extract the driver for your platform and copy it to your working directory.
 Then you would need to call `Playwright.InstallAsync` to install the browsers if required.
 
-This approach had a few downsides. 
-First, We were shipping 60MB DLL files. We could say: "ok, but we need those drivers". But you needed only the driver for your platform, not all the drivers. This approach also prevented us from shipping platform-specific libraries, e.g., for .NET 5.
-Second, we were writing files in runtime. That's not ideal. We have the risk of not being able to write to disk in some scenarios.
-Last, we were doing install tasks in runtime, in production. `Playwright.InstallAsync` would cause the first call to your app to take a few minutes to download all the browsers. Not ideal at all.
+This approach had a few downsides.  
+First, We were shipping a 60mb DLL file. We could say: "ok, but we need those drivers". But you needed only the driver for your platform, not all the drivers. This approach also prevented us from shipping platform-specific libraries, e.g., for .NET 5.  
+Second, we were writing files in runtime. That's not ideal. We have the risk of not being able to write to disk in some scenarios.  
+Last, we were doing install tasks in runtime. If you were using it in production, `Playwright.InstallAsync` would cause the first call to your app to take a few minutes to download all the required browsers. Not ideal at all.
 
-We tried to remove the need for the `InstallAsync` task with a dotnet tool. It did the work. The potential problem there is that the dotnet tool was downloading the browsers for the version referenced in the tool, which might not be the same as the version needed for your app.
+We tried to remove the need for the `InstallAsync` task with a dotnet tool. It did the work, but the potential problem there was that the dotnet tool was downloading the browsers for the version referenced in the tool, which might not be the same as the version your app needed.
 
 There should be a better way.
 
@@ -45,15 +47,15 @@ There should be a better way.
 
 ## A new approach
 
-v0.162.0 relies now on two features:
-Nuget runtimes folder.
-Custom Build targets.
+v0.162.0 now relies on two features:
+ * Nuget runtimes folder.
+ * Custom Build targets.
 
 Nuget has something called [architecture-specific folders](https://docs.microsoft.com/en-us/nuget/create-packages/supporting-multiple-target-frameworks?WT.mc_id=DT-MVP-5003814#architecture-specific-folders).
 
 > If you have architecture-specific assemblies, that is, separate assemblies that target ARM, x86, and x64, you must place them in a folder named runtimes within sub-folders named {platform}-{architecture}\lib\{framework} or {platform}-{architecture}\native.
 
-So now, instead of embedding the drivers into the DLL, we are shipping those inside the runtimes folder:
+So now, instead of embedding the drivers into the DLL, we are shipping the drivers inside the runtimes folder:
 
 ```
 \runtimes 
@@ -67,16 +69,16 @@ So now, instead of embedding the drivers into the DLL, we are shipping those ins
         \native 
 ```
 
-So now, Nuget will add a build task to copy those files depending on the [RuntimeIdentifier](https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props?WT.mc_id=DT-MVP-5003814#runtimeidentifier) or on the [runtime used on dotnet publish](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?WT.mc_id=DT-MVP-5003814).  
-If you don't have a RuntimeIdentifer and don't use the publish command (this would be a typical unit test scenario), all the drivers will be copied under a `runtimes` folder. We needed to do an extra check in the code. If we find the `playwright-cli` in the current directory, we use it; if not, we try to go to the `runtimes` folder, looking for a platform-specific driver.
+Nuget will add a build task to copy those files depending on the [RuntimeIdentifier](https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props?WT.mc_id=DT-MVP-5003814#runtimeidentifier) or on the [runtime used on dotnet publish](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?WT.mc_id=DT-MVP-5003814).  
+If you don't have a RuntimeIdentifer and don't use the publish command (this would be a typical unit test scenario), all the drivers will be copied under a `runtimes` folder. That's why if we find the `playwright-cli` in the current directory, we use it; if not, we try to go to the `runtimes` folder, looking for a platform-specific driver.
 
-That gives us a PlaywrightSharp.dll file of only 500kb, which would allow us to ship multi-target binaries, e.g., for .NET 5. And we remove the need for writing files at runtime.
+That gives us a PlaywrightSharp.dll file of only 500kb, which would allow us to ship multi-target binaries, e.g., for .NET 5. And we also removed the need for writing files at runtime.
 
 I also learn that you can [add targets inside Nuget packages](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package?WT.mc_id=DT-MVP-5003814#include-msbuild-props-and-targets-in-a-package). That means that you can inject your own tasks into the build process.
 
 ![hacker](https://media2.giphy.com/media/YQitE4YNQNahy/giphy.gif?cid=ecf05e47je5sy622q1yar960f2r1cv0lbilasndalwin4w9i&rid=giphy.gif)
 
-I create two targets that will run as part of your build process. The first task will run `playwright-cli install` command, installing the required browsers. At build time :o
+I created two targets that will run as part of your build process. The first task will run `playwright-cli install` command, installing the required browsers. At build time 😯.
 
 ```
  <Target Name="InstallBrowsers" AfterTargets="CopyFilesToOutputDirectory">
@@ -105,9 +107,9 @@ The second target is relatively new. It will copy the drivers if you try to use 
 
 ## Shipping process 
 
-We are removing the need for the `InstallAsync` method call in your code with these changes.
-If you are using PlaywrightSharp for testing, you are getting the browsers at build time.
-If you are using PlaywrightSharp in Docker, you will get the browser for free if you use an [official Docker image](https://hub.docker.com/_/microsoft-playwright).
+With these changes, we wouldn't need to call `InstallAsync` anymore.  
+If you are using PlaywrightSharp for testing, you are getting the browsers at build time.  
+If you are using PlaywrightSharp in Docker and you use any [official Docker image](https://hub.docker.com/_/microsoft-playwright), you will get the browser for free .  
 If you are shipping it to a custom server, you will get the `playwright-cli` binary in your bin folder. You just need to run `.\bin\playwright-cli.exe install` in Windows or `./bin/playwright-cli install` in OSX/Linux as part of your deploy script.
 
 I hope all these changes remove some barriers and deploy issues that some users were having.
