@@ -1,7 +1,7 @@
 ---
 layout: redirected
 sitemap: false
-permalink: /up-and-running-with-puppeteer/repo
-redirect_to: https://github.com/PacktPublishing/Up-and-Running-with-Puppeteer
+permalink: /ui-testing-with-puppeteer/repo
+redirect_to: https://github.com/PacktPublishing/ui-testing-with-puppeteer
 ---
 
