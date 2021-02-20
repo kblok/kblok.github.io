@@ -1,0 +1,115 @@
+body {
+    font-family: Ubuntu;
+    width: 1184px;
+    padding-top: 20px;
+    background-color: #efefef;
+    margin: auto;
+}
+
+@media print {
+    body {
+        font-family: Ubuntu;
+        width: 100%;
+        padding-top: 0;
+        background-color:white;
+    }
+}
+
+header {
+    background-color: #397ea8;
+    min-height: 80px;
+    padding: 44px 50px 34px 50px;
+    color: white;
+}
+
+.name {
+    font-size: 46px;
+}
+
+.role {
+    font-size: 24px;
+    color: rgb(188, 188, 188);
+}
+
+.summary {
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+.contact-info {
+    background-color: rgb(49, 110, 140);
+    color: white;
+    font-size: 18px;
+    padding: 20px 50px 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info div{
+    margin-top: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+}
+
+.column-content {
+    margin: 0 50px 0 50px;
+}
+
+.section-item {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: rgb(188, 188, 188);
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.section h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 8px 0 8px 0;
+    font-style: italic;
+}
+
+.section h5 {
+    margin: 0;
+    font-style: italic;
+    color: rgb(188, 188, 188);
+}
+
+.section h6 {
+    margin: 0;
+    font-style: italic;
+    color: rgb(188, 188, 188);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.content li {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.tag {
+    background-color: #9cbed3;
+    border-radius: 6px;
+    float: left;
+    color: #fff;
+    padding: 6px 14px 6px 14px;
+    margin-right: 14px;
+    margin-bottom: 18px;
+}
