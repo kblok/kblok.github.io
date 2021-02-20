@@ -80,7 +80,7 @@ header {
 }
 
 .section h4 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin: 8px 0 8px 0;
     font-style: italic;
@@ -95,9 +95,9 @@ header {
 .section h6 {
     margin: 0;
     font-style: italic;
-    color: rgb(188, 188, 188);
     font-size: 16px;
     margin-top: 10px;
+    font-weight: 400;
 }
 
 .content li {
