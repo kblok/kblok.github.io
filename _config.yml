@@ -23,6 +23,7 @@ description: Random thoughts about .NET and coding in general
 
 # List of links in the navigation bar
 navbar-links:
+  TIL: "til"
   En Español: "https://www.hardkoded.com/es/" 
   About Me: "aboutme"
   Resume: "resume"
@@ -130,6 +131,10 @@ paginate: 5
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+collections:
+  tils:
+    output: true
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
