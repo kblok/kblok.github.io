@@ -1,5 +1,5 @@
 body {
-    font-family: Ubuntu;
+    font-family: Roboto;
     width: 1184px;
     padding-top: 20px;
     background-color: #efefef;
@@ -8,7 +8,6 @@ body {
 
 @media print {
     body {
-        font-family: Ubuntu;
         width: 100%;
         padding-top: 0;
         background-color:white;
@@ -83,7 +82,6 @@ header {
     font-size: 18px;
     font-weight: 400;
     margin: 8px 0 8px 0;
-    font-style: italic;
 }
 
 .section h5 {
@@ -94,7 +92,6 @@ header {
 
 .section h6 {
     margin: 0;
-    font-style: italic;
     font-size: 16px;
     margin-top: 10px;
     font-weight: 400;
