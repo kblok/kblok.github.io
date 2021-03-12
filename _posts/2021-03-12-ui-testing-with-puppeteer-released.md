@@ -4,10 +4,16 @@ tags: playwright-sharp puppeteer ui-testing-with-puppeteer
 permalink: /blog/playwright-sharp-monthly-dec-2020
 ---
 
-I'm so thrilled to announce that my book [UI testing with Puppeteer](https://www.uitestingwithpuppeteer.com/)  has been published! You can find it on [Amazon.com](https://www.amazon.com/Testing-Puppeteer-end-end-automation/dp/180020678X/) and 
+I'm so thrilled to announce that my book [UI testing with Puppeteer](https://www.uitestingwithpuppeteer.com/)  has been published!  
+You can find it on [Amazon.com](https://www.amazon.com/Testing-Puppeteer-end-end-automation/dp/180020678X/) and 
 [PacktPub.com](https://www.packtpub.com/product/ui-testing-with-puppeteer/9781800206786). You will find all the details on [the book website](https://www.uitestingwithpuppeteer.com/). Special Thanks to [Facundo Giuliani](https://fgiuliani.com/) for helping me set up a Jamstack website in a few hours.  
 
-![book](https://www.uitestingwithpuppeteer.com/images/B16113_Mockup%20cover.jpg)
+<img src="https://www.uitestingwithpuppeteer.com/images/B16113_Mockup%20cover.jpg" alt="book" width="300" style="
+    margin-left: 25%;
+">
+
+
+# Why writing a book?
 
 When [Kaustubh Manglurkar](https://www.linkedin.com/in/kaustubh-manglurkar-871ba0167/) from [PacktPub](https://www.packtpub.com/) reached me out asking me if I wanted to write a book, I didn't know what to say. I wasn't (and I don't consider myself) a writer. But Kaustubh told me something that turned my doubts into an absolute yes. He told me that **there was no book about Puppeteer in the market**.
 That put extra pressure on the project. If I was going to write the first book about Puppeteer, it should cover most of the Puppeteer API.  
