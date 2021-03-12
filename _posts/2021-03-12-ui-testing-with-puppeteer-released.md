@@ -1,6 +1,6 @@
 ---
 title: UI testing with Puppeteer book officially released!
-tags: playwright-sharp puppeteer ui-testing-with-puppeteer
+tags: puppeteer ui-testing-with-puppeteer
 permalink: /blog/ui-testing-with-puppeteer-released
 ---
 
