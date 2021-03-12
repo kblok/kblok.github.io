@@ -24,7 +24,7 @@ I can make a connection with TV shows like House or Grey's Anatomy, where every 
 
 This book will help you get started not only with Puppeteer but also with UI testing. Each chapter begins with the basic concepts before getting into the code. You will learn about **automated testing** in general. You will learn what **test runners** are and what you should expect from them. 
 
-In Chapter 4, where you will learn to interact with the page, you will also learn about **CSS selectors and XPath**. You will even see a little bit about JavaScript closures in Chapter 7. Chapter 8 is about environments emulation, but I open the chapter talking about the internet ecosystem. 
+In Chapter 4, where you will learn to interact with the page, but you will also learn about **CSS selectors and XPath**. You will even see a little bit about **JavaScript closures** in Chapter 7. Chapter 8 is about **environments emulation**, but I open the chapter talking about the internet ecosystem. 
 
 **This book is also for web developers!!**  
 In chapter 2, I talk about how web developers can use web automation as part of their workflow to test their UI components. In Chapter 7, We see how to **generating content** with Puppeteer. Then in chapter 9, I talk about **web scraping** and scraping ethics. The last chapter is about **performance**, which is something we should all care about.
