@@ -1,7 +1,7 @@
 ---
 title: UI testing with Puppeteer book officially released!
 tags: playwright-sharp puppeteer ui-testing-with-puppeteer
-permalink: /blog/playwright-sharp-monthly-dec-2020
+permalink: /blog/ui-testing-with-puppeteer-released
 ---
 
 I'm so thrilled to announce that my book [UI testing with Puppeteer](https://www.uitestingwithpuppeteer.com/)  has been published!  
