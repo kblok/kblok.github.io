@@ -20,8 +20,6 @@ That put extra pressure on the project. If I was going to write the first book a
 
 I can make a connection with TV shows like House or Grey's Anatomy, where every chapter has its own plot, but there is an underlying story going on. The same happens with this book. Each chapter covers a topic, but the underlying story is the Puppeteer API.  
 
-Puppeteer is a living project, so it would be impossible for me to say that this covers all the API, but it covers the most important part of it. 
-
 # What you will find in the book
 
 This book will help you get started not only with Puppeteer but also with UI testing. Each chapter begins with the basic concepts before getting into the code. You will learn about **automated testing** in general. You will learn what **test runners** are and what you should expect from them. 
