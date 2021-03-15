@@ -4,6 +4,7 @@ body {
     padding-top: 20px;
     background-color: #efefef;
     margin: auto;
+    color: rgb(85, 94, 105);
 }
 
 @media print {
