@@ -7,7 +7,7 @@ comments: true
 social-share: true
 ---
 
-If you want to uncheck all viewed files... well, uncheck them using JavaScript
+If you want to uncheck all viewed files you can uncheck them using JavaScript
 
 ```
 document.querySelectorAll('.js-reviewed-checkbox').forEach(c => c.checked ? c.click() : null)
