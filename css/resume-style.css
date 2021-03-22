@@ -41,13 +41,13 @@ header {
     background-color: rgb(49, 110, 140);
     color: white;
     font-size: 18px;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 0 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .contact-info div{
-    margin-top: 20px;
+    margin: 20px 0 0 50px;
 }
 
 .content {
