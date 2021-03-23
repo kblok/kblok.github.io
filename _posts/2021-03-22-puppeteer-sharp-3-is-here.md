@@ -16,7 +16,7 @@ But while a was writing the [UI Testing with Puppeteer](https://www.uitestingwit
 PuppeteerSharp 3 is the first version that doesn't fully map the same version (Puppeteer 3) upstream. It's quite a Frankenstein, version-wise, but for good!  
 The first neat feature is that Puppeteer-Sharp is shipping Chromium 90.0.4403.0, which is the version that Puppeteer v8 is using.  
 The second new feature is [EmulateNetworkConditionsAsync](http://www.puppeteersharp.com/api/PuppeteerSharp.Page.html#PuppeteerSharp_Page_EmulateNetworkConditionsAsync_PuppeteerSharp_NetworkConditions_), which was also a feature introduced in Puppeteer v8. This method allows the use to emulate networks such as 3G or 4G.  
-And last, but not least, is experimental Firefox support.  
+And last, but not least: Experimental Firefox support.  
 *You can find the complete changelog on the [release page](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v3.0.0).*
 # The state of the Fox
 
