@@ -7,7 +7,7 @@ permalink: /blog/puppeteer-sharp-3-is-here
 I'm so excited to announce that, after eight months, Puppeteer-Sharp 3 is here!  
 ![party](https://media.giphy.com/media/1yJEEsgy4q2bu/giphy.gif)
 
-Getting Puppeteer-Sharp 3 out was quite a challenge. **The lack of [sponsors](https://github.com/sponsors/hardkoded) on Puppeteer-Sharp** and the [strong support of Microsoft on Playwright-Sharp](https://www.hardkoded.com/blog/playwright-sharp-joins-microsoft) made me put all my efforts on Playwright-Sharp.
+Getting Puppeteer-Sharp 3 out was quite a challenge. **The lack of [sponsors](https://github.com/sponsors/hardkoded) on Puppeteer-Sharp** and the [strong support of Microsoft on Playwright-Sharp](https://www.hardkoded.com/blog/playwright-sharp-joins-microsoft) made me put all my efforts on Playwright-Sharp in the past few months.
 
 But while a was writing the [UI Testing with Puppeteer](https://www.uitestingwithpuppeteer.com/) book, Puppeteer-Sharp got to 1 Million downloads (1 million downloads and only three sponsors), I said to myself: "Hey, let's do something to celebrate!" So I decided to wrap up **Experimental Firefox Support**. And that took us to v3!
 
@@ -15,7 +15,7 @@ But while a was writing the [UI Testing with Puppeteer](https://www.uitestingwit
 
 PuppeteerSharp 3 is the first version that doesn't fully map the same version (Puppeteer 3) upstream. It's quite a Frankenstein, version-wise, but for good!  
 The first neat feature is that it's shipping Chromium 90.0.4403.0, which is the version that Puppeteer v8 is using.  
-The second new feature is `EmulateNetworkConditionsAsync`, which is also a feature introduced in Puppeteer v8.  
+The second new feature is [EmulateNetworkConditionsAsync](http://www.puppeteersharp.com/api/PuppeteerSharp.Page.html#PuppeteerSharp_Page_EmulateNetworkConditionsAsync_PuppeteerSharp_NetworkConditions_), which was also a feature introduced in Puppeteer v8. This method allows the use to emulate networks such as 3G or 4G.
 And last, but not least, is experimental Firefox support.
 
 # The state of the Fox
