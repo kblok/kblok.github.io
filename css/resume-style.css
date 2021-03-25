@@ -14,6 +14,10 @@ body {
         background-color:white;
         zoom:69%;
     }
+
+    a {
+        text-decoration: none !important;
+    }
 }
 
 header {
@@ -46,6 +50,15 @@ header {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 .contact-info div{
     margin: 20px 0 0 50px;
 }
@@ -69,7 +82,6 @@ header {
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: underline;
     margin-bottom: 20px;
 }
 
@@ -77,6 +89,10 @@ header {
     font-size: 24px;
     font-weight: 700;
     margin: 0;
+}
+
+.section h3 a {
+    color: rgb(85, 94, 105);
 }
 
 .section h4 {
@@ -111,4 +127,8 @@ header {
     padding: 6px 14px 6px 14px;
     margin-right: 14px;
     margin-bottom: 18px;
+}
+
+.tag a {
+    color: #fff;
 }
