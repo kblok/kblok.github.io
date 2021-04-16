@@ -1,5 +1,5 @@
 ---
-title: How to delete all branches that are not in the remote repo
+title: TIL: How to delete all branches that are not in the remote repo
 tags: til, git
 permalink: /til/how-to-delete-all-branches-not-in-upstream
 layout: post
