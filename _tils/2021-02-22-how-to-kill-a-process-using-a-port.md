@@ -1,5 +1,5 @@
 ---
-title: TIL: How to kill a process locking a port in MacOS
+title: TIL - How to kill a process locking a port in MacOS
 tags: til, macos
 permalink: /til/how-to-kill-a-process-using-a-port
 layout: post

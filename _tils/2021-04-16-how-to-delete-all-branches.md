@@ -1,5 +1,5 @@
 ---
-title: TIL: How to delete all branches but one
+title: TIL - How to delete all branches but one
 tags: til, git
 permalink: /til/how-to-delete-all-branches
 layout: post
