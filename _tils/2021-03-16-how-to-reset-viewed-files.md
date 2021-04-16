@@ -1,6 +1,6 @@
 ---
 title: How to reset viewed files on GitHub
-tags: til
+tags: til, github
 permalink: /til/how-to-reset-viewed-files
 layout: post
 comments: true
