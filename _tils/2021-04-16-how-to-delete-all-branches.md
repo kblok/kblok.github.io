@@ -13,4 +13,5 @@ Sometimes it's time to start over. This script will delete all git branches but 
 git branch --v | grep "develop" -v | awk '{print $1}' | xargs git branch -D
 ```
 
-If you don't trust me, don't worry, I don't trust myself either. Just remove the ` | xargs git branch -D` and the script will only print the result.
+
+If you don't trust me, don't worry, I don't trust myself either. Just remove the ```| xargs git branch -D```, and the script will only print the result.
