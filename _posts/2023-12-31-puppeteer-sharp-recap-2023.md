@@ -15,7 +15,7 @@ I hope that Puppeteer-Sharp can become the best multi-purpose browser automation
 In 2023, Puppeteer-Sharp achieved over 9 million downloads and received sponsorship from the [.NET on AWS Open Source Software Fund](https://github.com/aws/dotnet-foss?tab=readme-ov-file). These two acknowledgments were fuel for me.
 
 My main goal in 2023 was to close the gap with [puppeteer](https://github.com/puppeteer/puppeteer). I was able to launch 19 versions! I didn't expect that number to be that big!  
-These are a few features I would like to highlight.
+Let me share with you two of the best features shipped this year.
 
 ## Query handlers
 
