@@ -1,5 +1,6 @@
 ---
 title: Claude Helped Me Be Lazy, Again
+date: 2026-07-31 18:33:03 -0300
 tags: general ai bots
 permalink: /blog/claude-helped-me-be-lazy-again
 ---
