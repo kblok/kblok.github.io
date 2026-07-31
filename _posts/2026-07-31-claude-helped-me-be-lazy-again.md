@@ -6,7 +6,7 @@ permalink: /blog/claude-helped-me-be-lazy-again
 share-img: https://www.hardkoded.com/img/claude-helped-me-be-lazy-again/thumbnail.png
 ---
 
-I found out that my [GitHub profile](https://github.com/kblok) was quite old. And broken. Some links didn't work anymore, some things were just there because I put them there years ago and then forgot about them.
+I found out that my [GitHub profile](https://github.com/kblok) was quite old. And broken. Some links didn't work anymore, and some things were just there because I put them there years ago and then forgot about them.
 
 So I did what we do now: I asked Claude to update it.
 
@@ -20,12 +20,12 @@ Ok, this is wrong.
 
 It turns out it wasn't wrong at all. [Gautam Krishna](https://github.com/gautamkrishnar) built [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow), a GitHub Action that reads your blog feed and keeps the posts in your README updated.
 
-I would have never taken the time to look for a tool to do that for me. Not because it is hard, but because it is one of those small things that is always nice to have and never important enough to spend time on.
+I never would have taken the time to look for a tool to do that for me. Not because it is hard, but because it is one of those small things that are always nice to have and never important enough to spend time on.
 
 > Claude didn't just update my profile. It found the automation I was too lazy to look for.
 
 Now my profile can keep itself updated when I publish something here.
 
-Claude, one more time, helped my laziness.
+Claude helped my laziness, one more time.
 
 Don't stop coding!
