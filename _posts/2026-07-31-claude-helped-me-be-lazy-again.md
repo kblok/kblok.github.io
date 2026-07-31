@@ -3,6 +3,7 @@ title: Claude Helped Me Be Lazy, Again
 date: 2026-07-31 18:33:03 -0300
 tags: general ai bots
 permalink: /blog/claude-helped-me-be-lazy-again
+share-img: https://www.hardkoded.com/img/claude-helped-me-be-lazy-again/thumbnail.png
 ---
 
 I found out that my [GitHub profile](https://github.com/kblok) was quite old. And broken. Some links didn't work anymore, some things were just there because I put them there years ago and then forgot about them.
