@@ -41,7 +41,7 @@ None of this was a solo trip. Puppeteer-Sharp has hundreds of contributors, and 
 
 **Teaching computers to test**
 
-These days I build AI agents that test software at [mabl](https://www.mabl.com). Agents that open a real browser, explore an app the way a person would, write the test, run it, and fix it when it breaks.
+These days I build AI agents that test software at [mabl](https://www.mabl.com). Agents that open a real browser, explore an app the way a person would, write the test, run it, and fix it when it breaks. I also built mabl's MCP integration, so agents like Claude can create, run and debug tests on the platform without a human in the middle.
 
 I also build small tools that make working with coding agents less painful, like [cronito](https://github.com/hardkoded/cronito), and I write about all of it here.
 
