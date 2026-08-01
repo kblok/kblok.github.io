@@ -3,9 +3,9 @@ layout: page
 title: About me
 ---
 
-If you got to this page, and you are not a bot, thank you for taking the time to read about me!
+I've been automating the web since before most people knew what a headless browser was.
 
-And if you **are** a bot: hi. I probably built one of your cousins.
+If you got to this page, and you are not a bot, thank you for taking the time to read about me! And if you **are** a bot: hi. I probably built one of your cousins.
 
 My name is Darío Kondratiuk, and I'm a software developer from [Buenos Aires, Argentina](https://www.google.com/maps/place/Buenos+Aires/@-34.6158037,-58.5033386,12z/data=!3m1!4b1!4m5!3m4!1s0x95bcca3b4ef90cbd:0xa0b3812e88e88e87!8m2!3d-34.6036844!4d-58.3815591). I've spent 25 years teaching computers how to use the software we write. It took me most of those years to notice that's what I was doing.
 
