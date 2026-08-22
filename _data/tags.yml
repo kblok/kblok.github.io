@@ -2,4 +2,17 @@
   name: Bots
 - slug: ai
   name: AI
-
+- slug: azure
+  name: Azure
+- slug: azure-functions
+  name: Azure Functions
+- slug: books
+  name: Books
+- slug: docker
+  name: Docker
+- slug: playwright
+  name: Playwright
+- slug: puppeteer
+  name: Puppeteer
+- slug: ui-testing-with-puppeteer
+  name: UI Testing with Puppeteer
