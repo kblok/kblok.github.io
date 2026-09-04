@@ -28,6 +28,8 @@ Claude Code asks a lot of multiple-choice questions. Leave the keyboard, find th
 
 So I built [streamdeck-claude-answer](https://github.com/hardkoded/streamdeck-claude-answer). When Claude asks, the question lands on the deck. Top-left tells you which directory is asking. The numbered keys are the options. Press one, the answer goes back, and the deck returns to whatever profile you were on.
 
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/stream-deck-as-an-agentic-productivity-tool/deck-question.png" style="display: block; margin: auto;">
+
 No network daemon. Claude writes a question file, the plugin watches it, you press a key, an answer file goes back. That is the whole loop.
 
 # Will it stick?
