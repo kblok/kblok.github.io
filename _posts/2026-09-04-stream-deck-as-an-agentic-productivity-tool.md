@@ -20,6 +20,8 @@ You are not one person at one terminal anymore. You are coordinating several age
 
 Each key is a cmux workspace. Background color matches the sidebar. A lighter key is the one you are on. An orange bar means it needs input. Pink means Claude is running. Progress and working directory show up on the key itself.
 
+<img src="https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/stream-deck-as-an-agentic-productivity-tool/streamdeck-cmux.png" style="display: block; margin: auto;">
+
 Press a key and you land on that workspace — the same wt1–wt6 I already use as a WIP limit, now one tap away from whatever I was reading in the browser.
 
 # Answering Claude from the keys
