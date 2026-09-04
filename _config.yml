@@ -65,6 +65,11 @@ author:
   name: Darío Kondratiuk
   twitter: hardkoded
 
+# jekyll-seo-tag emits the first twitter:card; X uses that value.
+twitter:
+  username: hardkoded
+  card: summary_large_image
+
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
@@ -224,6 +229,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189

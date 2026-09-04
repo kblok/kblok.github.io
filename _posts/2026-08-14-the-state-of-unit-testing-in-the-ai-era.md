@@ -2,6 +2,8 @@
 title: The state of unit testing in the AI era
 tags: general ai
 permalink: /blog/the-state-of-unit-testing-in-the-ai-era
+hero: /img/the-state-of-unit-testing-in-the-ai-era/hero.png
+image: /img/the-state-of-unit-testing-in-the-ai-era/hero.png
 ---
 
 The title of this post looks like deep research of unit testing and AI, but it's more a set of random thoughts.

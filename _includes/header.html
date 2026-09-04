@@ -1,5 +1,7 @@
 <!-- TODO this file has become a mess, refactor it -->
 
+{% assign hero = page.hero | default: page.image %}
+
 {% if page.bigimg or page.title %}
 
 {% if page.bigimg %}
@@ -64,6 +66,9 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
+      {% if hero %}
+      <img class="post-hero" src="{{ hero | prepend: site.baseurl }}" alt="{{ page.title }}">
+      {% endif %}
       <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
       {% if page.cross-site-link %}
       <a href="{{ page.cross-site-link }}" class="cross-site-link">Versión en español</a>

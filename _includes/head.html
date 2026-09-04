@@ -84,15 +84,23 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
   {% endif %}
 
-  {% if page.share-img %}
-  <meta property="og:image" content="{{ page.share-img }}" />
+  {% assign social_img = page.share-img | default: page.hero | default: page.image %}
+  {% if social_img %}
+    {% unless social_img contains '://' %}
+      {% assign social_img = social_img | prepend: site.url %}
+    {% endunless %}
+  <meta property="og:image" content="{{ social_img }}" />
   {% elsif site.avatar %}
   <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
   
 
   <!-- Twitter summary cards -->
+  {% if page.share-img or page.hero or page.image %}
+  <meta name="twitter:card" content="summary_large_image" />
+  {% else %}
   <meta name="twitter:card" content="summary" />
+  {% endif %}
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
 
@@ -112,8 +120,8 @@
   <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
   {% endif %}
 
-  {% if page.share-img %}
-  <meta name="twitter:image" content="{{ page.share-img }}" />
+  {% if social_img %}
+  <meta name="twitter:image" content="{{ social_img }}" />
   {% elsif site.avatar %}
   <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}

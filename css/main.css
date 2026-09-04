@@ -489,6 +489,12 @@ footer .theme-by {
   margin-top: 0;
   font-size: 30px;
 }
+.post-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 24px 0 20px;
+}
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
   font-size: 20px;
