@@ -30,9 +30,8 @@ There is no linter, formatter, or test suite in this repo.
 
 ## Content architecture
 
-- **`_posts/`** — main blog posts (Markdown), filename pattern `YYYY-MM-DD-slug.md`. Front matter uses `title`, `tags` (space-separated string, e.g. `tags: puppeteer-sharp csharp`), and `permalink` (posts use custom permalinks like `/blog/...`). Layout defaults to `post` via `_config.yml`.
-- **`_tils/`** — "Today I Learned" collection, listed on `/til/`. Front matter typically sets `layout: post`, comma-separated `tags`, and a `/til/...` permalink.
-- **`index.md`** — dedicated landing page (not a paginated post list): 3 recent posts, Puppeteer-Sharp / Hardkoded project CTA, About.
+- **`_posts/`** — main blog posts (Markdown), filename pattern `YYYY-MM-DD-slug.md`. Front matter uses `title`, `tags` (space-separated string, e.g. `tags: puppeteer-sharp csharp`), and `permalink` (posts use custom permalinks like `/blog/...`). Layout defaults to `post` via `_config.yml`. Optional `hero` / `image` renders above the body.
+- **`index.md`** — dedicated landing page (not a paginated post list): 3 recent posts, Puppeteer-Sharp flagship CTA, other projects, About.
 - **`archive.md`** — full post list grouped by month.
 - **`tag/*.md`** — one stub page per tag (`layout: tag_index`). `_data/tags.yml` lists known tag slugs/names. `_plugins/_tag_gen.rb` generates indexes only for tags that do not already have a stub.
 - **`goto/*.md`** — short-link redirect pages (`layout: redirected`, `redirect_to: <url>`).
@@ -44,7 +43,6 @@ There is no linter, formatter, or test suite in this repo.
 ## Conventions to follow when adding content
 
 - New blog posts: add to `_posts/` with a `YYYY-MM-DD-slug.md` filename, `title`, `tags` (space-separated), and an explicit `permalink: /blog/<slug>`.
-- New TILs: add to `_tils/` with `YYYY-MM-DD-slug.md`, and front matter matching the existing pattern (`layout: post`, comma-separated `tags`, `permalink: /til/<slug>`).
 - Introducing a brand-new tag: add an entry to `_data/tags.yml` and create the matching `tag/<slug>.md` stub (copy an existing one and change `tag`/`title`/`permalink`).
 - Adding a redirect/short link: add a file under `goto/` following `goto/pptr-slack.md`'s front matter shape.
 - Promoting a post (`.claude/skills/promote-post`): punch links must always carry UTMs so GA4 can attribute Organic Social / campaigns. Campaign slug = last path segment of `permalink`. Templates: `?utm_source=x&utm_medium=social&utm_campaign=<slug>` (X) and `?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>` (LinkedIn). Never append a bare canonical URL as the punch link.

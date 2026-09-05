@@ -19,7 +19,7 @@ Dev notes from the maintainer of [Puppeteer-Sharp](https://github.com/hardkoded/
 {% endfor %}
 </ol>
 
-<p class="landing-more"><a href="{{ '/archive/' | relative_url }}">All posts →</a> · <a href="{{ '/til/' | relative_url }}">Today I Learned</a></p>
+<p class="landing-more"><a href="{{ '/archive/' | relative_url }}">All posts →</a></p>
 
 ## Projects
 
@@ -28,10 +28,6 @@ Dev notes from the maintainer of [Puppeteer-Sharp](https://github.com/hardkoded/
 </p>
 
 <ul class="project-list">
-  <li>
-    <a href="https://github.com/hardkoded/puppeteer-sharp">Puppeteer-Sharp</a>
-    <span>Headless Chrome for .NET. The project that started Hardkoded.</span>
-  </li>
   <li>
     <a href="https://github.com/microsoft/playwright-dotnet">Playwright for .NET</a>
     <span>Started as Playwright-Sharp. Went to Microsoft and became the official library.</span>

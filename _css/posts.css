@@ -32,6 +32,13 @@
   color: var(--color-gray-600);
 }
 
+.post-hero {
+  width: 100%;
+  height: auto;
+  margin: 0 0 var(--spacer-2);
+  border-radius: var(--radius-default);
+}
+
 .related {
   padding-top: var(--spacer-2);
   padding-bottom: var(--spacer-2);

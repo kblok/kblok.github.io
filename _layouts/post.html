@@ -10,6 +10,10 @@ layout: default
   {% if page.subtitle %}
   <p class="lead">{{ page.subtitle }}</p>
   {% endif %}
+  {% assign hero = page.hero | default: page.image %}
+  {% if hero %}
+  <img class="post-hero" src="{{ hero | relative_url }}" alt="">
+  {% endif %}
   {{ content }}
 
   {% if page.tags.size > 0 %}

@@ -45,20 +45,10 @@ plugins:
   - jekyll-redirect-from
   - jekyll-gist
 
-collections:
-  tils:
-    output: true
-
 defaults:
   - scope:
       path: ""
       type: posts
-    values:
-      layout: post
-      comments: true
-  - scope:
-      path: ""
-      type: tils
     values:
       layout: post
       comments: true
@@ -94,3 +84,4 @@ exclude:
   - voice.md
   - Vagrantfile
   - vendor
+  - preview-artifacts
