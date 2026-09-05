@@ -46,4 +46,4 @@ Dev notes from the maintainer of [Puppeteer-Sharp](https://github.com/hardkoded/
 
 I'm [Darío Kondratiuk]({{ '/aboutme/' | relative_url }}), a software developer from Buenos Aires. 25 years teaching computers how to use the software we write — ORMs, browser automation, now AI agents that author and repair tests at [mabl](https://www.mabl.com).
 
-<p class="landing-more"><a href="{{ '/aboutme/' | relative_url }}">More about me →</a> · <a href="{{ '/resume' | relative_url }}">Resume</a></p>
+<p class="landing-more"><a href="{{ '/aboutme/' | relative_url }}">More about me →</a></p>

@@ -31,12 +31,12 @@ make build
 ## What this preview does
 
 - Replaces vendored Beautiful Jekyll (Dean Attali) layouts/CSS/JS with Swimmer layouts, Inter/Roboto Mono, Tailwind v4, dark-mode toggle, and the post sidebar.
-- Keeps Hardkoded content: `_posts/`, About, Resume (standalone HTML + `css/resume-style.css`), tag stubs, `goto/` redirects, images, `CNAME`, `/feed.xml`. TIL collection and chrome are removed in this preview.
+- Keeps Hardkoded content: `_posts/`, About, tag stubs, `goto/` redirects, images, `CNAME`, `/feed.xml`. TIL collection and chrome are removed. Resume file stays for old URLs but is not linked from UI.
 - Homepage is a funnel (issue #44), not a paginated river:
   1. Avatar + one-line pitch
   2. **3 most recent posts** + link to archive
   3. **One** Puppeteer-Sharp flagship CTA; other projects listed below (no duplicate)
-  4. **About** teaser + resume
+  4. **About** teaser
 - Branding: title **Hardkoded**, tagline Darío Kondratiuk, author/SEO/Twitter `@hardkoded`.
 - Adds Swimmer `atom.xml` next to the existing `feed.xml`.
 
@@ -46,7 +46,8 @@ make build
 | --- | --- |
 | **Disqus** | Removed. No `disqus` config, no embed include, no `comments` default. Posts do not load Disqus / Discovery ads. |
 | **`/es/` Spanish site** | No En Español / `/es/` nav link. Footer, homepage, config, and layouts do not point at hardkoded.com/es/. Historical `cross-site-link` front matter on a few old posts is unused by Swimmer. `es/tag/books.md` remains as a leftover inbound redirect, not a site link. |
-| **Beautiful Jekyll leftovers** | `Dockerfile` still pins ancient Jekyll 3.1.6 — do not use it for this branch. `json-demo.html`, `BingSiteAuth.xml`, `ui-testing-with-puppeteer/` notes, and `_data/SocialNetworks.yml` remain. Bootstrap/jQuery/theme CSS+JS were removed. Resume still uses its own stylesheet. |
+| **Resume** | `resume.html` + `css/resume-style.css` remain for `/resume` bookmarks. No sidebar, footer, or homepage link. |
+| **Beautiful Jekyll leftovers** | `Dockerfile` still pins ancient Jekyll 3.1.6 — do not use it for this branch. `json-demo.html`, `BingSiteAuth.xml`, `ui-testing-with-puppeteer/` notes, and `_data/SocialNetworks.yml` remain. Bootstrap/jQuery/theme CSS+JS were removed. |
 | **GitHub Pages** | Native Pages Jekyll is 3.x and will not run Tailwind or this Gemfile. Preview locally, or add an Actions workflow that runs `make build` and publishes `_site/`. Raw GitHub will show source, not a styled site. |
 | **Social share buttons** | Dropped (Twitter/Facebook/LinkedIn buttons on posts). |
 | **Navbar** | Swimmer has no top nav. Site links live in the footer + sidebar. |
