@@ -45,7 +45,7 @@ make build
 | Area | Status |
 | --- | --- |
 | **Disqus** | Wired on posts (`disqus: hardkoded`). Not visually verified in this preview (embed needs the live domain). |
-| **`/es/` Spanish site** | Footer still links to `https://www.hardkoded.com/es/`. This repo only has `es/tag/books.md` (a redirect). The Spanish section is not migrated here. |
+| **`/es/` Spanish site** | No En Español / `/es/` nav link. Footer, homepage, config, and layouts do not point at hardkoded.com/es/. Historical `cross-site-link` front matter on a few old posts is unused by Swimmer. `es/tag/books.md` remains as a leftover inbound redirect, not a site link. |
 | **Beautiful Jekyll leftovers** | `Dockerfile` still pins ancient Jekyll 3.1.6 — do not use it for this branch. `json-demo.html`, `BingSiteAuth.xml`, `ui-testing-with-puppeteer/` notes, and `_data/SocialNetworks.yml` remain. Bootstrap/jQuery/theme CSS+JS were removed. Resume still uses its own stylesheet. |
 | **GitHub Pages** | Native Pages Jekyll is 3.x and will not run Tailwind or this Gemfile. Preview locally, or add an Actions workflow that runs `make build` and publishes `_site/`. Raw GitHub will show source, not a styled site. |
 | **Social share buttons** | Dropped (Twitter/Facebook/LinkedIn buttons on posts). |
