@@ -14,7 +14,7 @@ Finally!!!
 
 ![Finally](https://media2.giphy.com/media/13HdQUsXSa6QYU/giphy.gif?cid=790b7611775d3f466a85a8b08e6a669c01659359ddc1eb2c&rid=giphy.gif)
 
-**Still valid in 2026.** Windows Consumption still won't run Chrome for you — that [sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html) is still a thing. A custom Linux container is still the way if you want Chrome next to the function. The recipe below is Functions v2 / `microsoft/dotnet:2.2-sdk` era. Today you'd start from the [current custom-container docs](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image) (isolated worker, v4 images) and reuse the [Docker Chrome setup](/blog/puppeteer-sharp-docker). If you don't want to babysit Chrome at all, [ConnectAsync to a remote browser](/blogs/azure-chrome-puppeteer-browserless) is still the other option.
+**Still valid in 2026.** Windows Consumption still won't run Chrome for you — that [sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html) is still a thing. A custom Linux container is still the way if you want Chrome next to the function. The recipe below is Functions v2 / `microsoft/dotnet:2.2-sdk` era. Today you'd start from the [current custom-container docs](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image) (isolated worker, v4 images) and reuse the [Docker Chrome setup](/blog/puppeteer-sharp-docker). If you don't want to babysit Chrome at all, [ConnectAsync to a remote browser](/blog/azure-chrome-puppeteer-browserless) is still the other option.
 
 `BrowserFetcher.DefaultRevision` in the snippet is old API. Current Puppeteer Sharp is `await new BrowserFetcher().DownloadAsync();` — and on Docker you shouldn't call it at all if Chrome is already in the image. The GitHub activity-graph selector is historical too; the page moved.
 
@@ -254,7 +254,7 @@ I know this is not as easy as one new line of code, and requires some extra work
 
 If you tried this recipe and it’s working for you, please let me know! If it doesn’t, let me know as well!
 
-Related: [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [remote Chrome with Browserless](/blogs/azure-chrome-puppeteer-browserless), [PDF generators](/blogs/pdf-generators-benchmark).
+Related: [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [remote Chrome with Browserless](/blog/azure-chrome-puppeteer-browserless), [PDF generators](/blog/pdf-generators-benchmark).
 
 Don't stop coding!
 

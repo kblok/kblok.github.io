@@ -1,7 +1,9 @@
 ---
 title: Implementing a BasePage in your ASP.NET Webforms Project
 tags: csharp aspnet
-permalink: /blogs/implementing-base-page-aspnet-project
+permalink: /blog/implementing-base-page-aspnet-project
+redirect_from:
+  - /blogs/implementing-base-page-aspnet-project
 ---
 
 I started to prepare two posts, one about Page Sessions and the other one about reducing QueryString, ViewState and Session boilerplate. But I realized that both solutions were implemented on a BasePage. So I felt that I first needed to write about the importance of implementing a BasePage in a project.

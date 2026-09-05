@@ -46,7 +46,7 @@ Chasing an active project is quite a challenge. You are always one step behind. 
 
 We have our [first project](https://github.com/kblok/playwright-sharp/projects/1). 157 issues that will take us to the [first-snapshot](https://github.com/kblok/playwright/tree/first-snapshot) I created today (Jan 24th).
 
-As [I learned in the past](https://www.hardkoded.com/blogs/how-to-start-an-oss-project), tests will be our lighthouse. They will be the first thing we are going to code (second, technically), and they will guide our implementation process.
+As [I learned in the past](https://www.hardkoded.com/blog/how-to-start-an-oss-project), tests will be our lighthouse. They will be the first thing we are going to code (second, technically), and they will guide our implementation process.
 
 # Final Words
 

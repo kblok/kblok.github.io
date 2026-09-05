@@ -1,7 +1,9 @@
 ---
 title: How to work with stored procedures and not die trying 
 tags: sqlserver
-permalink: /blogs/how-to-work-with-stored-procedures-and-not-die-trying
+permalink: /blog/how-to-work-with-stored-procedures-and-not-die-trying
+redirect_from:
+  - /blogs/how-to-work-with-stored-procedures-and-not-die-trying
 cross-site-link: https://www.hardkoded.com/es/blog/trabajando-con-stored-procedures-parte1
 ---
 

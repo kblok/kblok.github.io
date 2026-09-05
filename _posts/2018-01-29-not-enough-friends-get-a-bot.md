@@ -2,7 +2,9 @@
 title: Not enough friends? Get a bot!
 subtitle: How to build your first friend bot.
 tags: python
-permalink: /blogs/not-enough-friends-get-a-bot
+permalink: /blog/not-enough-friends-get-a-bot
+redirect_from:
+  - /blogs/not-enough-friends-get-a-bot
 ---
  
 # Introduction

@@ -1,7 +1,9 @@
 ---
 title: Puppeteer Sharp Monthly Report - February 2018
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-monthly-february-2018
+permalink: /blog/puppeteer-sharp-monthly-february-2018
+redirect_from:
+  - /blogs/puppeteer-sharp-monthly-february-2018
 ---
  
 # Introduction

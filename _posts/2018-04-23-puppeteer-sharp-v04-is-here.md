@@ -1,7 +1,9 @@
 ---
 title: Puppeteer Sharp v0.4 is here and it's huge!
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-v04-is-here
+permalink: /blog/puppeteer-sharp-v04-is-here
+redirect_from:
+  - /blogs/puppeteer-sharp-v04-is-here
 ---
 
 I’m so excited to announce that [Puppetter Sharp v0.4](https://github.com/hardkoded/puppeteer-sharp) is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). It includes more than 25 Page APIs such as:

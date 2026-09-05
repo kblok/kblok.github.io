@@ -2,10 +2,10 @@
 title: Using Chrome in Azure with Puppeteer Sharp and Browserless.io
 subtitle: Connect Puppeteer Sharp to a remote Chrome from Azure
 tags: puppeteer-sharp csharp
-permalink: /blogs/azure-chrome-puppeteer-browserless
-last_modified_at: 2026-09-05
+permalink: /blog/azure-chrome-puppeteer-browserless
 redirect_from:
-  - /blog/azure-chrome-puppeteer-browserless
+  - /blogs/azure-chrome-puppeteer-browserless
+last_modified_at: 2026-09-05
 ---
 
 **Still valid in 2026.** `Puppeteer.ConnectAsync` is still the API. [Browserless](https://www.browserless.io/) is still the hosted Chrome I pointed at. What changed is the hostname: their current docs use regional endpoints such as `wss://production-sfo.browserless.io?token=...` ([connection URLs](https://docs.browserless.io/overview/connection-urls)). `chrome.browserless.io` is now documented for private/enterprise fleets, not the default cloud URL.
@@ -14,7 +14,7 @@ The Telegram bot below is a 2018 proof of concept. The [Telegram.Bot](https://ww
 
 If you *do* want Chrome inside Azure, I later got that working with a [custom Functions container](/blog/running-puppeteer-sharp-azure-functions). Same Chrome-in-Docker recipe as [the Docker post](/blog/puppeteer-sharp-docker).
 
-One of the most exciting features of [Puppeteer Sharp v0.4](/blogs/puppeteer-sharp-v04-is-here) is the ability to connect to remote browsers, like browserless.io. So, when I decided to write a post about using Chrome in Azure, I knew I had two options:
+One of the most exciting features of [Puppeteer Sharp v0.4](/blog/puppeteer-sharp-v04-is-here) is the ability to connect to remote browsers, like browserless.io. So, when I decided to write a post about using Chrome in Azure, I knew I had two options:
 
 The first option would be something like this:
 
@@ -233,7 +233,7 @@ First of all, this is a proof of concept. Don't use this code in production!
 Second, I know this solution was a little bit over-engineered. The idea was showing off how to connect to a remote Chrome instance and also playing a little bit with .NET Core and Docker.
 Wrapping up, you can find this code on Github as [telegram-webphotographer](https://github.com/kblok/telegram-webphotographer), feel free to fork it and play with it.
 
-Related: [Azure Functions with Chrome in the image](/blog/running-puppeteer-sharp-azure-functions), [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [PDF generators](/blogs/pdf-generators-benchmark).
+Related: [Azure Functions with Chrome in the image](/blog/running-puppeteer-sharp-azure-functions), [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [PDF generators](/blog/pdf-generators-benchmark).
 
 Don't stop coding!
 

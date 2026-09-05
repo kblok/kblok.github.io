@@ -1,7 +1,9 @@
 ---
 title: Implementing a Simple Server in .NET Core
 tags: puppeteer-sharp csharp
-permalink: /blogs/implementing-simple-server
+permalink: /blog/implementing-simple-server
+redirect_from:
+  - /blogs/implementing-simple-server
 ---
 
 One thing we needed to start testing [Puppeteer Sharp](https://github.com/hardkoded/puppeteer-sharp) was a simple web server to run a testing website. I knew the ideal scenario was something like this: Run `dotnet test`, the test would load a web server, run all tests and shut down the server. I also knew that ASP.NET Core was able to run in any process so, starting a web server inside the unit test process seemed to be easy to implement.

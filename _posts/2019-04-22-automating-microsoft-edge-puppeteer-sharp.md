@@ -1,7 +1,9 @@
 ---
 title: Automating Microsoft Edge with Puppeteer-Sharp
 tags: puppeteer-sharp csharp
-permalink: /blog/automating-microsoft-edge-puppteer-sharp
+permalink: /blog/automating-microsoft-edge-puppeteer-sharp
+redirect_from:
+  - /blog/automating-microsoft-edge-puppteer-sharp
 cross-site-link: https://www.hardkoded.com/es/blog/automatizando-edge-con-puppeteer
 ---
 
