@@ -30,9 +30,17 @@ content replication.
 2. **Read the file.** Pull `title` and `permalink` from the front matter, and the full
    Markdown body.
 
-3. **Build the canonical URL**: `https://www.hardkoded.com` + the post's `permalink`
-   (e.g. `https://www.hardkoded.com/blog/puppeteer-sharp-recap-2023` or
-   `https://www.hardkoded.com/til/<slug>`).
+3. **Build the canonical URL and platform UTM punch links.**
+   - Canonical URL: `https://www.hardkoded.com` + the post's `permalink`
+     (e.g. `https://www.hardkoded.com/blog/puppeteer-sharp-recap-2023` or
+     `https://www.hardkoded.com/til/<slug>`).
+   - Campaign `slug`: the last path segment of `permalink` (e.g. permalink
+     `/blog/stream-deck-as-an-agentic-productivity-tool` → slug
+     `stream-deck-as-an-agentic-productivity-tool`).
+   - Build two punch URLs (never use the bare canonical as a punch link):
+     - **X**: `{canonical}?utm_source=x&utm_medium=social&utm_campaign={slug}`
+     - **LinkedIn**: `{canonical}?utm_source=linkedin&utm_medium=social&utm_campaign={slug}`
+   - Do not add `utm_content` or `utm_term`.
 
 4. **Convert the Markdown body to clean plain text** for both platforms — neither
    LinkedIn's article editor nor X's composer render Markdown syntax, so raw `##`,
@@ -52,9 +60,12 @@ content replication.
    - Leave blockquotes as plain text (drop the `>` marker but keep the line distinct
      with surrounding blank lines) — voice.md-style pull-quotes and the "dramatic
      pause" stacked-line device should survive as-is, just without Markdown syntax.
-   - Append the canonical URL from step 3 at the very end of the converted text (after
-     the sign-off, if any), so readers can click through to the live post with real
-     formatting, working code, and comments.
+   - Produce **two** converted bodies that share the same prose but end with different
+     punch links (after the sign-off, if any):
+     - LinkedIn body → append the **LinkedIn** UTM URL from step 3.
+     - X body → append the **X** UTM URL from step 3.
+     Readers click through to the live post with real formatting, working code, and
+     comments; GA4 attributes the session to the campaign via the UTMs.
    - Use exactly one blank line between paragraphs/list items — no double blank lines,
      and no leading/trailing blank lines around the whole block. This converted text is
      what gets typed into the editors in step 6, so its spacing directly determines the
@@ -64,7 +75,9 @@ content replication.
    clearly labeled:
    - `LinkedIn article body`
    - `X post`
-   Both blocks contain the same converted full text (from step 4); there is no
+   Call out the trailing punch link on each block (LinkedIn UTM URL vs X UTM URL) so
+   attribution is visible before posting. Both blocks contain the same converted full
+   prose (from step 4) with only the trailing URL differing; there is no
    shortened/teaser variant. This is a record of what's about to be posted, not a
    request for approval — proceed straight to step 6 after showing it.
 
@@ -73,11 +86,14 @@ content replication.
    loaded yet, load them first (`ToolSearch` for `claude-in-chrome`). For each
    platform:
    - **LinkedIn**: open `https://www.linkedin.com/article/new/`, put the post `title`
-     (from step 2) in the article title field, paste the converted body (step 4) into
-     the article body editor, then click **Publish**.
-   - **X**: open the X compose view, paste the converted body (step 4) into the
-     composer (X Premium long-form supports up to ~25,000 characters in one post — do
-     not split it into a thread), then click **Post**.
+     (from step 2) in the article title field, paste the **LinkedIn** converted body
+     (step 4, LinkedIn UTM punch link) into the article body editor, then click
+     **Publish**.
+   - **X**: open the X compose view, paste the **X** converted body (step 4, X UTM
+     punch link) into the composer (X Premium long-form supports up to ~25,000
+     characters in one post — do not split it into a thread), then click **Post**.
+   - Any hardkoded.com URL typed into either composer must use that platform's UTM
+     punch URL from step 3 — never the bare canonical.
    - If either platform doesn't show the user as logged in, or the composer/editor
      can't be located, stop and report that instead of guessing at selectors or
      retrying blindly.
@@ -108,6 +124,8 @@ content replication.
         - Every `text (url)` pair from step 4's link conversion has its URL rendered
           as a real clickable hyperlink (colored/underlined) by the editor's
           auto-link detection — not sitting there as plain, unclickable text.
+        - The trailing punch link shows the full UTM query string for that platform
+          (`utm_source`, `utm_medium`, `utm_campaign`) and is clickable.
      3. Fix anything wrong directly in the editor (retype a dropped section, delete
         an extra blank paragraph or stray space, strip a stray list-marker character,
         click into a URL that didn't auto-link and re-trigger it e.g. by adding/
@@ -125,6 +143,8 @@ content replication.
      `voice.md` (direct hook, no corporate throat-clearing, at most one emoji at the
      very end). This is new copy you're generating, not a repetition of the article —
      treat it like a hook, not a summary.
+   - If the teaser (or any other text typed here) includes a hardkoded.com URL, use
+     the **LinkedIn** UTM punch URL from step 3 — never the bare canonical.
    - **Show the draft teaser to the user and wait for explicit approval before
      posting it.** This is the one exception to this skill's normal fully-autonomous
      flow — unlike the article body (which is a direct conversion of the user's own
@@ -136,3 +156,10 @@ content replication.
      attached, then click **Post**.
    - X's long-form post already appears directly in the X feed, so this reshare step
      is LinkedIn-only — there's no equivalent needed on X.
+
+8. **After-publish GA check (attribution handoff).** Report the `utm_campaign` slug
+   from step 3 and tell the user to check GA4 → Traffic acquisition / Campaigns for
+   the last 7 days for non-zero sessions on that campaign (Organic Social). If
+   `analytics-mcp` is available and authenticated, attempt a short sessions-by-campaign
+   query for that slug; if the MCP is missing, unauthenticated, or errors, skip the
+   automated query and only report the campaign name for a manual check.
