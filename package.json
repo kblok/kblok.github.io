@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/cli": "^4",
+    "puppeteer": "^25.1.0"
+  }
+}

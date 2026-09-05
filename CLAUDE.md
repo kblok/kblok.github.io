@@ -4,42 +4,45 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-This is the Jekyll source for [hardkoded.com](https://www.hardkoded.com), Darío Kondratiuk's personal blog (hosted as `kblok.github.io` on GitHub Pages). It's a fork/customization of the "Beautiful Jekyll" theme. There is no application code, build pipeline, or test suite — just Jekyll content, layouts, and static assets.
+This is the Jekyll source for [hardkoded.com](https://www.hardkoded.com), Darío Kondratiuk's personal blog (hosted as `kblok.github.io` on GitHub Pages). The visual theme is a Hardkoded adaptation of [Swimmer](https://github.com/dsillman2000/swimmer) (Poole + Tailwind v4, dedicated landing page, dark mode).
 
 ## Commands
 
-Serve the site locally (uses the `github-pages` gem, pinned to match GitHub Pages' actual environment):
+Install Ruby gems and Node deps, then serve:
 
 ```
 bundle install
-bundle exec jekyll serve
+npm install
+make serve
 ```
 
-Site is served at `http://localhost:4000`.
+Site is served at `http://localhost:4000`. CSS lives in `_css/` and is compiled to `styles.css` via `@tailwindcss/cli`.
 
-Alternatively, via Docker (uses an old, pinned toolchain — `Dockerfile` installs Jekyll 3.1.6 and specific gem versions):
+Production build:
 
 ```
-docker build -t kblok.github.io .
-docker run -p 4000:4000 kblok.github.io
+make build
 ```
 
 There is no linter, formatter, or test suite in this repo.
 
+**Note:** This stack is Jekyll 4 + Tailwind. GitHub Pages' built-in Jekyll builder will not compile CSS. Use `make build` locally (or a GitHub Action) and publish `_site/` if you want Pages to host this theme.
+
 ## Content architecture
 
-- **`_posts/`** — main blog posts (Markdown), filename pattern `YYYY-MM-DD-slug.md`. Front matter uses `title`, `tags` (space-separated string, e.g. `tags: puppeteer-sharp csharp`), and `permalink` (posts use custom permalinks like `/blog/...` rather than the site-wide `/:year-:month-:day-:title/` default). Layout defaults to `post` via `_config.yml` scoping rules, so it usually doesn't need to be declared per-file.
-- **`_tils/`** — a separate Jekyll collection ("Today I Learned" short posts), rendered on `til.html`. Front matter here explicitly sets `layout: post`, `tags` as a comma-separated string (different convention from `_posts`), and a `/til/...` permalink.
-- **`tag/*.md`** — one stub page per tag (`layout: tag_index`), used as the target for tag-index URLs. `_data/tags.yml` lists known tag slugs/names. Actual tag→post indexing is generated automatically by `_plugins/_tag_gen.rb` (a Jekyll `Generator` that builds a `TagIndex` page per tag found in `site.tags`, using `_layouts/tag_index.html`) — you don't need to hand-maintain per-tag post lists.
-- **`goto/*.md`** — short-link redirect pages (`layout: redirected`, `redirect_to: <url>`), rendered via `_layouts/redirect.html` (meta-refresh + JS redirect). Used for stable outbound links (e.g. Slack invites) that might change destination later without changing the short URL.
-- **`ui-testing-with-puppeteer/`** — a large flat set of standalone reference `.md` notes (not a Jekyll collection with an index); mostly source material/snippets related to the "UI Testing with Puppeteer" book.
-- **`_layouts/`** and **`_includes/`** — standard Jekyll templating. `base.html` is the root layout; `default.html`/`page.html`/`post.html`/`minimal.html` build on it. Analytics/social/comments snippets live in `_includes/` (`google_analytics.html`, `gtm_head.html`/`gtm_body.html`, `disqus.html`, `social-share.html`) and are pulled in via `_config.yml` values (`google_analytics`, `gtm`, `disqus`) rather than hardcoded per page.
-- **`_config.yml`** — site-wide settings: nav bar links, colors, social links (`_data/SocialNetworks.yml` backs the `social-network-links` keys), Disqus/GA IDs, permalink scheme, and the `defaults` block that sets `layout: post` for everything under `_posts` and `layout: page` for everything else.
+- **`_posts/`** — main blog posts (Markdown), filename pattern `YYYY-MM-DD-slug.md`. Front matter uses `title`, `tags` (space-separated string, e.g. `tags: puppeteer-sharp csharp`), and `permalink` (posts use custom permalinks like `/blog/...`). Layout defaults to `post` via `_config.yml`. Optional `hero` / `image` renders above the body.
+- **`index.md`** — dedicated landing page (not a paginated post list): 3 recent posts, Puppeteer-Sharp flagship CTA, other projects, About.
+- **`archive.md`** — full post list grouped by month.
+- **`tag/*.md`** — one stub page per tag (`layout: tag_index`). `_data/tags.yml` lists known tag slugs/names. `_plugins/_tag_gen.rb` generates indexes only for tags that do not already have a stub.
+- **`goto/*.md`** — short-link redirect pages (`layout: redirected`, `redirect_to: <url>`).
+- **`ui-testing-with-puppeteer/`** — standalone reference `.md` notes related to the "UI Testing with Puppeteer" book.
+- **`_layouts/`** and **`_includes/`** — Swimmer templating. `default.html` is the root layout; `page.html` / `post.html` build on it. Dark-mode toggle + sidebar live here. Analytics snippets are still pulled from `_config.yml`. No Disqus.
+- **`_css/`** — Tailwind v4 source. Edit here, then `make css` (or `make serve`).
+- **`_config.yml`** — site-wide settings: title/tagline, author, plugins, collections, permalinks.
 
 ## Conventions to follow when adding content
 
 - New blog posts: add to `_posts/` with a `YYYY-MM-DD-slug.md` filename, `title`, `tags` (space-separated), and an explicit `permalink: /blog/<slug>`.
-- New TILs: add to `_tils/` with `YYYY-MM-DD-slug.md`, and front matter matching the existing pattern (`layout: post`, comma-separated `tags`, `permalink: /til/<slug>`).
-- Introducing a brand-new tag: add an entry to `_data/tags.yml` and create the matching `tag/<slug>.md` stub (copy an existing one and change `tag`/`title`/`permalink`) — the tag index generator does the rest.
+- Introducing a brand-new tag: add an entry to `_data/tags.yml` and create the matching `tag/<slug>.md` stub (copy an existing one and change `tag`/`title`/`permalink`).
 - Adding a redirect/short link: add a file under `goto/` following `goto/pptr-slack.md`'s front matter shape.
 - Promoting a post (`.claude/skills/promote-post`): punch links must always carry UTMs so GA4 can attribute Organic Social / campaigns. Campaign slug = last path segment of `permalink`. Templates: `?utm_source=x&utm_medium=social&utm_campaign=<slug>` (X) and `?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>` (LinkedIn). Never append a bare canonical URL as the punch link.

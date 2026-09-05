@@ -1,0 +1,45 @@
+<button class="post-sidebar-toggle" aria-label="Open post directory" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
+<div class="post-sidebar-backdrop"></div>
+<aside class="post-sidebar">
+  <h4 class="post-sidebar-heading">Recent Posts</h4>
+  <ul class="post-sidebar-list">
+    {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ post.url | relative_url }}" {% if post.url == page.url %}class="active"{% endif %}>
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if page.related %}
+  <h4 class="post-sidebar-heading post-sidebar-heading--related">Related</h4>
+  <ul class="post-sidebar-list">
+    {% for slug in page.related %}
+      {% for post in site.posts %}
+        {% if post.slug == slug %}
+        <li>
+          <a href="{{ post.url | relative_url }}" {% if post.url == page.url %}class="active"{% endif %}>
+            {{ post.title }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <h4 class="post-sidebar-heading post-sidebar-heading--related">Hardkoded</h4>
+  <ul class="post-sidebar-list">
+    <li><a href="{{ '/aboutme/' | relative_url }}" {% if page.url == '/aboutme/' %}class="active"{% endif %}>About</a></li>
+    <li><a href="{{ '/resume' | relative_url }}">Resume</a></li>
+    <li><a href="https://github.com/hardkoded/puppeteer-sharp">Puppeteer-Sharp</a></li>
+  </ul>
+  {% unless page.url == '/archive/' %}
+  <a class="post-sidebar-archive" href="{{ '/archive/' | relative_url }}">Archive (all posts)</a>
+  {% endunless %}
+</aside>

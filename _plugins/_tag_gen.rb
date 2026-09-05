@@ -1,3 +1,5 @@
+require "set"
+
 module Jekyll
   class TagIndex < Page
     def initialize(site, base, dir, tag)
@@ -18,7 +20,10 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tag_index'
         dir = site.config['tag_dir'] || 'tag'
+        existing = site.pages.map { |p| p.url }.to_set
         site.tags.keys.each do |tag|
+          dest = "/#{dir}/#{tag}/"
+          next if existing.include?(dest) || existing.include?("/#{dir}/#{tag}")
           write_tag_index(site, File.join(dir, tag), tag)
         end
       end
