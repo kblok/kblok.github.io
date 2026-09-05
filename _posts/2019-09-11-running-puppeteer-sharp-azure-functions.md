@@ -1,7 +1,11 @@
 ---
 title: Running Puppeteer-Sharp on Azure Functions
+subtitle: How to run Puppeteer-Sharp in an Azure Functions custom container
 tags: puppeteer-sharp azure-functions azure docker
 permalink: /blog/running-puppeteer-sharp-azure-functions
+last_modified_at: 2026-09-05
+redirect_from:
+  - /blogs/running-puppeteer-sharp-azure-functions
 ---
 
 Let's see if we can get Puppeteer-Sharp running into an Azure Function.
@@ -10,11 +14,15 @@ Finally!!!
 
 ![Finally](https://media2.giphy.com/media/13HdQUsXSa6QYU/giphy.gif?cid=790b7611775d3f466a85a8b08e6a669c01659359ddc1eb2c&rid=giphy.gif)
 
+**Still valid in 2026.** Windows Consumption still won't run Chrome for you — that [sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html) is still a thing. A custom Linux container is still the way if you want Chrome next to the function. The recipe below is Functions v2 / `microsoft/dotnet:2.2-sdk` era. Today you'd start from the [current custom-container docs](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image) (isolated worker, v4 images) and reuse the [Docker Chrome setup](/blog/puppeteer-sharp-docker). If you don't want to babysit Chrome at all, [ConnectAsync to a remote browser](/blogs/azure-chrome-puppeteer-browserless) is still the other option.
+
+`BrowserFetcher.DefaultRevision` in the snippet is old API. Current Puppeteer Sharp is `await new BrowserFetcher().DownloadAsync();` — and on Docker you shouldn't call it at all if Chrome is already in the image. The GitHub activity-graph selector is historical too; the page moved.
+
 # Environment
 
 Azure sandboxes have [some restrictions](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html). They also have blocked many GDI APIs. So, copying and executing a chrome.exe file in the build folder won't work.
 
-**But**, we can [create a function using a custom docker image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814), and we’ve already learned [how to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker).
+**But**, we can [create a function using a custom docker image](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814), and we’ve already learned [how to run puppeteer-sharp on Docker](/blog/puppeteer-sharp-docker).
 
 ![Idea](https://media1.giphy.com/media/l3mZasrfwrWUMnndS/giphy.gif?cid=790b7611ce327bb0e3f23a0d7571e481e562dcbc8c362319&rid=giphy.gif)
 
@@ -22,13 +30,13 @@ Azure sandboxes have [some restrictions](https://github.com/projectkudu/kudu/wik
 
 I think these three posts will be super helpful:
 
- * [Create a function on Linux using a custom image](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814).
+ * [Create a function on Linux using a custom image](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814).
  * [Azure Functions in a Docker Container](https://medium.com/faun/azure-functions-in-a-docker-container-56e625da3243) by [Matias Miguenz](https://medium.com/@miguenz.matias)
- * [How to run puppeteer-sharp on Docker ](https://www.hardkoded.com/blog/puppeteer-sharp-docker) ;)
+ * [How to run puppeteer-sharp on Docker](/blog/puppeteer-sharp-docker) ;)
 
 # Prerequisites
 
-I followed all the steps mentioned in the "[Create your first function from the command line](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=DT-MVP-5003814)" post.
+I followed all the steps mentioned in the "[Create your first function from the command line](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli?WT.mc_id=DT-MVP-5003814)" post.
  
 # Let's get started
 
@@ -135,7 +143,7 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 
 COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
 ```
-So, [a few posts ago](https://www.hardkoded.com/blog/puppeteer-sharp-docker), we learned how to run Puppeteer-Sharp on Docker. What if we mix the DockerFile `func` created with our recipe?
+So, [a few posts ago](/blog/puppeteer-sharp-docker), we learned how to run Puppeteer-Sharp on Docker. What if we mix the DockerFile `func` created with our recipe?
 
 It would be something like this:
 
@@ -193,7 +201,7 @@ And boom!
 
 ## Publish to Azure
 
-Now, let's follow [Microsoft Tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#push-the-custom-image-to-docker-hub)
+Now, let's follow [Microsoft Tutorial](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#push-the-custom-image-to-docker-hub)
 
 ```
 docker login --username hardkoded
@@ -235,7 +243,7 @@ Let's see if it works...
 
 ## A few things to consider
 
-I didn't configure the app [as the tutorial says](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#configure-the-function-app), you should do it on a real app.
+I didn't configure the app [as the tutorial says](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?WT.mc_id=DT-MVP-5003814#configure-the-function-app), you should do it on a real app.
 
 This setup uses a Premium plan. You might need to check the pricing.
 ![Premium](https://i.ytimg.com/vi/Xjzmjh-9ee4/maxresdefault.jpg)
@@ -245,6 +253,8 @@ This setup uses a Premium plan. You might need to check the pricing.
 I know this is not as easy as one new line of code, and requires some extra work, and resources, such as a Docker Account. But at least now we know that it is possible to run a Puppeteer-Sharp function on Azure Functions.
 
 If you tried this recipe and it’s working for you, please let me know! If it doesn’t, let me know as well!
+
+Related: [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [remote Chrome with Browserless](/blogs/azure-chrome-puppeteer-browserless), [PDF generators](/blogs/pdf-generators-benchmark).
 
 Don't stop coding!
 

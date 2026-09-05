@@ -1,15 +1,23 @@
 ---
 title: Running Puppeteer-Sharp on Docker
+subtitle: How to run Puppeteer-Sharp in a Linux Docker container
 tags: puppeteer-sharp docker
 permalink: /blog/puppeteer-sharp-docker
 cross-site-link: https://www.hardkoded.com/es/blog/puppeteer-sharp-docker
+last_modified_at: 2026-09-05
+redirect_from:
+  - /blogs/puppeteer-sharp-docker
 ---
 
 I get many questions about running Puppeteer-Sharp on Docker. Let's see if we can get a:
 
 ![Book](https://raw.githubusercontent.com/kblok/kblok.github.io/master/img/puppeteer-sharp-docker/orly.png)
 
-Let's take a look at the [example provided by Puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-in-docker) and see what we need to change there to make it work.
+**Still valid in 2026.** The walkthrough below is from 2019. The idea didn't age: put Chrome in the image, point Puppeteer-Sharp at it with `PUPPETEER_EXECUTABLE_PATH`, and skip `BrowserFetcher` on Linux containers. What did age is the packaging — `mcr.microsoft.com/dotnet/core/runtime:2.1`, `google-chrome-unstable`, and that pinned Chrome 81 build. Swap those for a current `mcr.microsoft.com/dotnet/...` image and a Chrome (or Chromium) build you actually control. As I write this, [Puppeteer Sharp on NuGet](https://www.nuget.org/packages/PuppeteerSharp) is 25.8.0 (net8 / net10 / netstandard2.0). Official Docker notes now live in the [Puppeteer troubleshooting guide](https://pptr.dev/troubleshooting#running-puppeteer-in-docker).
+
+If you need this on Azure instead of a raw container, I later wrote [how to run it on Azure Functions](/blog/running-puppeteer-sharp-azure-functions). If you don't want Chrome in the image at all, [connect to a remote browser](/blogs/azure-chrome-puppeteer-browserless).
+
+Let's take a look at the [example provided by Puppeteer](https://pptr.dev/troubleshooting#running-puppeteer-in-docker) and see what we need to change there to make it work.
 
 ```
 FROM node:10-slim
@@ -188,7 +196,7 @@ If you don't want to use the `--no-sandbox` flag, you will need to keep the user
 
 >Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
 
-You will find [many](https://github.com/jessfraz/dockerfiles/issues/65), [many](https://github.com/GoogleChrome/puppeteer/issues/2668) posts talking about this.
+You will find [many](https://github.com/jessfraz/dockerfiles/issues/65), [many](https://github.com/puppeteer/puppeteer/issues/2668) posts talking about this.
 
 I found the solution on [this post](https://github.com/jlund/docker-chrome-pulseaudio/issues/8#issue-166464652).
 We'll need to run docker using the `--security-opt=seccomp:unconfined` 
@@ -251,6 +259,8 @@ COPY bin/Release/netcoreapp2.1/publish/ /app/
 ENTRYPOINT ["dotnet", "/app/PuppeteerSharpPdfDemo-Local.dll"]
 ```
 
+One leftover from mixing the original recipe with Tobias' pin: that `ENV` still says `google-chrome-unstable`, but the `.deb` we install is `google-chrome-stable`. If you follow the pinned-package path, point `PUPPETEER_EXECUTABLE_PATH` at `/usr/bin/google-chrome-stable`.
+
 # Demo
 
 Does it work?  
@@ -297,5 +307,7 @@ docker run --security-opt=seccomp:unconfined -it hardkoded/simple-docker-demo:v1
 # Final words
 
 I hope this post helps the community to start using Puppeteer-Sharp on Docker. I will see if I can publish these images to the Docker Repository, stay tuned! :)
+
+Related: [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), [remote Chrome with Browserless](/blogs/azure-chrome-puppeteer-browserless), [PDF generators](/blogs/pdf-generators-benchmark), [WhatsApp bot](/blog/creating-whatsapp-bot-puppteer-sharp).
 
 Don't stop coding!

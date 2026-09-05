@@ -1,13 +1,19 @@
 ---
 title: Creating a WhatsApp bot with Puppeteer-Sharp
+subtitle: Automate WhatsApp Web from C# with Puppeteer-Sharp
 tags: puppeteer-sharp csharp
 permalink: /blog/creating-whatsapp-bot-puppteer-sharp
 cross-site-link: https://www.hardkoded.com/es/blog/creando-un-bot-para-whatsapp-con-puppeteer-sharp
+last_modified_at: 2026-09-05
+redirect_from:
+  - /blogs/creating-whatsapp-bot-puppteer-sharp
 ---
+
+**Still valid in 2026 — the technique, not the CSS classes.** `ExposeFunctionAsync` plus a `MutationObserver` is still how I would bridge a live page into C#. WhatsApp Web has been rewritten more than once since 2019, so those hashed class names (`.jN-F5`, `._2wP_Y`, and friends) will not match today's DOM. Treat this as a pattern, not a copy-paste bot. If you need a production WhatsApp integration, use the [official WhatsApp Business platform](https://www.whatsapp.com/business/). I wrote this as a weekend hack, same as the [Telegram bot](/blogs/not-enough-friends-get-a-bot) that started it.
 
 # Once upon a time
 
-[Not enough friends? Get a bot!](https://www.hardkoded.com/blogs/not-enough-friends-get-a-bot) was my second post on this blog. I was learning some Machine Learning back then. I found that many devs were using [Marcovify](https://github.com/jsvine/markovify) and I thought it would be fun to create a bot to interact with my friends. But I found that it was not so simple to create a bot for WhatsApp. You need to set up a [business account](https://www.whatsapp.com/business/) and pay for it. So I built it on Telegram.
+[Not enough friends? Get a bot!](/blogs/not-enough-friends-get-a-bot) was my second post on this blog. I was learning some Machine Learning back then. I found that many devs were using [Marcovify](https://github.com/jsvine/markovify) and I thought it would be fun to create a bot to interact with my friends. But I found that it was not so simple to create a bot for WhatsApp. You need to set up a [business account](https://www.whatsapp.com/business/) and pay for it. So I built it on Telegram.
 
 There is one problem with Telegram. **It wasn't our primary chat app**. We all love it, but we use WhatsApp...
 
@@ -302,5 +308,7 @@ And voilà! We have our Bot!
 
 I hope you enjoyed reading this tutorial. You will find [the repo on Github](https://github.com/kblok/WhatsAppBot).
 The idea of this post was not only showing off this bot but also presenting some techniques and tools you can use to automate a browser.
+
+Related: [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker) if you want to host something like this, [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), and [PDF generation](/blogs/pdf-generators-benchmark) if you're here for the "control a real Chrome from .NET" idea.
 
 Don't stop coding!
