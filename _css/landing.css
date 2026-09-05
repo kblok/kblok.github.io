@@ -77,12 +77,6 @@
   font-size: 0.875rem;
 }
 
-.comments {
-  margin-top: var(--spacer-3);
-  padding-top: var(--spacer-2);
-  border-top: 1px solid var(--border-color);
-}
-
 .site-links {
   display: flex;
   flex-wrap: wrap;

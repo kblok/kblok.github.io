@@ -33,8 +33,7 @@ social:
 
 logo: /img/avatar-icon.png
 
-# Comments / analytics (carried over from Beautiful Jekyll)
-disqus: hardkoded
+# Analytics (carried over from Beautiful Jekyll)
 google_analytics: UA-586295-8
 
 # Swimmer + SEO plugins
@@ -51,7 +50,6 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: true
   - scope:
       path: ""
     values:

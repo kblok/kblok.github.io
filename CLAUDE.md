@@ -36,7 +36,7 @@ There is no linter, formatter, or test suite in this repo.
 - **`tag/*.md`** — one stub page per tag (`layout: tag_index`). `_data/tags.yml` lists known tag slugs/names. `_plugins/_tag_gen.rb` generates indexes only for tags that do not already have a stub.
 - **`goto/*.md`** — short-link redirect pages (`layout: redirected`, `redirect_to: <url>`).
 - **`ui-testing-with-puppeteer/`** — standalone reference `.md` notes related to the "UI Testing with Puppeteer" book.
-- **`_layouts/`** and **`_includes/`** — Swimmer templating. `default.html` is the root layout; `page.html` / `post.html` build on it. Dark-mode toggle + sidebar live here. Analytics/Disqus snippets are still pulled from `_config.yml`.
+- **`_layouts/`** and **`_includes/`** — Swimmer templating. `default.html` is the root layout; `page.html` / `post.html` build on it. Dark-mode toggle + sidebar live here. Analytics snippets are still pulled from `_config.yml`. No Disqus.
 - **`_css/`** — Tailwind v4 source. Edit here, then `make css` (or `make serve`).
 - **`_config.yml`** — site-wide settings: title/tagline, author, plugins, collections, permalinks.
 
