@@ -1,7 +1,9 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem "github-pages", '163', group: :jekyll_plugins
-
-# enable tzinfo-data for local build
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
-gem 'jekyll-paginate'
+gem "jekyll", "~> 4.3"
+gem "jekyll-paginate"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "jekyll-redirect-from"
+gem "jekyll-gist"
+gem "webrick"
