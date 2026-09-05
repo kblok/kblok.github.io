@@ -42,3 +42,4 @@ There is no linter, formatter, or test suite in this repo.
 - New TILs: add to `_tils/` with `YYYY-MM-DD-slug.md`, and front matter matching the existing pattern (`layout: post`, comma-separated `tags`, `permalink: /til/<slug>`).
 - Introducing a brand-new tag: add an entry to `_data/tags.yml` and create the matching `tag/<slug>.md` stub (copy an existing one and change `tag`/`title`/`permalink`) — the tag index generator does the rest.
 - Adding a redirect/short link: add a file under `goto/` following `goto/pptr-slack.md`'s front matter shape.
+- Promoting a post (`.claude/skills/promote-post`): punch links must always carry UTMs so GA4 can attribute Organic Social / campaigns. Campaign slug = last path segment of `permalink`. Templates: `?utm_source=x&utm_medium=social&utm_campaign=<slug>` (X) and `?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>` (LinkedIn). Never append a bare canonical URL as the punch link.
