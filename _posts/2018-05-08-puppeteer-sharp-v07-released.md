@@ -1,7 +1,9 @@
 ---
 title: Puppeteer Sharp v0.7 Released!
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-v07-released
+permalink: /blog/puppeteer-sharp-v07-released
+redirect_from:
+  - /blogs/puppeteer-sharp-v07-released
 ---
 
 We are shipping Puppeteer Sharp [v0.7](https://github.com/hardkoded/puppeteer-sharp/projects/12) with many cool new features: Element selectors and evaluation over elements. But our big challenge on v0.7 was [one of the hard things in computer science](https://twitter.com/codinghorror/status/506010907021828096?lang=en): Naming Things.

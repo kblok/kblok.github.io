@@ -15,7 +15,7 @@ I get many questions about running Puppeteer-Sharp on Docker. Let's see if we ca
 
 **Still valid in 2026.** The walkthrough below is from 2019. The idea didn't age: put Chrome in the image, point Puppeteer-Sharp at it with `PUPPETEER_EXECUTABLE_PATH`, and skip `BrowserFetcher` on Linux containers. What did age is the packaging — `mcr.microsoft.com/dotnet/core/runtime:2.1`, `google-chrome-unstable`, and that pinned Chrome 81 build. Swap those for a current `mcr.microsoft.com/dotnet/...` image and a Chrome (or Chromium) build you actually control. As I write this, [Puppeteer Sharp on NuGet](https://www.nuget.org/packages/PuppeteerSharp) is 25.8.0 (net8 / net10 / netstandard2.0). Official Docker notes now live in the [Puppeteer troubleshooting guide](https://pptr.dev/troubleshooting#running-puppeteer-in-docker).
 
-If you need this on Azure instead of a raw container, I later wrote [how to run it on Azure Functions](/blog/running-puppeteer-sharp-azure-functions). If you don't want Chrome in the image at all, [connect to a remote browser](/blogs/azure-chrome-puppeteer-browserless).
+If you need this on Azure instead of a raw container, I later wrote [how to run it on Azure Functions](/blog/running-puppeteer-sharp-azure-functions). If you don't want Chrome in the image at all, [connect to a remote browser](/blog/azure-chrome-puppeteer-browserless).
 
 Let's take a look at the [example provided by Puppeteer](https://pptr.dev/troubleshooting#running-puppeteer-in-docker) and see what we need to change there to make it work.
 
@@ -308,6 +308,6 @@ docker run --security-opt=seccomp:unconfined -it hardkoded/simple-docker-demo:v1
 
 I hope this post helps the community to start using Puppeteer-Sharp on Docker. I will see if I can publish these images to the Docker Repository, stay tuned! :)
 
-Related: [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), [remote Chrome with Browserless](/blogs/azure-chrome-puppeteer-browserless), [PDF generators](/blogs/pdf-generators-benchmark), [WhatsApp bot](/blog/creating-whatsapp-bot-puppteer-sharp).
+Related: [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), [remote Chrome with Browserless](/blog/azure-chrome-puppeteer-browserless), [PDF generators](/blog/pdf-generators-benchmark), [WhatsApp bot](/blog/creating-whatsapp-bot-puppeteer-sharp).
 
 Don't stop coding!

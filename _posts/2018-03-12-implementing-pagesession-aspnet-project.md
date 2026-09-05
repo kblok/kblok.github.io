@@ -1,7 +1,9 @@
 ---
 title: Implementing PageSession in ASP.NET Webforms
 tags: csharp aspnet
-permalink: /blogs/implementing-pagesession-aspnet-project
+permalink: /blog/implementing-pagesession-aspnet-project
+redirect_from:
+  - /blogs/implementing-pagesession-aspnet-project
 ---
 
 Maintaining the state of a large page can be quite a challenge. Let's say you were asked to implement a page with four tabs, each with two GridViews. Each Gridview would be editable and you would have one save button which would execute all database actions.
@@ -24,7 +26,7 @@ The recipe is simple. We will need:
 
 ## Prerequisites
 
-As I mentioned in my [previous post](https://www.hardkoded.com/blogs/implementing-base-page-aspnet-project), Having a `BasePage` is a great place to build these kinds of solutions.
+As I mentioned in my [previous post](https://www.hardkoded.com/blog/implementing-base-page-aspnet-project), Having a `BasePage` is a great place to build these kinds of solutions.
 
 ## Step 1: Create your unique identifier
 

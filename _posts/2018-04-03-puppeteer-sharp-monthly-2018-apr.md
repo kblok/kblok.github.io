@@ -1,7 +1,9 @@
 ---
 title: Puppeteer Sharp Monthly Report - April 2018
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-monthly-april-2018
+permalink: /blog/puppeteer-sharp-monthly-april-2018
+redirect_from:
+  - /blogs/puppeteer-sharp-monthly-april-2018
 ---
  
 March was an exciting Month for Puppeteer Sharp. [CI Server](https://ci.appveyor.com/project/kblok/puppeteer-sharp) is up an running. [Version 0.3](https://github.com/hardkoded/puppeteer-sharp/releases/tag/v0.3) was released, implementing IDisposable, many `Puppeteer` features (such as `User dat dir` support) and also fixing many process leaks. We also released v.0.3.1, adding .NET Framework support.
@@ -81,5 +83,5 @@ Don't stop coding!
 
 #### Previous Reports
 
- * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
- * [February 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018)
+ * [March 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-march-2018)
+ * [February 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-february-2018)

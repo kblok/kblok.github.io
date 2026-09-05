@@ -1,7 +1,9 @@
 ---
 title: Killing boilerplates in ASP.NET - Volume 1
 tags: csharp aspnet
-permalink: /blogs/killing-boilerplates-in-aspnet-volume-1
+permalink: /blog/killing-boilerplates-in-aspnet-volume-1
+redirect_from:
+  - /blogs/killing-boilerplates-in-aspnet-volume-1
 ---
 
 We all hate boilerplates, right? That bunch of code that you copy over and over again. Boilerplates are not a complex piece of code but code so simple that we don't take time to think about it.
@@ -134,7 +136,7 @@ public sealed class QueryStringAttribute : Attribute
  
 # Let's set some variables
  
-As I mentioned in my previous post [Implementing PageSession](https://www.hardkoded.com/blogs/implementing-pagesession-aspnet-project), The [PreLoad](https://msdn.microsoft.com/en-us/library/system.web.ui.page.preload(v=vs.110).aspx?WT.mc_id=DT-MVP-5003814) event is perfect for this, because we need those variables to be ready to be used as soon as possible.
+As I mentioned in my previous post [Implementing PageSession](https://www.hardkoded.com/blog/implementing-pagesession-aspnet-project), The [PreLoad](https://msdn.microsoft.com/en-us/library/system.web.ui.page.preload(v=vs.110).aspx?WT.mc_id=DT-MVP-5003814) event is perfect for this, because we need those variables to be ready to be used as soon as possible.
  
 Another thing it’d be cool to do is to support these attributes on our Master pages. We can start by doing something like this:
  

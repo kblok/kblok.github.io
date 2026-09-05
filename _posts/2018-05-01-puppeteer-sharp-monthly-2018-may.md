@@ -1,14 +1,16 @@
 ---
 title: Puppeteer Sharp Monthly Report - May 2018
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-monthly-may-2018
+permalink: /blog/puppeteer-sharp-monthly-may-2018
+redirect_from:
+  - /blogs/puppeteer-sharp-monthly-may-2018
 ---
  
-April was a great month for Puppeteer Sharp. We launched [v0.4](https://www.hardkoded.com/blogs/puppeteer-sharp-v04-is-here), which is huge! But not only that, we've got two more contributors. That means that I had to spend more time getting  the issues and milestones ready for them as well as doing more code review. I wouldn't have been able to release v0.4 if it wasn't for them.
+April was a great month for Puppeteer Sharp. We launched [v0.4](https://www.hardkoded.com/blog/puppeteer-sharp-v04-is-here), which is huge! But not only that, we've got two more contributors. That means that I had to spend more time getting  the issues and milestones ready for them as well as doing more code review. I wouldn't have been able to release v0.4 if it wasn't for them.
 
 # What can you do so far?
 
-Please, go and read the [v0.4](https://www.hardkoded.com/blogs/puppeteer-sharp-v04-is-here) release post, I'll be waiting here for you...
+Please, go and read the [v0.4](https://www.hardkoded.com/blog/puppeteer-sharp-v04-is-here) release post, I'll be waiting here for you...
 <br/>
 <br/>
 <br/>
@@ -58,7 +60,7 @@ I’m looking forward to getting more feedback. The issues tab in github is open
 Don't stop coding!
 
 #### Previous Reports
- * [April 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-april-2018)
- * [March 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-march-2018)
+ * [April 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-april-2018)
+ * [March 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-march-2018)
 
 

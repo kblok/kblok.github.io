@@ -1,11 +1,13 @@
 ---
 title: Puppeteer Sharp Monthly Report - March 2018
 tags: puppeteer-sharp csharp
-permalink: /blogs/puppeteer-sharp-monthly-march-2018
+permalink: /blog/puppeteer-sharp-monthly-march-2018
+redirect_from:
+  - /blogs/puppeteer-sharp-monthly-march-2018
 ---
  
 # Puppeteer Sharp v0.1 released!
-I'm super excited to announce that the first **usable** version of Puppeteer Sharp is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). The first milestone on the [roadmap](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018) is completed.
+I'm super excited to announce that the first **usable** version of Puppeteer Sharp is ready to download from [Nuget](https://www.nuget.org/packages/PuppeteerSharp/). The first milestone on the [roadmap](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-february-2018) is completed.
 
 # What can you do so far?
 
@@ -113,4 +115,4 @@ Don't stop coding!
 
 #### Previous Reports
 
- * [February 2018](https://www.hardkoded.com/blogs/puppeteer-sharp-monthly-february-2018)
+ * [February 2018](https://www.hardkoded.com/blog/puppeteer-sharp-monthly-february-2018)
