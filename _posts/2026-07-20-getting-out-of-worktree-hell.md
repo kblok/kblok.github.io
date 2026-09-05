@@ -34,4 +34,6 @@ There's also a seventh, wt0. It isn't a real worktree — it's just a cmux tab f
 
 Six sounds restrictive, and it is. That's what makes it work. When all six are busy, I can't just spin up a seventh — I have to finish something, ship it, or park it, before I start anything new. It turns the worktrees into a kanban board with a hard WIP limit, and it's done more for shipping than any productivity tip I've tried: fewer half-finished branches, more PRs actually landing.
 
+The other mess those agents create — a wall of tests nobody reads — is [a different post](/blog/the-state-of-unit-testing-in-the-ai-era).
+
 Don't stop coding!

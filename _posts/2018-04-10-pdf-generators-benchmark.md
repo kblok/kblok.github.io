@@ -1,8 +1,14 @@
 ---
 title: PDF Generators benchmark - It’s competition time!
+subtitle: Puppeteer Sharp vs wkhtmltopdf (2018 numbers, still the idea)
 tags: puppeteer-sharp csharp
 permalink: /blogs/pdf-generators-benchmark
+last_modified_at: 2026-09-05
+redirect_from:
+  - /blog/pdf-generators-benchmark
 ---
+
+**Still valid in 2026 as a why, not as a leaderboard.** These numbers are from 2018, on a Dell XPS 15, against wkhtmltopdf. I'm not re-running the bench. The takeaway I still stand behind: if you care about real-world HTML/CSS/JS, a Chromium-based generator (Puppeteer or Puppeteer Sharp) beats a black-box WebKit process. [Puppeteer Sharp](https://www.nuget.org/packages/PuppeteerSharp) is what I use when I need that from .NET. If you're generating PDFs in Azure, skip the sandbox fight and see [Docker](/blog/puppeteer-sharp-docker), [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), or a [remote Chrome](/blogs/azure-chrome-puppeteer-browserless).
  
 Though there are many things left to be done on Puppeteer Sharp, I wanted to perform the first benchmark and see how Puppeteer Sharp is performing so far.
 
@@ -53,6 +59,8 @@ Puppeteer proved to be way faster; three times faster according to my tests. Pup
 Puppeteer (Node and Sharp) has a richer API than wkhtmltopdf. Though I used  a process call to execute wkhtmltopdf there are many wrappers around wkhtmltopdf, such as [the one coded by codaxy](https://github.com/codaxy/wkhtmltopdf), but all of them are limited to the small API the process itself exposes
 
 This [benchmark](https://github.com/kblok/PdfGeneratorsBenchmark) is on Github, and also the [TinyProcessProfiler](https://github.com/kblok/TinyProcessProfiler). Issues and Pull Request are opened for comments and feedback.
+
+Related: [Puppeteer-Sharp on Docker](/blog/puppeteer-sharp-docker), [Azure Functions](/blog/running-puppeteer-sharp-azure-functions), [remote Chrome with Browserless](/blogs/azure-chrome-puppeteer-browserless).
 
 Don’t stop coding!
 

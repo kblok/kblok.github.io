@@ -40,6 +40,8 @@ Or is it that we don't need them anymore?
 
 But there are two things I will never skip. E2E tests for the UI. And it might sound old-fashioned, but I will ALWAYS do a manual test on user-facing features.
 
+This sits next to how I work with agents day to day: [getting out of worktree hell](/blog/getting-out-of-worktree-hell) and [pr-memory](/blog/pr-memory).
+
 # Final words
 
 I don't have a clean answer. I know I don't want to mark 40 test files as viewed and call it a review. If the tests don't tell me what the code is supposed to do, they're just the AI talking to itself.
