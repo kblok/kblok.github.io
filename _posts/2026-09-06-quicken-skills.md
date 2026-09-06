@@ -6,7 +6,7 @@ permalink: /blog/quicken-skills
 
 I moved my whole life into my AI bot. Calendar, notes, todos. Money was the last blocker.
 
-Ten years of financial life live in Quicken for Mac. Transactions since 2011. And Quicken does not talk to anything.
+Over ten years of financial life live in Quicken for Mac. Transactions since 2011. And Quicken does not talk to anything.
 
 Hard rule I set myself: **read-only**. I will not let an AI write into ten years of bookkeeping.
 
