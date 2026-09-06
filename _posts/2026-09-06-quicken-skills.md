@@ -74,8 +74,6 @@ codex plugin add quicken@quicken-skills
 
 Requirements: Quicken Classic for Mac, file open, `sqlite3` and `curl`. Quicken for Windows (QDF) is not plain SQLite. Not supported yet.
 
-Honest limits: realized gains per sale are not available (Quicken does not store the cost of shares sold on the sell row). Investment history rebuilt from transactions can disagree with lots after stock splits. Recurring-charge and price-increase detection are heuristics.
-
 # Final words
 
 The skills are markdown and SQL. Come add the one you miss. Send PRs. Break it. Tell me what is wrong with your data that I did not model yet.
