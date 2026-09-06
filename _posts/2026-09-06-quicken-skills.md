@@ -8,9 +8,7 @@ I moved my whole life into my AI bot. Calendar, notes, todos. Money was the last
 
 Over ten years of financial life live in Quicken for Mac. Transactions since 2011. And Quicken does not talk to anything.
 
-Hard rule I set myself: **read-only**. I will not let an AI write into ten years of bookkeeping.
-
-Then I found the real insight. Quicken for Mac stores everything in a plain SQLite database inside the `.quicken` package. If it is SQLite, an agent can read it.
+But I found the real insight (well, Claude did). Quicken for Mac stores everything in a plain SQLite database inside the `.quicken` package. If it is SQLite, an agent can read it.
 
 So I built [quicken-skills](https://github.com/hardkoded/quicken-skills). A plugin for Claude Code, Cursor, GitHub Copilot, and Codex. Your personal finances, in your AI.
 
