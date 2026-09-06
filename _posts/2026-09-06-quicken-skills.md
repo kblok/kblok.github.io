@@ -2,6 +2,8 @@
 title: I Connected Quicken to My AI Agent
 tags: general ai
 permalink: /blog/quicken-skills
+hero: /img/quicken-skills/hero.png
+image: /img/quicken-skills/hero.png
 ---
 
 I moved my whole life into my AI bot. Calendar, notes, todos. Money was the last blocker.
