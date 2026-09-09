@@ -79,14 +79,6 @@ sys.exit(libc.clonefile(sys.argv[1].encode(), sys.argv[2].encode(), 0))
 
 Falls back to `cp -c -R` if the syscall fails (non-APFS, or different volumes).
 
-# A mistake worth telling
-
-The first disk measurements used `df /`. On macOS that is the sealed system volume. It never changes.
-
-Every "0 growth" number in the first report was **wrong evidence for a correct claim**. Re-measured on `/System/Volumes/Data`: 82 MB per clone.
-
-Measure on the volume the files live on.
-
 # What you give up
 
 A branch made in a clone is invisible from the main repo until you push. Scripts that scanned main for branches now also scan the worktree sets.
@@ -94,12 +86,6 @@ A branch made in a clone is invisible from the main repo until you push. Scripts
 `git gc` or a real `pnpm install` inside a clone rewrites files and ends block sharing for those files only. That is fine. Sharing is a bonus, not a promise.
 
 And `clonefile` on a directory is not O(1). It is kernel-side and fast. Seven seconds for 3 GB here. Still not free.
-
-# Cleanup
-
-Before deleting the old sets, every slot was checked for uncommitted files and unpushed commits, and every unpushed branch was checked against GitHub. Twenty branches had merged PRs (squash merges make local commits look unpushed). About ten slots had real unsaved work, mostly from mid-August.
-
-I deleted all of it. Nine sets removed. 55 GB freed.
 
 # Final words
 
