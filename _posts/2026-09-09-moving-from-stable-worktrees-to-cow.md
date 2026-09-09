@@ -12,13 +12,13 @@ But the WIP limit never fixed the expensive part.
 
 # The cost was never git
 
-My day job workspace is not one repo. It is a parent directory with **77 independent git repos**. Parallel work lives in "worktree sets": wt1 through wt7, each holding one `git worktree` per child repo, plus hooks that keep the agent from editing the main tree.
+My day job workspace is not one repo. It is a parent directory with **dozens of independent git repos**. Parallel work lives in "worktree sets": wt1 through wt7, each holding one `git worktree` per repo, plus hooks that keep the agent from editing the main tree.
 
 Git was fine. Dependencies were not. Every set reinstalled `node_modules` and rebuilt Gradle output.
 
 | Measurement | Value |
 |---|---|
-| `mabl-worktrees/` total | 55 GB |
+| Worktree sets total | 55 GB |
 | `node_modules` in wt1 alone | 4.7 GB |
 | Main workspace | 22 GB |
 
@@ -34,9 +34,9 @@ I wanted that.
 
 No.
 
-cow wants **one primary repo** as its source. My workspace is a parent plus 77 children. cow's branch / sync / extract would run on the parent, which holds nothing useful.
+cow wants **one primary repo** as its source. My workspace is a parent plus dozens of repos under it. cow's branch / sync / extract would run on the parent, which holds nothing useful.
 
-Also: nine hooks and scripts already key on paths like `../mabl-worktrees/<set>/<repo>`. cow keeps pastures in its own directory and its own registry. I could force the path with `--dir`, but then I am adding a second tool for no gain.
+Also: nine hooks and scripts already key on paths like `../worktrees/<set>/<repo>`. cow keeps pastures in its own directory and its own registry. I could force the path with `--dir`, but then I am adding a second tool for no gain.
 
 **The single valuable idea is the mechanism: `clonefile(2)`.**
 
@@ -46,11 +46,11 @@ macOS already exposes it. `cp -c`. Or five lines of Python ctypes. No new depend
 
 Framing that clicked for me: a repo slot is disposable.
 
-"We need `mabl-cli` in wt1. Clone it in. New task? Delete it and clone again."
+"We need that repo in wt1. Clone it in. New task? Delete it and clone again."
 
 So I rewrote the create script:
 
-1. Clone `~/Code/mabl/<repo>` into `~/Code/mabl-worktrees/<set>/<repo>` with `clonefile`.
+1. Clone the main copy of a repo into `~/Code/.../worktrees/<set>/<repo>` with `clonefile`.
 2. Drop the copied `.git/worktrees` admin dir.
 3. Fetch, then `git checkout -f -B <branch>` from `origin/<branch>` if it exists, else `origin/main`.
 4. Rerun for the same repo replaces the slot. Refuse if there are uncommitted changes, unless `--force`.
