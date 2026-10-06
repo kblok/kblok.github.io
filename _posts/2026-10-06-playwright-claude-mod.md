@@ -26,6 +26,8 @@ When Claude runs `playwright test`, the panel updates by itself. Pass or fail pe
 
 In the demo, I asked Claude: "I think something is broken with the add items to the todo list, can we run the tests?" Claude ran them, and the panel filled in: "Claude's run: 9 passed." Then I clicked "Adding Todos › should add single todo", it said "Running…", and then "1 passed".
 
+![Playwright Claude Mod side panel next to Claude Code running the todomvc tests](/img/playwright-claude-mod/panel.png)
+
 You can drive it too:
 
 - `/playwright` opens the panel. `/playwright <folder>` opens it for another project.
