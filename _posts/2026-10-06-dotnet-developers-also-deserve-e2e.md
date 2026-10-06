@@ -6,9 +6,13 @@ hero: /img/dotnet-developers-also-deserve-e2e/hero.png
 image: /img/dotnet-developers-also-deserve-e2e/hero.png
 ---
 
-.NET folks keep asking me: where's our agentic E2E story?
+Where's our agentic E2E story?
 
-Playwright ships a nice [TodoMVC example](https://github.com/microsoft/playwright/tree/main/examples/todomvc) for https://demo.playwright.dev/todomvc: 23 tests, 625 lines. I rewrote it with [e2e for .NET](https://github.com/hardkoded/e2e-dotnet). Same app. Same flows. 20 tests, 310 lines. And a few weak checks in the original got fixed along the way.
+If you hang around X this week, you already know the answer for TypeScript: [tester-army/e2e](https://github.com/tester-army/e2e). It launched hard. Launch posts pulled hundreds of thousands of views. The repo sat at #1 on GitHub Trending. People keep saying the same two things: write the goal in plain English (`agent.act("upgrade the workspace to Pro")`), and once a step is verified, **replay it from cache with no model calls** until the UI changes. Agentic where it helps. Deterministic where it matters. That mix is why everyone is calling it cool.
+
+.NET folks, that story was missing for us.
+
+So I ported the idea. [e2e for .NET](https://github.com/hardkoded/e2e-dotnet) is a community .NET take on that flow (not an official TesterArmy product). To prove it, I rewrote Playwright's [TodoMVC example](https://github.com/microsoft/playwright/tree/main/examples/todomvc) for https://demo.playwright.dev/todomvc: 23 tests, 625 lines. The rewrite: 20 tests, 310 lines. Same app. Same flows. And a few weak checks in the original got fixed along the way.
 
 # Wait, isn't this "just Playwright"?
 
@@ -31,7 +35,7 @@ e2e keeps the intent in the test and resolves it at run time, then records it. T
 
 First run with an empty cache and Copilot `claude-sonnet-5.5`: about 4 minutes (3 min 51 s to 4 min 28 s across three runs). Every `ActAsync` calls the model.
 
-Next run, replay from cache: 17 to 32 seconds. No model calls. Most tests take about a second. One takes 8 s — more on that later.
+Next run, replay from cache: 17 to 32 seconds. No model calls. Most tests take about a second.
 
 I did not time the Playwright suite, so I'm not comparing run times. "Better" here means shorter, closer to what the user does, no fragile selectors in actions, and stronger checks. Not faster. Not free.
 
@@ -102,25 +106,7 @@ Playwright's `should-uncomplete-completed-todo` clicks a checkbox twice and has 
 
 And those duplicate folders in the Playwright example (`adding-todos/` and `todo-creation/` testing the same things) got merged.
 
-# Limits (yes, there are some)
 
-- **Rows that look the same.** Every todo row has a "Toggle Todo" checkbox and a Delete button with the same name. The replay cache records a control by role, name, and test id only. So "mark Buy milk complete" replays fine with one row, but not with several. In those tests the row action uses a locator, like `Todo("Task 2").GetByRole("button", "Delete").ClickAsync()`. Four tests do this. Recording which row a control belongs to is possible future work.
-- **No `AssertAsync` styling checks.** The model reads the accessibility tree, not pixels. An `AssertAsync("the todo is shown struck through")` failed — the judge could not see styling. The sample checks checkbox state instead and does not use `AssertAsync` at all. `AssertAsync` would also call the model on every run, because only actions are cached.
-- **One step still runs live on replay.** `Trims_whitespace_from_an_edit` takes 8 seconds on replay while every other test takes about 1 second. It passes. We have not found the cause yet.
-- **A model provider is required** for the first run. The sample uses a GitHub Copilot subscription (`e2e login github-copilot`). In CI, an API key is the recommended setup.
-
-So no, you do not get zero selectors forever. Locators still matter for checks, and for a few actions.
-
-# Dogfooding found real bugs
-
-Rewriting a real suite exposed real problems. Each one is fixed now, with a test.
-
-1. **The agent could not double-click.** TodoMVC opens the editor only on double-click. All five edit tests failed with `AUTOMATION_UNSUPPORTED`. Fix: a new `double_tap` agent tool ([PR #45](https://github.com/hardkoded/e2e-dotnet/pull/45)). The upstream TypeScript library does not have that.
-2. **A key press with no target never replayed.** The agent often presses Enter on the focused field without naming it. The cache recorded it with no target, replay looked one up, found none, and called the model again. Every "add a todo" step missed the cache ([PR #46](https://github.com/hardkoded/e2e-dotnet/pull/46)).
-3. **The end-state check compared against repeated controls.** After a step, the recorder saved things like `checkbox "Toggle Todo"`. With three rows there are three of those. Replay wanted exactly one match, so the step could never finish. The recorder now saves only unique controls (also #46).
-4. **A key press with only a test id went to the wrong control** — whatever had focus (also #46).
-
-Before those fixes, a replay run took 10 min 34 s. After: 17 to 32 s.
 
 # Try the sample
 
