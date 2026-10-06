@@ -24,19 +24,7 @@ Somewhere in the middle of the build I was typing "it's working!" and "this is a
 
 When Claude runs `playwright test`, the panel updates by itself. Pass or fail per test, how long each one took, and the first lines of each error. **It changes nothing in Claude's command.** It just watches.
 
-```
- Playwright   Diff                                        ✕
-[ Run all ] [ Refresh ]
-✓ 23  ✗ 1  ○ 0  total 24
-Claude's run: 1 of 24 failed.
-
-adding-todos/should-add-single-todo.spec.ts
-✓ Adding Todos › should add single todo 749ms
-
-deleting-todos/should-clear-all-completed-todos.spec.ts
-✗ Deleting Todos › should clear all completed todos 1204ms
-    Error: Property 'toMatchAriaSnapshot' not found
-```
+In the demo, I asked Claude: "I think something is broken with the add items to the todo list, can we run the tests?" Claude ran them, and the panel filled in: "Claude's run: 9 passed." Then I clicked "Adding Todos › should add single todo", it said "Running…", and then "1 passed".
 
 You can drive it too:
 
