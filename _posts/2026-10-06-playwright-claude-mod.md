@@ -18,7 +18,7 @@ It's a Claude Code plugin made of function hooks. It runs only in Claude Code.
 
 It all started with a prompt: "Learn about claude mods". Then: "I want to see Playwright results in a side panel, just like the VS Code Playwright extension."
 
-A couple of hours later I was typing "it's working!" and "this is awesome!" in the chat. Not my most professional moment, I know.
+Somewhere in the middle of the build I was typing "it's working!" and "this is awesome!" in the chat. Not my most professional moment, I know.
 
 # What does it do?
 
@@ -93,7 +93,7 @@ reporter: [['list'], ['json', { outputFile: 'test-results/results.json' }]],
 
 # Final words
 
-I spend my days watching agents run tests. Now I can see the results without scrolling. That's it. That's the whole idea.
+Now I can see what Claude's test run did without scrolling. That's it. That's the whole idea.
 
 It's free, open source, and MIT. Try it, break it, and tell me what's missing in the [repo](https://github.com/hardkoded/playwright-claude-mod).
 
