@@ -6,17 +6,15 @@ hero: /img/dotnet-developers-also-deserve-e2e/hero.png
 image: /img/dotnet-developers-also-deserve-e2e/hero.png
 ---
 
-Where's our agentic E2E story?
+.NET folks, Where's our agentic E2E story?
 
 If you hang around X this week, you already know the answer for TypeScript: [tester-army/e2e](https://github.com/tester-army/e2e). It launched hard. Launch posts pulled hundreds of thousands of views. The repo sat at #1 on GitHub Trending. People keep saying the same two things: write the goal in plain English (`agent.act("upgrade the workspace to Pro")`), and once a step is verified, **replay it from cache with no model calls** until the UI changes. Agentic where it helps. Deterministic where it matters. That mix is why everyone is calling it cool.
-
-.NET folks, that story was missing for us.
 
 So I ported the idea. [e2e for .NET](https://github.com/hardkoded/e2e-dotnet) is a community .NET take on that flow (not an official TesterArmy product). To prove it, I rewrote Playwright's [TodoMVC example](https://github.com/microsoft/playwright/tree/main/examples/todomvc) for https://demo.playwright.dev/todomvc: 23 tests, 625 lines. The rewrite: 20 tests, 310 lines. Same app. Same flows. And a few weak checks in the original got fixed along the way.
 
 # Wait, isn't this "just Playwright"?
 
-Kind of. e2e for .NET runs **on top of** Playwright. The browser engine is `Microsoft.Playwright` 1.63 driving Chromium. So no, Playwright is not the villain here.
+Kind of. e2e for .NET runs **on top of** Playwright. The browser engine is `Microsoft.Playwright` driving Chromium. So no, Playwright is not the villain here.
 
 **The point is: write intent, not selectors, and let the agent and the cache handle the mechanics.**
 
