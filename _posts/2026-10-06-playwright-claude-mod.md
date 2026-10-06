@@ -4,6 +4,10 @@ tags: general ai
 permalink: /blog/playwright-claude-mod
 hero: /img/playwright-claude-mod/hero.png
 image: /img/playwright-claude-mod/hero.png
+redirect_from:
+  - /blog/playwright-claude-mode
+  - /blog/playwright-claude-mode/
+  - /blog/playwright-claude-mod/
 ---
 
 Claude just ran your Playwright tests. Did they pass?
