@@ -48,6 +48,38 @@ Thanks to the `#if DEBUG`, your Release build has no agent and no open port.
 
 Then give your controls an `AutomationId`. The sample is a greeting form plus a counter, with `name`, `greet`, `error`, `greeting`, `counter`, and `increment`. Pick ids that say what the control *is*, not how it looks. They are your test contract.
 
+## Let's set up the test project
+
+This part used to hurt. Before, you needed around 200 lines of your own base class and a `[SetUpFixture]` before writing the first mobile test. Not anymore. With e2e-dotnet 0.6 you install `E2E.Mobile.NUnit` (or `E2E.Mobile.XUnit.V3` if you are an xUnit person) and declare your app in `e2e.config.json`:
+
+```json
+{
+  "targets": [
+    {
+      "name": "mobileapp",
+      "platform": "ios",
+      "app": {
+        "bundleId": "dev.hardkoded.e2e.mobileapp",
+        "appPath": "../MobileApp/bin/Debug/net10.0-ios/iossimulator-arm64/MobileApp.app"
+      }
+    }
+  ]
+}
+```
+
+Then your test class derives from `MobileAppTest`:
+
+```csharp
+using E2E.Mobile.NUnit;
+
+public class GreetingTests : MobileAppTest
+{
+    // your tests go here
+}
+```
+
+That's it. The base class builds the engine, installs the build once per run, launches the app fresh before each test, and gives the agent the mobile tools. If you run on a hosted device (Limrun or DevFlow), it shares one device for the whole run and releases it when the process ends. Environment variables like `E2E_MOBILE_PLATFORM` or `E2E_MOBILE_APP_PATH` still win over the config, so the same project can run on iOS and Android.
+
 ## Let's write some tests
 
 A locator-only test. No model, fast, stable:
@@ -88,10 +120,10 @@ Launch the Debug build yourself, then run the tests with the DevFlow provider:
 
 ```bash
 dotnet build samples/MobileApp -f net10.0-ios -r iossimulator-arm64 -t:Run
-E2E_MOBILE_PROVIDER=devflow dotnet test samples/MobileApp.E2ETests
+E2E_MOBILE_PROVIDER=devflow E2E_DEVFLOW_APP=MobileApp dotnet test samples/MobileApp.E2ETests
 ```
 
-The tests find the agent through the DevFlow broker (`maui devflow list`) when one is running, else on port 9223, or on `E2E_DEVFLOW_PORT` if you set it. They wait up to a minute for it and hold the agent's mutation lease for the run, so other DevFlow tools know e2e is driving the app. On Android, forward the port first with `adb forward tcp:<port> tcp:<port>`.
+The tests find the agent through the DevFlow broker (`maui devflow list`) when one is running, else on port 9223, or on `E2E_DEVFLOW_PORT` if you set it. `E2E_DEVFLOW_APP` is the app name the broker lists, so it picks the right agent if you have more than one app running. They wait up to a minute for it and hold the agent's mutation lease for the run, so other DevFlow tools know e2e is driving the app. On Android, forward the port first with `adb forward tcp:<port> tcp:<port>`.
 
 Something doesn't work? Set `E2E_DEVFLOW_TRACE=1` and you get every call to the agent (method, URL, status) on stderr.
 
@@ -109,10 +141,10 @@ await Agent.ActAsync("press Add one three times");
 await Expect.That(Screen.GetByTestId("counter")).ToHaveTextAsync($"Count: {before + 3}");
 ```
 
-Tests that need a relaunch or to send the app to the background just opt out with `Assume.That`, so they show up as inconclusive, not failed:
+Tests that need a relaunch or to send the app to the background just opt out with `Assume.That` and the `AttachesToRunningApp` flag from `MobileAppTest`, so they show up as inconclusive, not failed:
 
 ```csharp
-Assume.That(!HostedDeviceSetup.AttachesToRunningApp,
+Assume.That(!AttachesToRunningApp,
     "The DevFlow agent runs inside the app and cannot relaunch it yet.");
 ```
 
@@ -122,7 +154,7 @@ And of course, Debug builds only. No agent in Release.
 
 ## Final words
 
-If you already run your MAUI app in a simulator, the cost is tiny: one package, one line in `MauiProgram.cs`, some `AutomationId`s. And you get E2E tests, even AI-driven ones.
+If you already run your MAUI app in a simulator, the cost is tiny: one package, one line in `MauiProgram.cs`, some `AutomationId`s, a `targets` entry, and a base class. And you get E2E tests, even AI-driven ones.
 
 But let's be honest, this is a spike. Use it to explore, and keep the agent-device path for tests that need a clean launch. If you try it and something breaks, run with `E2E_DEVFLOW_TRACE=1` and [open an issue](https://github.com/hardkoded/e2e-dotnet/issues) with the output. That would help a lot.
 
