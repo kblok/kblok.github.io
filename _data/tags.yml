@@ -16,3 +16,7 @@
   name: Puppeteer
 - slug: ui-testing-with-puppeteer
   name: UI Testing with Puppeteer
+- slug: winui
+  name: WinUI
+- slug: windows
+  name: Windows
