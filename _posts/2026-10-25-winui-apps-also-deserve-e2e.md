@@ -14,7 +14,7 @@ If you read [.NET developers also deserve E2E!](/blog/dotnet-developers-also-des
 
 ## What landed
 
-[`E2E.WinApp`](https://www.nuget.org/packages/E2E.WinApp) is on NuGet, in [0.7.0](https://www.nuget.org/packages/E2E.WinApp/0.7.0). It landed in [PR #621](https://github.com/hardkoded/e2e-dotnet/pull/621). The engine drives the app through Windows UI Automation, with the library behind the `winapp ui` command (`Microsoft.Windows.SDK.BuildTools.WinApp.UIAutomation` 0.7.1). The package brings that library. `dotnet add package` is the whole install. No `winapp.exe`.
+[`E2E.WinApp`](https://www.nuget.org/packages/E2E.WinApp) is on NuGet, in [0.7.0](https://www.nuget.org/packages/E2E.WinApp/0.7.0). The engine drives the app through Windows UI Automation, with the library behind the `winapp ui` command (`Microsoft.Windows.SDK.BuildTools.WinApp.UIAutomation` 0.7.1). The package brings that library. `dotnet add package` is the whole install. No `winapp.exe`.
 
 WinUI 3, WPF, WinForms, and Win32 all speak UI Automation, so the engine talks to all of them. It runs on Windows only.
 
@@ -163,22 +163,6 @@ Built the exe somewhere else? `E2E_WINAPP_APP_PATH` names it over the config.
 e2e explore "open the login form and sign in"
 e2e mcp
 ```
-
-## Wait, what's the catch?
-
-A few. The [windows skill doc](https://github.com/hardkoded/e2e-dotnet/blob/main/skills/e2e-dotnet/references/windows.md) lists them. These are the ones that will bite you.
-
-**Windows only.** Starting a session on another OS fails with `ENVIRONMENT_UNAVAILABLE`. On a non-Windows host a `windows` target is `INVALID_CONFIG` before any session opens.
-
-**Keys and clicks need the foreground.** `Window.MinimizeAsync()` is there. Keys and clicks need the window restored. Pattern actions still work while it's sitting in the background.
-
-**A packaged MSIX app doesn't launch from `appPath`.** It starts through a broker and the process exits at once. Put the process name in `app.bundleId` and start the app yourself, or launch it from the test with `Window.OpenAppAsync(name)`. The benchmark stays unpackaged so the exe path works.
-
-**There is no back stack.** `App.BackAsync` is `UNSUPPORTED_CAPABILITY`. Tap the app's own Back button. `Home_lists_the_scenarios_and_opens_one` does that.
-
-**A screenshot is the main window only.** A flyout, a menu, or a combo box list that WinUI opens in its own popup window is in the observation, and missing from the image. Secure fields in the main window are painted black. A secure field with no box withholds the image.
-
-Two more, before you find them the hard way. `video` on a `windows` target is `UNSUPPORTED_ARTIFACT`. `App.ClearStateAsync` relaunches the app and deletes nothing. The engine doesn't know where the app keeps its data, so a test that needs a clean folder removes it before the launch.
 
 ## Final words
 
