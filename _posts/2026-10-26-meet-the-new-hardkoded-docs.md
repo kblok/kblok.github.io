@@ -79,8 +79,8 @@ Open `http://localhost:4321/e2e-dotnet/`, `http://localhost:4321/typesafe-sdk-do
 
 DocFX still reads the assemblies. Starlight is the site. Pages still hosts it, from `main`.
 
-If the API reference is fine and the look is what feels old, this split is small enough to copy. Metadata in, Markdown out, Starlight on top. I did it three times this week.
-
 Meet the new Hardkoded docs: [E2E for .NET](https://hardkoded.github.io/e2e-dotnet/), [TypeSafe.AI.Sdk](https://hardkoded.github.io/typesafe-sdk-dotnet/), and the [Vercel AI SDK for .NET](https://hardkoded.github.io/vercel-ai-sdk-dotnet/).
+
+I know they are not super pretty yet. Step by step.
 
 Don't stop coding!
