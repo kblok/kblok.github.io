@@ -1,16 +1,24 @@
 ---
-title: "DocFX metadata, Starlight site"
+title: "Meet the new Hardkoded docs"
 tags: dotnet docfx
-permalink: /blog/docfx-metadata-starlight-site
-hero: /img/docfx-metadata-starlight-site/hero.png
-image: /img/docfx-metadata-starlight-site/hero.png
+permalink: /blog/meet-the-new-hardkoded-docs
+hero: /img/meet-the-new-hardkoded-docs/hero.png
+image: /img/meet-the-new-hardkoded-docs/hero.png
 ---
 
-The Hardkoded .NET docs got a refresh. DocFX still reads the code. The site is [Starlight](https://starlight.astro.build/) now.
+Meet the new Hardkoded docs.
+
+Same libraries. A refresh of the site around them. DocFX still reads the code. What you open is [Starlight](https://starlight.astro.build/) now, still on GitHub Pages.
 
 I wrote a [DocFX tutorial](/blog/creating-docfx-site) back in 2018. XML comments in, GitHub Pages out. It worked. Search, dark mode, the sidebar, the look: dated next to the Mintlify-style docs I actually like opening. I wanted that UX, and I wanted to stay on GitHub Pages.
 
 **So the site moved to Starlight. DocFX stayed in the pipeline, one step earlier.**
+
+Here they are:
+
+- [E2E for .NET](https://hardkoded.github.io/e2e-dotnet/)
+- [TypeSafe.AI.Sdk](https://hardkoded.github.io/typesafe-sdk-dotnet/)
+- [Vercel AI SDK for .NET](https://hardkoded.github.io/vercel-ai-sdk-dotnet/)
 
 ## Why the old site felt dated
 
@@ -28,21 +36,23 @@ The goal was a Mintlify-like UX without leaving GitHub Pages. That was the whole
 
 Starlight has no idea what a C# `uid` is. DocFX does. The API reference still starts there. DocFX stops at the YAML, and Starlight is the website.
 
-`npm run api` restores the local DocFX tool and runs `docfx metadata`. That writes YAML. A small script turns the YAML into Markdown under `docs-site/src/content/docs/api/`, and Starlight renders that. Member headings keep the old DocFX anchors (`#E2E_App_OpenAsync_...` and the same idea on the other repo).
+`npm run api` restores the local DocFX tool and runs `docfx metadata`. That writes YAML. A small script turns the YAML into Markdown under `docs-site/src/content/docs/api/`, and Starlight renders that. Member headings keep the old DocFX anchors (`#E2E_App_OpenAsync_...` and the same idea on the other repos).
 
 The generated Markdown is committed. `npm run dev` can start without the .NET SDK. CI runs `npm run api` again before `npm run build`, so the published site matches the code on that commit.
 
-## Two sites, same move
+## Three sites, same move
 
 The first one was [e2e-dotnet](https://github.com/hardkoded/e2e-dotnet), in [pull request 667](https://github.com/hardkoded/e2e-dotnet/pull/667). It is live: [hardkoded.github.io/e2e-dotnet](https://hardkoded.github.io/e2e-dotnet/).
 
 The site lives in `docs-site/` on `@astrojs/starlight`. The accent is the logo blue, `#4fa8ff`. Links in light mode are `#0c74d4`. `npm run sync` copies `README.md`, `COMPATIBILITY.md`, and `CONTRIBUTING.md` into the site. The rest of the guides live in `docs-site/`. The API reference comes from `E2E`, `E2E.NUnit`, and `E2E.XUnit.V3`.
 
-Same pattern, a bit later, on [typesafe-sdk-dotnet](https://github.com/hardkoded/typesafe-sdk-dotnet), [pull request 28](https://github.com/hardkoded/typesafe-sdk-dotnet/pull/28). Also live: [hardkoded.github.io/typesafe-sdk-dotnet](https://hardkoded.github.io/typesafe-sdk-dotnet/). Gold stayed gold, `#e3a008` on the dark theme and `#b87d06` in light mode. Guides sit in `docs-site/guides/`. The API comes from `src/TypeSafe.AI.Sdk`.
+Same pattern on [typesafe-sdk-dotnet](https://github.com/hardkoded/typesafe-sdk-dotnet), [pull request 28](https://github.com/hardkoded/typesafe-sdk-dotnet/pull/28). Live: [hardkoded.github.io/typesafe-sdk-dotnet](https://hardkoded.github.io/typesafe-sdk-dotnet/). Gold stayed gold, `#e3a008` on the dark theme and `#b87d06` in light mode. Guides sit in `docs-site/guides/`. The API comes from `src/TypeSafe.AI.Sdk`.
+
+And the [Vercel AI SDK for .NET](https://github.com/hardkoded/vercel-ai-sdk-dotnet), [pull request 787](https://github.com/hardkoded/vercel-ai-sdk-dotnet/pull/787). Live: [hardkoded.github.io/vercel-ai-sdk-dotnet](https://hardkoded.github.io/vercel-ai-sdk-dotnet/). Accent is violet, `#7c5cff` in the dark theme and `#5b3fd4` in light mode. Guides come from `docs/articles/`. The API comes from `src/Vercel.AI`. It is a community port, not an official Vercel product.
 
 ## Still GitHub Pages
 
-Both repos use `.github/workflows/docs.yml`. A pull request builds the site. A push to `main` builds it and deploys with `actions/deploy-pages`. That is the only deploy.
+All three repos use `.github/workflows/docs.yml`. A pull request builds the site. A push to `main` builds it and deploys with `actions/deploy-pages`. That is the only deploy.
 
 On e2e-dotnet, docs used to publish when a version tag went out. That path is gone. **Docs publish from `main`.** A release tag does not ship the site anymore.
 
@@ -52,7 +62,7 @@ One aside, because it bit the runner. Astro wants Node `>=22.23.4`. The `"22"` a
 
 ## Let's preview it
 
-From `docs-site/` in either repo:
+From `docs-site/` in any of the three repos:
 
 ```bash
 cd docs-site
@@ -63,12 +73,14 @@ npm run dev
 
 `npm run api` needs the .NET 10 SDK. If the generated API Markdown is already in the checkout and you only want to click around, `npm ci` and `npm run dev` are enough. `npm run sync` refreshes the guides. Search shows up after `npm run build`.
 
-Open `http://localhost:4321/e2e-dotnet/` or `http://localhost:4321/typesafe-sdk-dotnet/`. The prefix is the GitHub Pages project-site base.
+Open `http://localhost:4321/e2e-dotnet/`, `http://localhost:4321/typesafe-sdk-dotnet/`, or `http://localhost:4321/vercel-ai-sdk-dotnet/`. The prefix is the GitHub Pages project-site base.
 
 ## Final words
 
 DocFX still reads the assemblies. Starlight is the site. Pages still hosts it, from `main`.
 
-If the API reference is fine and the look is what feels old, this split is small enough to copy. Metadata in, Markdown out, Starlight on top. I did it twice this week. Both sites are up.
+If the API reference is fine and the look is what feels old, this split is small enough to copy. Metadata in, Markdown out, Starlight on top. I did it three times this week.
+
+Meet the new Hardkoded docs: [E2E for .NET](https://hardkoded.github.io/e2e-dotnet/), [TypeSafe.AI.Sdk](https://hardkoded.github.io/typesafe-sdk-dotnet/), and the [Vercel AI SDK for .NET](https://hardkoded.github.io/vercel-ai-sdk-dotnet/).
 
 Don't stop coding!
