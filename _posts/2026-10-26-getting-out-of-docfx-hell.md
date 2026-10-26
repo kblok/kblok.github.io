@@ -20,7 +20,7 @@ I don't have a bug list to wave around. The pages worked. I just stopped wanting
 
 ## Why Starlight
 
-[Starlight](https://starlight.astro.build/) is the Astro docs theme. Open source. The build is a static site, so GitHub Pages can host it the same way it hosted DocFX, with no new bill and no new host. Search ships with the production build. Dark mode ships with the theme. It looks like the docs sites I was jealous of.
+[Starlight](https://starlight.astro.build/) is the Astro docs theme. Open source. The build is a static site, so GitHub Pages can host it the same way it hosted DocFX. Search ships with the production build. Dark mode ships with the theme. It looks like the docs sites I was jealous of.
 
 The goal was a Mintlify-like UX without leaving GitHub Pages. That was the whole brief.
 
