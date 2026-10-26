@@ -1,22 +1,22 @@
 ---
-title: "Getting out of DocFX hell"
+title: "DocFX metadata, Starlight site"
 tags: dotnet docfx
-permalink: /blog/getting-out-of-docfx-hell
-hero: /img/getting-out-of-docfx-hell/hero.png
-image: /img/getting-out-of-docfx-hell/hero.png
+permalink: /blog/docfx-metadata-starlight-site
+hero: /img/docfx-metadata-starlight-site/hero.png
+image: /img/docfx-metadata-starlight-site/hero.png
 ---
 
-DocFX got the API reference out. The site around it felt stuck in 2018.
+The Hardkoded .NET docs got a refresh. DocFX still reads the code. The site is [Starlight](https://starlight.astro.build/) now.
 
-I wrote a [DocFX tutorial](/blog/creating-docfx-site) back then. XML comments in, GitHub Pages out. It worked. Search, dark mode, the sidebar, the look: it stayed in that era. The docs I like opening now look like Mintlify. I wanted that UX, and I wanted to stay on GitHub Pages.
+I wrote a [DocFX tutorial](/blog/creating-docfx-site) back in 2018. XML comments in, GitHub Pages out. It worked. Search, dark mode, the sidebar, the look: dated next to the Mintlify-style docs I actually like opening. I wanted that UX, and I wanted to stay on GitHub Pages.
 
-**So the site moved to [Astro Starlight](https://starlight.astro.build/). DocFX stayed in the pipeline, one step earlier.**
+**So the site moved to Starlight. DocFX stayed in the pipeline, one step earlier.**
 
-## Why it felt dated
+## Why the old site felt dated
 
 DocFX is still good at one job. It reads a .NET project and emits an API model. The website it builds on top of that model is the part that felt old. Search, dark mode, the sidebar, the whole look and feel.
 
-I don't have a bug list to wave around. The pages worked. I just stopped wanting to send people there.
+I don't have a bug list to wave around. The pages worked. I wanted a site I was happy to send people to.
 
 ## Why Starlight
 
@@ -67,8 +67,8 @@ Open `http://localhost:4321/e2e-dotnet/` or `http://localhost:4321/typesafe-sdk-
 
 ## Final words
 
-DocFX still reads the assemblies. Starlight is the site. Pages still hosts it, from `main`, for free.
+DocFX still reads the assemblies. Starlight is the site. Pages still hosts it, from `main`.
 
-If your library docs feel like the year you first set DocFX up, this split is small enough to copy. Metadata in, Markdown out, Starlight on top. I did it twice this week. Both sites are up.
+If the API reference is fine and the look is what feels old, this split is small enough to copy. Metadata in, Markdown out, Starlight on top. I did it twice this week. Both sites are up.
 
 Don't stop coding!
