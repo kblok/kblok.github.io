@@ -12,7 +12,7 @@ Lately I added three projects to my open source portfolio. [TypeSafe SDK .NET](h
 
 I mentioned this before. Nowadays, getting the work done is easy. Marketing is my weak spot. Today, you need a good website and clear tutorials so the developer/agent can ramp up quickly.
 
-DocFX falls short for that. I do this for love of the community, so I need something better.
+DocFX falls short for that. I do this for love of the community in my free time, so I need something better.
 
 I wrote a [DocFX tutorial](/blog/creating-docfx-site) back in 2018. XML comments in, GitHub Pages out. It worked. Search, dark mode, the sidebar, the look: dated next to the Mintlify-style docs I actually like opening. I wanted that UX, and I wanted to stay on GitHub Pages.
 
