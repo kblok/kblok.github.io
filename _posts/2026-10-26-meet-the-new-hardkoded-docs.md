@@ -10,7 +10,7 @@ Meet the new Hardkoded docs.
 
 Lately I added three projects to my open source portfolio. [TypeSafe SDK .NET](https://hardkoded.github.io/typesafe-sdk-dotnet/) (a.k.a. JEV for .NET), [E2E .NET](https://hardkoded.github.io/e2e-dotnet/), and [Vercel AI for .NET](https://hardkoded.github.io/vercel-ai-sdk-dotnet/). I'm also working on a native Playwright version. That one is still in progress.
 
-I mentioned this before. Nowadays getting the work done is easy. Marketing is my weak spot. And today you need a good website and good tutorials, so the agent can ramp up.
+I mentioned this before. Nowadays, getting the work done is easy. Marketing is my weak spot. Today, you need a good website and clear tutorials so the developer/agent can ramp up quickly.
 
 DocFX falls short for that. I do this for love of the community, so I need something better.
 
