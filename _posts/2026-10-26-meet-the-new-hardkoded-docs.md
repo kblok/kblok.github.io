@@ -64,21 +64,6 @@ Old DocFX `.html` URLs redirect to the new paths. The redirect page keeps `locat
 
 One aside, because it bit the runner. Astro wants Node `>=22.23.4`. The `"22"` alias on GitHub Actions resolved to `22.23.3`. Close enough to fail. The workflow pins `>=22.23.4 <23` and sets `check-latest: true`.
 
-## Let's preview it
-
-From `docs-site/` in any of the three repos:
-
-```bash
-cd docs-site
-npm ci
-npm run api
-npm run dev
-```
-
-`npm run api` needs the .NET 10 SDK. If the generated API Markdown is already in the checkout and you only want to click around, `npm ci` and `npm run dev` are enough. `npm run sync` refreshes the guides. Search shows up after `npm run build`.
-
-Open `http://localhost:4321/e2e-dotnet/`, `http://localhost:4321/typesafe-sdk-dotnet/`, or `http://localhost:4321/vercel-ai-sdk-dotnet/`. The prefix is the GitHub Pages project-site base.
-
 ## Final words
 
 DocFX still reads the assemblies. Starlight is the site. Pages still hosts it, from `main`.
