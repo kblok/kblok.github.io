@@ -8,7 +8,11 @@ image: /img/meet-the-new-hardkoded-docs/hero.png
 
 Meet the new Hardkoded docs.
 
-Same libraries. A refresh of the site around them. DocFX still reads the code. What you open is [Starlight](https://starlight.astro.build/) now, still on GitHub Pages.
+Lately I added three projects to my open source portfolio. [TypeSafe SDK .NET](https://hardkoded.github.io/typesafe-sdk-dotnet/) (a.k.a. JEV for .NET), [E2E .NET](https://hardkoded.github.io/e2e-dotnet/), and [Vercel AI for .NET](https://hardkoded.github.io/vercel-ai-sdk-dotnet/). I'm also working on a native Playwright version. That one is still in progress.
+
+I mentioned this before. Nowadays getting the work done is easy. Marketing is my weak spot. And today you need a good website and good tutorials, so the agent can ramp up.
+
+DocFX falls short for that. I do this for love of the community, so I need something better.
 
 I wrote a [DocFX tutorial](/blog/creating-docfx-site) back in 2018. XML comments in, GitHub Pages out. It worked. Search, dark mode, the sidebar, the look: dated next to the Mintlify-style docs I actually like opening. I wanted that UX, and I wanted to stay on GitHub Pages.
 
