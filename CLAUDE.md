@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-This is the Jekyll source for [hardkoded.com](https://www.hardkoded.com), Darío Kondratiuk's personal blog (hosted as `kblok.github.io` on GitHub Pages). The visual theme is a Hardkoded adaptation of [Swimmer](https://github.com/dsillman2000/swimmer) (Poole + Tailwind v4, dedicated landing page, dark mode).
+This is the Jekyll source for [hardkoded.com](https://www.hardkoded.com), Darío Kondratiuk's personal blog. Production is Vercel at https://www.hardkoded.com/. GitHub Pages is retired. The visual theme is a Hardkoded adaptation of [Swimmer](https://github.com/dsillman2000/swimmer) (Poole + Tailwind v4, dedicated landing page, dark mode).
 
 ## Commands
 
@@ -26,7 +26,7 @@ make build
 
 There is no linter, formatter, or test suite in this repo.
 
-**Note:** This stack is Jekyll 4 + Tailwind. GitHub Pages' built-in Jekyll builder will not compile CSS. Use `make build` locally (or a GitHub Action) and publish `_site/` if you want Pages to host this theme.
+**Note:** Production is Vercel at https://www.hardkoded.com/. GitHub Pages is retired. This stack is Jekyll 4 + Tailwind; `make build` writes `_site/` for local checks.
 
 ## Content architecture
 
