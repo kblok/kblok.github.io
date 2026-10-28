@@ -18,7 +18,12 @@
     },
     {
       "source": "/puppeteer-sharp",
-      "destination": "/puppeteer-sharp/",
+      "destination": "https://www.puppeteersharp.com/",
+      "permanent": true
+    },
+    {
+      "source": "/puppeteer-sharp/:path(.*)",
+      "destination": "https://www.puppeteersharp.com/:path",
       "permanent": true
     }
   ],
@@ -34,10 +39,6 @@
     {
       "source": "/vercel-ai-sdk-dotnet/:path(.*)",
       "destination": "https://vercel-ai-sdk-dotnet.vercel.app/vercel-ai-sdk-dotnet/:path"
-    },
-    {
-      "source": "/puppeteer-sharp/:path(.*)",
-      "destination": "https://puppeteer-sharp.vercel.app/:path"
     }
   ]
 }
