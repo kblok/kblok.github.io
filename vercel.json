@@ -1,0 +1,43 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/e2e-dotnet",
+      "destination": "/e2e-dotnet/",
+      "permanent": true
+    },
+    {
+      "source": "/typesafe-sdk-dotnet",
+      "destination": "/typesafe-sdk-dotnet/",
+      "permanent": true
+    },
+    {
+      "source": "/vercel-ai-sdk-dotnet",
+      "destination": "/vercel-ai-sdk-dotnet/",
+      "permanent": true
+    },
+    {
+      "source": "/puppeteer-sharp",
+      "destination": "/puppeteer-sharp/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/e2e-dotnet/:path(.*)",
+      "destination": "https://e2e-dotnet.vercel.app/e2e-dotnet/:path"
+    },
+    {
+      "source": "/typesafe-sdk-dotnet/:path(.*)",
+      "destination": "https://typesafe-sdk-dotnet.vercel.app/typesafe-sdk-dotnet/:path"
+    },
+    {
+      "source": "/vercel-ai-sdk-dotnet/:path(.*)",
+      "destination": "https://vercel-ai-sdk-dotnet.vercel.app/vercel-ai-sdk-dotnet/:path"
+    },
+    {
+      "source": "/puppeteer-sharp/:path(.*)",
+      "destination": "https://puppeteer-sharp.vercel.app/:path"
+    }
+  ]
+}

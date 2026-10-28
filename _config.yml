@@ -82,4 +82,5 @@ exclude:
   - voice.md
   - Vagrantfile
   - vendor
+  - vercel.json
   - preview-artifacts
