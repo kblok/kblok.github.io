@@ -33,10 +33,16 @@
     {% endfor %}
   </ul>
   {% endif %}
-  <h4 class="post-sidebar-heading post-sidebar-heading--related">Hardkoded</h4>
+  <h4 class="post-sidebar-heading post-sidebar-heading--related">My projects</h4>
+  <ul class="post-sidebar-list">
+    <li><a href="https://www.puppeteersharp.com/">Puppeteer-Sharp</a></li>
+    <li><a href="https://www.hardkoded.com/e2e-dotnet/">E2E .NET</a></li>
+    <li><a href="https://www.hardkoded.com/typesafe-sdk-dotnet/">TypeSafe SDK</a></li>
+    <li><a href="https://www.hardkoded.com/vercel-ai-sdk-dotnet/">Vercel AI SDK</a></li>
+  </ul>
+  <h4 class="post-sidebar-heading post-sidebar-heading--related">About</h4>
   <ul class="post-sidebar-list">
     <li><a href="{{ '/aboutme/' | relative_url }}" {% if page.url == '/aboutme/' %}class="active"{% endif %}>About</a></li>
-    <li><a href="https://github.com/hardkoded/puppeteer-sharp">Puppeteer-Sharp</a></li>
   </ul>
   {% unless page.url == '/archive/' %}
   <a class="post-sidebar-archive" href="{{ '/archive/' | relative_url }}">Archive (all posts)</a>
