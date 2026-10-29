@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
   "redirects": [
     {
       "source": "/e2e-dotnet",
@@ -24,6 +25,216 @@
     {
       "source": "/puppeteer-sharp/:path(.*)",
       "destination": "https://www.puppeteersharp.com/:path",
+      "permanent": true
+    },
+    {
+      "source": "/blog/getting-out-of-docfx-hell",
+      "destination": "/blog/meet-the-new-hardkoded-docs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/getting-out-of-docfx-hell/",
+      "destination": "/blog/meet-the-new-hardkoded-docs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/creating-whatsapp-bot-puppteer-sharp",
+      "destination": "/blog/creating-whatsapp-bot-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/blog/automating-microsoft-edge-puppteer-sharp",
+      "destination": "/blog/automating-microsoft-edge-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/blog/playwright-claude-mode",
+      "destination": "/blog/playwright-claude-mod",
+      "permanent": true
+    },
+    {
+      "source": "/2018-11-21-async-void-fairy-tale",
+      "destination": "/blog/async-void-fairy-tale",
+      "permanent": true
+    },
+    {
+      "source": "/2018-11-21-async-void-fairy-tale/",
+      "destination": "/blog/async-void-fairy-tale",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/creating-whatsapp-bot-puppteer-sharp",
+      "destination": "/blog/creating-whatsapp-bot-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/creating-whatsapp-bot-puppteer-sharp/",
+      "destination": "/blog/creating-whatsapp-bot-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:slug",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:slug/",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blogs",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug/",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/creando-un-bot-para-whatsapp-con-puppeteer-sharp",
+      "destination": "/blog/creating-whatsapp-bot-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/automatizando-edge-con-puppeteer",
+      "destination": "/blog/automating-microsoft-edge-puppeteer-sharp",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/puppeteer-sharp-docker",
+      "destination": "/blog/puppeteer-sharp-docker",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/hagamos-comunidad",
+      "destination": "/blog/hello-world",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/trabajando-con-stored-procedures-parte1",
+      "destination": "/blog/how-to-work-with-stored-procedures-and-not-die-trying",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/trabajando-con-stored-procedures-parte2",
+      "destination": "/blog/how-to-work-with-stored-procedures-and-not-die-trying",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/creando-sitio-docfx",
+      "destination": "/blog/creating-docfx-site",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/cuento-async-void",
+      "destination": "/blog/async-void-fairy-tale",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/yendo-a-las-profundidades-async",
+      "destination": "/blog/going-deeper-async",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/concurrency-cookbook-review",
+      "destination": "/blog/concurrency-cookbook-review",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/es-hora-de-playwright",
+      "destination": "/blog/its-playwright-time",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/soy-microsoft-mvp",
+      "destination": "/blog/im-microsoft-mvp",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/:slug/",
+      "destination": "/es/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/es/blog/:slug",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/es/tag/:slug/",
+      "destination": "/tag/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/es/tag/:slug",
+      "destination": "/tag/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/es/aboutme",
+      "destination": "/aboutme",
+      "permanent": true
+    },
+    {
+      "source": "/es/aboutme/",
+      "destination": "/aboutme",
+      "permanent": true
+    },
+    {
+      "source": "/es/page:num(\\d+)",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/es/page:num(\\d+)/",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/es/feed.xml",
+      "destination": "/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/es",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/til",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/til/",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/til/:path*",
+      "destination": "/archive",
       "permanent": true
     }
   ],
