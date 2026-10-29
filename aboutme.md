@@ -2,9 +2,6 @@
 layout: page
 title: About me
 permalink: /aboutme/
-redirect_from:
-  - /aboutme.html
-  - /aboutme
 ---
 
 If you got to this page, and you are not a bot, thank you for taking the time to read about me!
