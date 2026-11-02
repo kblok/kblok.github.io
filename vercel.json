@@ -236,6 +236,11 @@
       "source": "/til/:path*",
       "destination": "/archive",
       "permanent": true
+    },
+    {
+      "source": "/til/:path*/",
+      "destination": "/archive",
+      "permanent": true
     }
   ],
   "rewrites": [
