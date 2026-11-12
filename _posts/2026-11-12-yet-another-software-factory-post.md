@@ -129,7 +129,7 @@ Local agent (PC, every 120 s)
    └── (planned) claude --cloud ── Claude cloud sessions
 ```
 
-## Problems we hit
+## Problems I hit
 
 A second worker almost landed on the same issue. Labeling failed after the launch, and the launch wasn't recorded, so the next pass thought the issue was free. The fix was to record the launch first.
 
