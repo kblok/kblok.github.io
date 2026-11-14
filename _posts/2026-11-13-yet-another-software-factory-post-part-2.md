@@ -46,6 +46,12 @@ The payload the orchestrator sends is one line: the repo, and the issue number. 
 
 The first worker went through the routine. It ran, and it works perfectly.
 
+## Don't trust the session to watch its PR
+
+Something else I found. I can't trust the session to watch the pull request the way I expected. Sometimes it starts the loop. Other times it just waits for someone to tell it.
+
+So the orchestrator watches the pull request, and tells the routine for that PR when the build is broken or when there are conflicts. Watching a PR is a deterministic task, so the console app does it, same golden rule from [Part 1](/blog/yet-another-software-factory-post).
+
 ## What I learned
 
 A repo setting does not reach a cloud session. **Put what the worker needs into the session itself**, like the cloned repos.
@@ -56,8 +62,10 @@ A running exe locks its build output. I build to a scratch folder when I only wa
 
 `setx` only lands on new terminals. I had to reopen the terminal before starting the agent.
 
+I can't trust the session to watch its own pull request. Sometimes the loop starts, sometimes it waits, so the orchestrator reports a broken build or conflicts to that routine.
+
 ## Final words
 
-`claude --cloud` was the next step, and then the worker just waited. Starting the session with the repos already cloned is what got it through.
+`claude --cloud` was the next step, and then the worker just waited. Starting the session with the repos already cloned is what got it through. Watching the PR stayed on the console app.
 
 Don't stop coding!
