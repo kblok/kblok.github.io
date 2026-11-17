@@ -1,7 +1,7 @@
 ---
-title: "The verification layer for the .NET developer"
+title: "The verification layer for the agentic .NET developer"
 tags: dotnet ai testing
-permalink: /blog/the-verification-layer-for-the-dotnet-developer
+permalink: /blog/the-verification-layer-for-the-agentic-dotnet-developer
 hero: /img/the-verification-layer-for-the-dotnet-developer/hero.png
 image: /img/the-verification-layer-for-the-dotnet-developer/hero.png
 ---
@@ -46,32 +46,30 @@ A warning the agent can scroll past never stops it. In [Directory.Build.props](h
 </Project>
 ```
 
-That's the whole file. The library csproj sets `LangVersion` to 14 on its own, and `TreatWarningsAsErrors` is what every project still picks up from this one. There is a `NoWarn` for `NU5104` on the package project, a packaging warning I left alone on purpose. The default is fail. That's the part that matters when the agent is the one typing.
 
 ## dotnet format
 
 Once it compiles, I want the style and the analyzer passes to fail the same way.
 
-CI runs this on the Ubuntu headless Chrome job, against the solution, in [dotnet.yml](https://github.com/hardkoded/puppeteer-sharp/blob/master/.github/workflows/dotnet.yml):
+We run it in CI:
 
 ```bash
-dotnet format style ./lib/PuppeteerSharp.sln --verify-no-changes --exclude-diagnostics CA1865
-dotnet format analyzers ./lib/PuppeteerSharp.sln --verify-no-changes --exclude-diagnostics CA1865
+dotnet format style ./lib/PuppeteerSharp.sln --verify-no-changes
+dotnet format analyzers ./lib/PuppeteerSharp.sln --verify-no-changes
 ```
 
 `--verify-no-changes` is the whole trick. If the code isn't already in the shape those passes want, the job fails.
 
-Whitespace stays with [CSharpier](https://csharpier.com). The two tools undo each other if `dotnet format` is also allowed to touch spacing, so the whitespace pass stays off, and the workflow has a comment saying so. That comment is my note to the next agent that tries to "fix" it by running a plain `dotnet format`. `CA1865` is excluded on both commands because I turned that rule off in the editorconfig. It wants `string.StartsWith(char)`, and the comment next to it says that isn't .NET 8 compatible.
 
 ## Analyzers
 
 Those format passes only catch what you plugged in, so the package list is the actual layer. These are the ones on the repo today.
 
-[Microsoft.CodeAnalysis.NetAnalyzers 9.0.0](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj), with `AnalysisLevel` set to `10.0-Recommended` in that same csproj. That's the Microsoft recommended set.
+[Microsoft.CodeAnalysis.NetAnalyzers](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj), with `AnalysisLevel` set to `10.0-Recommended` in that same csproj. That's the Microsoft recommended set.
 
-[StyleCop.Analyzers 1.2.0-beta.556](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj) comes with [lib/stylecop.json](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/stylecop.json) and [lib/.editorconfig](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/.editorconfig). StyleCop is the one that nags about docs, member order, and naming. The layout rules, the SA ones about spaces and braces, are set to `none` in that editorconfig, because CSharpier already decided how the file looks and those rules just disagree with it.
+[StyleCop.Analyzers](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj) comes with [lib/stylecop.json](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/stylecop.json) and [lib/.editorconfig](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/.editorconfig). StyleCop is the one that nags about docs, member order, and naming. The layout rules, the SA ones about spaces and braces, are set to `none` in that editorconfig, because CSharpier already decided how the file looks and those rules just disagree with it.
 
-[Microsoft.CodeAnalysis.CSharp.CodeStyle 4.8.0](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj) is the IDE-style package. There is a [root .editorconfig](https://github.com/hardkoded/puppeteer-sharp/blob/master/.editorconfig), and `lib/.editorconfig` is marked as its own root, so the library follows the file that sits next to the code. Both are full of `csharp_style_*` lines, and a bunch of them are errors. `var`, expression-bodied members, braces. The kind of thing two humans will argue about in review, and an agent will "fix" a different way every time, unless the build says no.
+[Microsoft.CodeAnalysis.CSharp.CodeStyle](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp/PuppeteerSharp.csproj) is the IDE-style package. There is a [root .editorconfig](https://github.com/hardkoded/puppeteer-sharp/blob/master/.editorconfig), and `lib/.editorconfig` is marked as its own root, so the library follows the file that sits next to the code. Both are full of `csharp_style_*` lines, and a bunch of them are errors. `var`, expression-bodied members, braces. The kind of thing two humans will argue about in review, and an agent will "fix" a different way every time, unless the build says no.
 
 The test project adds [NUnit.Analyzers 4.3.0](https://github.com/hardkoded/puppeteer-sharp/blob/master/lib/PuppeteerSharp.Tests/PuppeteerSharp.Tests.csproj). Same idea, pointed at the tests.
 
