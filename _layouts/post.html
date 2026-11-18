@@ -11,7 +11,12 @@ layout: default
   <p class="lead">{{ page.subtitle }}</p>
   {% endif %}
   {% assign hero = page.hero | default: page.image %}
-  {% if hero %}
+  {% if page.hero_dark and hero %}
+  <div class="post-hero-pair">
+    <img class="post-hero post-hero-light" src="{{ hero | relative_url }}" alt="" width="1200" height="628">
+    <img class="post-hero post-hero-dark" src="{{ page.hero_dark | relative_url }}" alt="" width="1200" height="628">
+  </div>
+  {% elsif hero %}
   <img class="post-hero" src="{{ hero | relative_url }}" alt="">
   {% endif %}
   {{ content }}

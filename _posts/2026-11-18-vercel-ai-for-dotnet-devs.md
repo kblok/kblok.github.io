@@ -3,6 +3,7 @@ title: "Vercel AI for .NET devs!"
 tags: dotnet csharp ai vercel opensource
 permalink: /blog/vercel-ai-for-dotnet-devs
 hero: /img/vercel-ai-for-dotnet-devs/hero.png
+hero_dark: /img/vercel-ai-for-dotnet-devs/hero-dark.png
 image: /img/vercel-ai-for-dotnet-devs/hero.png
 ---
 
