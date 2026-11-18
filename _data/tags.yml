@@ -16,6 +16,10 @@
   name: Puppeteer
 - slug: ui-testing-with-puppeteer
   name: UI Testing with Puppeteer
+- slug: opensource
+  name: Open Source
+- slug: vercel
+  name: Vercel
 - slug: winui
   name: WinUI
 - slug: windows
