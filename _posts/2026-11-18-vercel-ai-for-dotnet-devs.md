@@ -8,7 +8,7 @@ image: /img/vercel-ai-for-dotnet-devs/hero.png
 
 I know, I know. Vercel is not the go-to cloud for a .NET developer.
 
-Vercel is designed for a different ecosystem, Next.js and TypeScript on Node. I'm pretty sure [Guillermo Rauch](https://x.com/rauchg) knows about this. And in the web world, let's be honest, .NET devs are a small village.
+Vercel grew up around Next.js and TypeScript on Node. I'm pretty sure [Guillermo Rauch](https://x.com/rauchg) knows about this. And in the web world, let's be honest, .NET devs are a small village.
 
 But let me tell you a story.
 
