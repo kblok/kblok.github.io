@@ -39,6 +39,32 @@
   border-radius: var(--radius-default);
 }
 
+.post-hero-pair {
+  display: grid;
+  margin: 0 0 var(--spacer-2);
+
+  > .post-hero {
+    grid-area: 1 / 1;
+    margin: 0;
+  }
+}
+
+.post-hero-dark {
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .post-hero-light { visibility: hidden; }
+    .post-hero-dark { visibility: visible; }
+  }
+}
+
+:root[data-theme="dark"] {
+  .post-hero-light { visibility: hidden; }
+  .post-hero-dark { visibility: visible; }
+}
+
 .related {
   padding-top: var(--spacer-2);
   padding-bottom: var(--spacer-2);
