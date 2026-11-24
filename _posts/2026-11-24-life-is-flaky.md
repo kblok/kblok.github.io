@@ -7,7 +7,7 @@ hero_dark: /img/life-is-flaky/hero-dark.png
 image: /img/life-is-flaky/hero.png
 ---
 
-A LinkedIn post asked Chris Hutchens, Darrel Farris, and me how you stop the noise from flaky tests without ignoring the failures that are real. <!-- TODO: link LinkedIn post -->
+[Joe Colantonio](https://www.linkedin.com/in/joecolantonio/) [asked me](https://www.linkedin.com/feed/update/urn:li:activity:7531039061004857344/) how I'd stop the noise from flaky tests without ignoring the real failures.
 
 First, I'll try to remove the mabl tape and answer that from a developer's approach, but I was also working hard on this at mabl, so I'll be biased. You already know flaky tests are THE topic in software automation, and it would be naive to pretend I solved it in one post, so this is just what I've learned so far.
 
@@ -15,7 +15,7 @@ First, I'll try to remove the mabl tape and answer that from a developer's appro
 
 Notice that flaky tests got filed as pretty much an automation problem, and I'm not so sure that's the whole story.
 
-Andrey Lushnikov once told me the internet is flaky, and I would say life is flaky. The network is flaky, your computer is flaky under load, third-party services are flaky, and test automation is just the place where you are forced to look at that, over and over, in red.
+[Andrey Lushnikov](https://www.linkedin.com/in/aslushnikov/) once told me the internet is flaky, and I would say life is flaky. The network is flaky, your computer is flaky under load, third-party services are flaky, and test automation is just the place where you are forced to look at that, over and over, in red.
 
 ## I tried to eradicate them
 
